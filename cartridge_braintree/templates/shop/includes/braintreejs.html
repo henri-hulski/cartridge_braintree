@@ -1,0 +1,16 @@
+{% load i18n mezzanine_tags %}
+{% comment %}
+This snippet of javascript allows us to use braintree.js to encrypt the credit
+card number and ccv on the client side before proceeding with payment processing.
+
+See also https://www.braintreepayments.com/docs/python/guide/getting_paid
+
+Note that I am not using their suggested AJAX script as it screws up the
+Cartridge 'back' button (which is a different type of 'submit' button)
+{% endcomment %}
+
+<script type="text/javascript" src="https://js.braintreegateway.com/v1/braintree.js"></script>
+  <script type="text/javascript">
+    var braintree = Braintree.create( "{{ settings.BRAINTREE_CLIENT_SIDE_ENCRYPTION_KEY }}");
+    braintree.onSubmitEncryptForm('checkout-form');
+  </script>

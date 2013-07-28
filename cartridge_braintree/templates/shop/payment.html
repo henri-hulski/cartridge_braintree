@@ -1,0 +1,11 @@
+{% extends "shop/checkout.html" %}
+{% load i18n mezzanine_tags %}
+
+{% block fields %}
+{% include "shop/includes/payment_fields.html" %}
+{% fields_for form.other_fields %}
+{% endblock %}
+
+{% block after-form %}
+{% include "shop/includes/braintreejs.html" %}
+{% endblock %}
