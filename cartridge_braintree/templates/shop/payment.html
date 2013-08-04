@@ -2,8 +2,10 @@
 {% load i18n mezzanine_tags %}
 
 {% block fields %}
+{% if request.cart.has_items %}
 {% include "shop/includes/payment_fields.html" %}
 {% fields_for form.other_fields %}
+{% endif %}
 {% endblock %}
 
 {% block after-form %}
