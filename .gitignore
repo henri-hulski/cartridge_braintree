@@ -1,0 +1,13 @@
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.bak
+*.orig
+*~
+.project
+.pydevproject
+*.db
+.DS_Store
+.coverage
+/static
