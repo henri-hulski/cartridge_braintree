@@ -35,6 +35,8 @@ This form does the following:
 - Changes the shipping and billing country fields to a Select widget
   This ensures that the country selected can be converted to a valid
   code for Braintree's payment processing.
+  The default selected country can be selected by settings.SHOP_DEFAULT_COUNTRY
+  which is also editable in the admin.
 - Changes Credit Card number and CVV to custom widgets that will generate
   data encrypted form inputs as required by braintree.js
   Note also CCV becomes a password input rather than just text.

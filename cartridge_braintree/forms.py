@@ -60,7 +60,9 @@ class BraintreeOrderForm(OrderForm):
             if is_first_step:
                 # Change country widgets to a Select widget
                 self.fields["billing_detail_country"].widget = forms.Select(choices=countries)
+                self.fields["billing_detail_country"].initial = settings.SHOP_DEFAULT_COUNTRY
                 self.fields["shipping_detail_country"].widget = forms.Select(choices=countries)
+                self.fields["shipping_detail_country"].initial= settings.SHOP_DEFAULT_COUNTRY
             if is_payment_step:
                 # Make card number and cvv fields use the data encrypted widget
                 self.fields["card_number"].widget = DataEncryptedTextInput()
@@ -68,7 +70,9 @@ class BraintreeOrderForm(OrderForm):
         else:
             # Change country widgets to a Select widget
             self.fields["billing_detail_country"].widget = forms.Select(choices=countries)
+            self.fields["billing_detail_country"].initial = settings.SHOP_DEFAULT_COUNTRY            
             self.fields["shipping_detail_country"].widget = forms.Select(choices=countries)
+            self.fields["shipping_detail_country"].initial= settings.SHOP_DEFAULT_COUNTRY
             if settings.SHOP_PAYMENT_STEP_ENABLED:
                 # Make card number and cvv fields use the data encrypted widget
                 self.fields["card_number"].widget = DataEncryptedTextInput()

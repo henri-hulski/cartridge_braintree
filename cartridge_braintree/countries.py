@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-from cartridge.shop.checkout import CheckoutError
-
 # This module defines the list of countries (ISO-3166) supported by
 # Braintree, coupled with a tuple of Alpha2, Alpha3 and Numeric codes
 
@@ -21,6 +19,7 @@ def get_country_codes(country):
     try:
         return COUNTRIES[country]
     except KeyError:
+        from cartridge.shop.checkout import CheckoutError
         raise CheckoutError("Unrecognised country")
 
 def get_country_code_alpha2(country):
