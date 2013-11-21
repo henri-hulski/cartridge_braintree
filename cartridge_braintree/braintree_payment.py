@@ -103,6 +103,6 @@ def payment_handler(request, order_form, order):
     if result.is_success:
         return result.transaction.id
     else:
-        raise CheckoutError(result.message)
+        raise CheckoutError("Credit Card error: " + result.message)
 
 
