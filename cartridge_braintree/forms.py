@@ -21,6 +21,7 @@ class DataEncryptedTextInput(forms.TextInput):
             value = ''
         if attrs is None:
             attrs = {}
+        attrs['name'] = name
         attrs['autocomplete'] = 'off'
         attrs['data-encrypted-name'] = name           
         final_attrs = self.build_attrs(attrs, type=self.input_type)

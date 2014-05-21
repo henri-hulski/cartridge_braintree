@@ -12,5 +12,5 @@ Cartridge 'back' button (which is a different type of 'submit' button)
 <script type="text/javascript" src="https://js.braintreegateway.com/v1/braintree.js"></script>
   <script type="text/javascript">
     var braintree = Braintree.create( "{{ settings.BRAINTREE_CLIENT_SIDE_ENCRYPTION_KEY }}");
-    braintree.onSubmitEncryptForm('checkout-form');
+    braintree.onSubmitEncryptForm('form.checkout-form');
   </script>
