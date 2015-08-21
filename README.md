@@ -10,8 +10,8 @@ I have no intention of formally publishing this as a full PyPI package, but I'm 
 Instructions for use
 --------------------
 
-1. Install braintree's python client library
-    pip install braintree
+1. Install cartridge_braintree
+    pip install git+https://github.com/molokov/cartridge_braintree.git
 
 2. Add cartridge_braintree to your INSTALLED_APPS. List it higher than
 'cartridge.shop', otherwise the cartridge_braintree template will not
