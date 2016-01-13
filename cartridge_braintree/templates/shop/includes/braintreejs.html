@@ -1,16 +1,188 @@
-{% load i18n mezzanine_tags %}
+{% load i18n mezzanine_tags shop_tags staticfiles %}
 {% comment %}
-This snippet of javascript allows us to use braintree.js to encrypt the credit
-card number and ccv on the client side before proceeding with payment processing.
+Set up braintree.js to create a payment_method_nonce for payment processing.
+Based on cartridge-pinpayments.
 
-See also https://www.braintreepayments.com/docs/python/guide/getting_paid
+See also https://github.com/braintree/braintree-web/blob/master/README.md
+and https://developers.braintreepayments.com/guides/client-sdk/javascript/v2
 
-Note that I am not using their suggested AJAX script as it screws up the
-Cartridge 'back' button (which is a different type of 'submit' button)
+NOTE: This requires the following modifications to the 'checkout.html' template:
+
+id='checkout-form' on the form element
+name='next' on the 'Next' submit button.
+
+If you override the 'checkout.html' template, make sure your template also
+contains these changes.
+
 {% endcomment %}
 
-<script type="text/javascript" src="https://js.braintreegateway.com/v1/braintree.js"></script>
-  <script type="text/javascript">
-    var braintree = Braintree.create( "{{ settings.BRAINTREE_CLIENT_SIDE_ENCRYPTION_KEY }}");
-    braintree.onSubmitEncryptForm('form.checkout-form');
-  </script>
+<script src="{% static "js/jquery.payform.min.js" %}"></script>
+<script type="text/javascript">
+    $('#id_card_number').payform('formatCardNumber');
+    $('#id_card_ccv').payform('formatCardCVC');
+</script>
+<script src="{% static "js/braintree.js" %}"></script>
+<script type="text/javascript">
+    $(function() {
+        var client;
+        try {
+            client = new braintree.api.Client({
+                clientToken: "{{ client_token }}"
+            });
+        }
+        catch (err) {
+            // The braintree.js script was not loaded successfully, so we want to
+            // display an error to the user.
+            console.error("{% trans "Braintree API could not be created." %}");
+            $("#no_braintree").removeClass('hidden');
+        }
+
+        var form = $('form.checkout-form'),
+            nextButton = form.find(":submit[name='next']"),
+            backButton = form.find(":submit[name='back']"),
+            errorsField = $("#id_braintree_errors");
+
+        backButton.click(function() {
+            // Clicking the 'back' button is always OK.
+            // Clear previous errors
+            errorsField.val("");
+            // continue with form submission
+            return true;
+        });
+
+        nextButton.click(function(e) {
+            // 'Next' button was clicked.
+            e.preventDefault();
+
+            // Clear previous errors
+            errorsField.val("");
+
+            // Disable the submit button to prevent multiple clicks
+            nextButton.attr({disabled: true});
+
+            // Validate card payment form
+            // TODO: Show validation errors immetially without sending them back to the server.
+            var cardName = $('#id_card_name').val(),
+                cardNumber = $('#id_card_number').val(),
+                expiryMonth = $('#id_card_expiry_month').val(),
+                expiryYear = $('#id_card_expiry_year').val(),
+                cardCCV = $('#id_card_ccv').val(),
+                cardType = $('#checkout-form').find("input[type='radio'][name='card_type']:checked").val(),
+                calculatedType = '',
+                errors = {};
+            if (!cardType) {
+                cardType = "";
+            }
+            if (!cardName.trim()) {
+                errors.cardName = 'blank';
+            }
+            if (!cardNumber.trim()) {
+                errors.cardNumber = 'blank';
+                calculatedType = cardType.toLowerCase();
+            } else if ($.payform.validateCardNumber(cardNumber) === true) {
+                calculatedType = $.payform.parseCardType(cardNumber);
+            } else {
+                errors.cardNumber = 'invalid';
+                calculatedType = cardType.toLowerCase();
+            }
+            if ($.payform.validateCardExpiry(expiryMonth, expiryYear) !== true) {
+                errors.cardExpiry = 'invalid';
+            }
+            if (!cardCCV.trim()) {
+                errors.cardCCV = 'blank';
+            } else if ($.payform.validateCardCVC(cardCCV, calculatedType) !== true) {
+                errors.cardCCV = 'invalid';
+            }
+            if (!cardType) {
+                errors.cardType = 'blank';
+            } else if (calculatedType.toLowerCase() !== cardType.toLowerCase()) {
+                errors.cardType = 'invalid';
+            }
+
+
+            if ($.isEmptyObject(errors)) {
+                // Get a nonce for the card.toLowerCase()
+                client.tokenizeCard({
+                    number:  cardNumber,
+                    expirationMonth:  expiryMonth,
+                    expirationYear: expiryYear,
+                    cvv: cardCCV
+                }, function (err, nonce) {
+                    // Set the nonce and errors in the form
+                    $("#id_payment_method_nonce").val(nonce);
+
+                    if (err && ~err.toLowerCase().indexOf('unable to tokenize card')) {
+                        errors.tokenizeCard = 'failed';
+                        $("#id_braintree_errors").val(JSON.stringify(errors));
+                    }
+
+                    // Resubmit the form to the server
+                    // The card_number and card_ccv will not be submitted to the server,
+                    // as the form inputs have no 'name' attribute.
+                    // Instead the nonce and error messages are submitted to the server.
+                    form.get(0).submit();
+                });
+            } else {
+                $("#id_braintree_errors").val(JSON.stringify(errors));
+                // Re-enable the next button
+                nextButton.removeAttr('disabled');
+                form.get(0).submit();
+            }
+        });
+    });
+</script>
+
+{% if settings.BRAINTREE_PAYPAL_ACTIVATE %}
+<script type="text/javascript">
+    $(function() {
+        var form = $('form.checkout-form'),
+            nextButton = form.find(":submit[name='next']");
+
+        // Disable the next button and hide the card details fieldset.
+        nextButton.attr({disabled: true});
+        $("#card-details").addClass('hidden');
+
+        $("#card").click(function() {
+            // Show card details form, set payment method to card
+            // and re-enable the next button.
+            $("#card-details").removeClass('hidden');
+            $("#id_payment_method").val('card');
+            nextButton.removeAttr('disabled');
+        });
+
+        var checkout;
+
+        braintree.setup("{{ client_token }}", "custom", {
+          onReady: function (integration) {
+            checkout = integration;
+          },
+          onPaymentMethodReceived: function (payload) {
+            // Set the nonce in the form
+            $("#id_payment_method_nonce").val(payload.nonce);
+            form.get(0).submit();
+          },
+          paypal: {
+            singleUse: true,
+            amount: '{{ order_total }}',
+            currency: '{{ settings.BRAINTREE_PAYPAL_CURRENCY }}',
+            locale: '{{ LANGUAGE_CODE }}',
+            enableShippingAddress: false,
+            headless: true
+          }
+        });
+
+        $("#paypal").click(function(e) {
+            // 'PayPal' button was clicked.
+            e.preventDefault();
+            // Hide Card details form, set payment method to paypal
+            // and disable the next button.
+            $("#card-details").addClass('hidden');
+            $("#id_payment_method").val('paypal');
+            nextButton.attr({disabled: true});
+            // Invoke the paypal.initAuthFlow method
+            // returned from the onReady callback.
+            checkout.paypal.initAuthFlow();
+        });
+    });
+</script>
+{% endif %}
