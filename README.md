@@ -3,6 +3,11 @@ cartridge_braintree
 
 Braintree Payments processing for Mezzanine/Cartridge
 
+********************************************************************************************
+NOTE: This fork is no longer maintained as of January 2016 
+Please instead use https://github.com/henri-hulski/cartridge_braintree as the main reference.
+********************************************************************************************
+
 Note that this is very much a first pass and has not been thoroughly tested. 
 
 I have no intention of formally publishing this as a full PyPI package, but I'm happy for someone to take this initial code and expand it into a full package.
