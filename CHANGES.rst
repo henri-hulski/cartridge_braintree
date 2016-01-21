@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-1.0b2 (2016-01-21)
+1.0b3 (2016-01-21)
 ------------------
 
 This is an entire rewrite release of the whole app by Henri Hulski.
@@ -18,4 +18,4 @@ This is an entire rewrite release of the whole app by Henri Hulski.
 Initial release (2013-07-28)
 ----------------------------
 
-Initial release by molokov.
+Initial release by Danny Sag (molokov).

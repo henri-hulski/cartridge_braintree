@@ -1,5 +1,19 @@
 import io
+import sys
 from setuptools import setup, find_packages
+from shutil import rmtree
+
+if sys.argv[:2] == ["setup.py", "bdist_wheel"]:
+    # Remove previous build dir when creating a wheel build,
+    # since if files have been removed from the project,
+    # they'll still be cached in the build dir and end up
+    # as part of the build, which is really neat!
+    try:
+        rmtree("build")
+    except:
+        pass
+
+
 long_description = (
     io.open('README.rst', encoding='utf-8').read() +
     '\n' +
@@ -10,7 +24,7 @@ long_description = (
 
 setup(
     name='cartridge_braintree',
-    version='1.0b2',
+    version='1.0b3',
     description="Braintree Payments processing for Mezzanine/Cartridge",
     long_description=long_description,
     maintainer="Henri Hulski",
@@ -30,10 +44,11 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
         "Topic :: Internet :: WWW/HTTP",
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
         "Topic :: Internet :: WWW/HTTP :: WSGI",
