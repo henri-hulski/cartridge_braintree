@@ -81,7 +81,25 @@ Instructions for use
    See https://www.braintreepayments.com/docs/python/guide/getting_paid
    for Braintree's tutorial.
 
-6. If you want to use PayPal payments with Braintree activate them in
+6. Include ``cartridge_braintree.urls`` for ``shop/checkout`` in ``urls.py`` before Cartridge urls.
+
+   For Cartridge older then version 0.11::
+
+      # Cartridge URLs.
+      ("^shop/checkout/", include("cartridge_braintree.urls")),
+      ("^shop/", include("cartridge.shop.urls")),
+      url("^account/orders/$", "cartridge.shop.views.order_history",
+          name="shop_order_history"),
+
+   For Cartrige 0.11 and newer::
+
+      # Cartridge URLs.
+      url("^shop/checkout/", include("cartridge_braintree.urls")),
+      url("^shop/", include("cartridge.shop.urls")),
+      url("^account/orders/$", order_history, name="shop_order_history"),
+
+
+7. If you want to use PayPal payments with Braintree activate them in
    the Admin Site Settings and set the currency to use with PayPal.
 
    Alternatively you can set them in ``settings.py`` in the form::

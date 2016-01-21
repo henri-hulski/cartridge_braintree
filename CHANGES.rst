@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-1.0b3 (2016-01-21)
+1.0b4 (2016-01-21)
 ------------------
 
 This is an entire rewrite release of the whole app by Henri Hulski.
