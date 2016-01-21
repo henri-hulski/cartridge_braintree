@@ -11,3 +11,6 @@
 .DS_Store
 .coverage
 /static
+/build
+/*.egg-info
+/dist

@@ -1,0 +1,47 @@
+{% load i18n mezzanine_tags %}
+
+{% if settings.BRAINTREE_PAYPAL_ACTIVATE %}
+<fieldset id="payment-method">
+    <legend>{% trans "Payment Method" %}</legend>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-sm-offset-2 text-center">
+                <span id="card">
+                    <button type="button" class="btn btn-lg btn-primary hidden-xs">
+                        {% trans "Pay with Card" %}
+                    </button>
+                    <button type="button" class="btn btn-lg btn-primary btn-block visible-xs-block">
+                        {% trans "Pay with Card" %}
+                    </button>
+                </span>
+            </div>
+            <div class="col-sm-2"><br></div>
+            <div class="col-sm-3 text-center">
+                <span id="paypal">
+                    <button type="button" class="btn btn-lg btn-primary hidden-xs">
+                        {% trans "Pay with PayPal" %}
+                    </button>
+                    <button type="button" class="btn btn-lg btn-primary btn-block visible-xs-block">
+                        {% trans "Pay with PayPal" %}
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <br>
+</fieldset>
+{% endif %}
+
+<fieldset id="card-details">
+    <legend>{% trans "Payment Details" %}</legend>
+    {% fields_for form.card_name_field %}
+    {% fields_for form.card_type_field %}
+    {% with form.card_expiry_fields as card_expiry_fields %}
+    <div class="form-group card-expiry-fields{% if card_expiry_fields.errors.card_expiry_year %} error{% endif %}">
+        <label class="control-label">{% trans "Card Expiry" %}</label>
+        {% fields_for card_expiry_fields %}
+    </div>
+    <div class="clearfix"></div>
+    {% endwith %}
+    {% fields_for form.card_fields %}
+</fieldset>
