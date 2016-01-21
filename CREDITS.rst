@@ -1,7 +1,7 @@
 CREDITS
 =======
 
-* molokov: Initial author
+*  Danny Sag (molokov): Initial author
 
 *  Henri Hulski:
 

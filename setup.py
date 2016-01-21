@@ -15,7 +15,7 @@ setup(
     long_description=long_description,
     maintainer="Henri Hulski",
     maintainer_email="henri@openhomeo.info",
-    license="MIT",
+    license="BSD",
     url="https://github.com/henri-hulski/cartridge_braintree",
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -27,7 +27,7 @@ setup(
         "Environment :: Web Environment",
         "Framework :: Django",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.6",
