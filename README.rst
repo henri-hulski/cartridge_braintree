@@ -86,7 +86,7 @@ Instructions for use
    For Cartridge older then version 0.11::
 
       # Cartridge URLs.
-      ("^shop/checkout/", include("cartridge_braintree.urls")),
+      ("^shop/checkout", include("cartridge_braintree.urls")),
       ("^shop/", include("cartridge.shop.urls")),
       url("^account/orders/$", "cartridge.shop.views.order_history",
           name="shop_order_history"),
@@ -94,7 +94,7 @@ Instructions for use
    For Cartrige 0.11 and newer::
 
       # Cartridge URLs.
-      url("^shop/checkout/", include("cartridge_braintree.urls")),
+      url("^shop/checkout", include("cartridge_braintree.urls")),
       url("^shop/", include("cartridge.shop.urls")),
       url("^account/orders/$", order_history, name="shop_order_history"),
 

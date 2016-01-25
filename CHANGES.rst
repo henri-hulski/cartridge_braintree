@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.0b6 (2016-01-25)
+------------------
+
+- Upgrade to Cartridge 0.11.
+- Clean up the template directory.
+
 1.0b4 (2016-01-21)
 ------------------
 
