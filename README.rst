@@ -33,11 +33,7 @@ Instructions for use
    See also
    https://articles.braintreepayments.com/control-panel/important-gateway-credentials
 
-4. Set the order form to be the modified Braintree form (in ``settings.py``)::
-
-      SHOP_CHECKOUT_FORM_CLASS = 'cartridge_braintree.forms.BraintreeOrderForm'
-
-   This form does the following:
+4. cartridge_braintree uses a modified checkout form, which does the following:
 
    - Changes the shipping and billing country fields to a Select
      widget. This ensures that the country selected can be converted to
@@ -85,18 +81,30 @@ Instructions for use
 
    For Cartridge older then version 0.11::
 
-      # Cartridge URLs.
-      ("^shop/checkout", include("cartridge_braintree.urls")),
-      ("^shop/", include("cartridge.shop.urls")),
-      url("^account/orders/$", "cartridge.shop.views.order_history",
-          name="shop_order_history"),
+      _slash = "/" if settings.APPEND_SLASH else ""
+
+      urlpatterns += patterns('',
+
+          # cartridge_braintree URLs.
+          ("^shop/checkout%s" % _slash, include("cartridge_braintree.urls")),
+
+          # Cartridge URLs.
+          ("^shop/", include("cartridge.shop.urls")),
+          url("^account/orders/$", "cartridge.shop.views.order_history",
+              name="shop_order_history"),
 
    For Cartrige 0.11 and newer::
 
-      # Cartridge URLs.
-      url("^shop/checkout", include("cartridge_braintree.urls")),
-      url("^shop/", include("cartridge.shop.urls")),
-      url("^account/orders/$", order_history, name="shop_order_history"),
+      _slash = "/" if settings.APPEND_SLASH else ""
+
+      urlpatterns += [
+
+          # cartridge_braintree URLs.
+          url("^shop/checkout%s" % _slash, include("cartridge_braintree.urls")),
+
+          # Cartridge URLs.
+          url("^shop/", include("cartridge.shop.urls")),
+          url("^account/orders/$", order_history, name="shop_order_history"),
 
 
 7. If you want to use PayPal payments with Braintree activate them in
