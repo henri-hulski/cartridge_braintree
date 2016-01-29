@@ -46,7 +46,7 @@ register_setting(
 register_setting(
     name="BRAINTREE_PAYPAL_CURRENCY",
     label=_("Currency for PayPal payments"),
-    description=_("The currency Braintree PayPal is using for payments."),
+    description=_("The currency Braintree is using for PayPal payments."),
     editable=True,
     default="USD"
     # TODO: Add support for currency selection.

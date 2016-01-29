@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 22:01+0100\n"
-"PO-Revision-Date: 2016-01-19 22:10+0100\n"
-"Last-Translator: Henri Hulski <henri@openhomeo.info>\n"
+"POT-Creation-Date: 2016-01-28 14:34+0100\n"
+"PO-Revision-Date: 2016-01-28 14:37+0100\n"
+"Last-Translator: Henri Schumacher <henri.hulski@gazeta.pl>\n"
 "Language-Team: German (http://www.transifex.com/smileychris/django-countries/"
 "language/de/)\n"
 "Language: de\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: countries.py:15
 msgid "Afghanistan"
@@ -1025,9 +1025,6 @@ msgid "Zimbabwe"
 msgstr "Simbabwe"
 
 #: defaults.py:9
-#| msgid ""
-#| "Countries that show up at the top of the billing/shipping fields. A list "
-#| "of alpha2 codes."
 msgid ""
 "Countries that show up at the top of the country selection fields. A list of "
 "alpha2 codes."
@@ -1054,68 +1051,47 @@ msgid "Currency for PayPal payments"
 msgstr "Währung für PayPal Zahlungen"
 
 #: defaults.py:49
-msgid "The currency Braintree PayPal is using for payments."
-msgstr "Die Wāhrung, die Braintree PayPal für Zahlungen benutzt."
+msgid "The currency Braintree is using for PayPal payments."
+msgstr "Die Wāhrung, die Braintree für PayPal Zahlungen benutzt."
 
-#: forms.py:57 templates/shop/includes/payment_fields.html:5
+#: forms.py:56 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr "Zahlungsmethode"
 
-#: forms.py:58
+#: forms.py:57
 msgid "Payment Method Nonce"
 msgstr "Zahlungsmethode-Nonce"
 
-#: forms.py:59
+#: forms.py:58
 msgid "Braintree Errors"
 msgstr "Braintree Fehler"
 
-#: forms.py:104 forms.py:106 forms.py:112 forms.py:116
+#: forms.py:103 forms.py:105 forms.py:111 forms.py:115
 msgid "This field is required."
 msgstr "Dieses Feld ist zwingend erforderlich."
 
-#: forms.py:108
+#: forms.py:107
 msgid "A valid card number is required."
 msgstr "Eine gültige Kreditkartennummer ist erforderlich."
 
-#: forms.py:110
+#: forms.py:109
 msgid "A valid expiry date is required."
 msgstr "Ein gültiges Ablaufdatum ist erforderlich."
 
-#: forms.py:114
+#: forms.py:113
 msgid "A valid CCV is required."
 msgstr "Ein gültiger Sicherheitskode isterforderlich."
 
-#: forms.py:118
+#: forms.py:117
 msgid "The card type selected doesn't match your card number."
 msgstr ""
 "Der ausgewählte Kreditkartentyp entspricht nicht deiner Kreditkartennummer."
 
-#: forms.py:120 forms.py:126
+#: forms.py:119 forms.py:125
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 "Kreditkartennummer/Sicherheidskode konnte nicht verarbeitet wedern. Versuch "
 "es bitte nocheinmal."
-
-#: templates/shop/billing_shipping.html:17
-#, python-format
-msgid ""
-"\n"
-"If you have an existing account or would like to create one, please\n"
-"<a href=\"%(login_url)s?next=%(next)s\">log in</a> or\n"
-"<a href=\"%(signup_url)s?next=%(next)s\">sign up</a>.\n"
-msgstr ""
-"\n"
-"Wenn Sie bereits ein Benutzkonto haben oder eines erstellen möchten\n"
-"<a href=\"%(login_url)s?next=%(next)s\">anmelden</a> oder\n"
-"<a href=\"%(signup_url)s?next=%(next)s\">registrieren</a>.\n"
-
-#: templates/shop/billing_shipping.html:30 templates/shop/confirmation.html:10
-msgid "Billing Details"
-msgstr "Rechnungsanschrift"
-
-#: templates/shop/billing_shipping.html:35
-msgid "Delivery Details"
-msgstr "Lieferanschrift"
 
 #: templates/shop/checkout.html:4 templates/shop/checkout.html.py:5
 msgid "Checkout"
@@ -1129,7 +1105,7 @@ msgstr "Schritt"
 msgid "of"
 msgstr "von"
 
-#: templates/shop/checkout.html:25 templates/shop/complete.html:69
+#: templates/shop/checkout.html:25
 msgid "Complete"
 msgstr "Abgeschlossen"
 
@@ -1164,53 +1140,19 @@ msgstr "Weiter einkaufen"
 msgid "Edit Cart"
 msgstr "Warenkorb bearbeiten"
 
-#: templates/shop/complete.html:6 templates/shop/complete.html.py:63
-msgid "Order Complete"
-msgstr "Bestellung abgeschlossen"
-
-#: templates/shop/complete.html:74
-msgid "Thank you for shopping with us, your order is complete."
-msgstr ""
-"Vielen Dank für Ihren Einkauf bei uns. Ihre Bestellung ist abgeschlossen."
-
-#: templates/shop/complete.html:75
-msgid "We've sent you a receipt via email."
-msgstr "Wir haben Ihnen eine Bestätigung per E-Mail gesendet."
-
-#: templates/shop/complete.html:76
-msgid "You can also view your invoice using one of the links below."
-msgstr ""
-"Sie können Ihre Rechnung auch über einen der folgenden Verweise betrachten:"
-
-#: templates/shop/complete.html:81
-msgid "Download PDF invoice"
-msgstr "Rechnung als PDF-Datei herunterladen"
-
-#: templates/shop/complete.html:83
-msgid "View invoice in your browser"
-msgstr "Rechnung im Browser betrachten"
-
-#: templates/shop/complete.html:85
-msgid "Re-send order email"
-msgstr "E-Mail an Benutzer senden"
-
-#: templates/shop/confirmation.html:25
-msgid "Shipping Details"
-msgstr "Lieferanschrift"
-
 #: templates/shop/includes/braintreejs.html:36 templates/shop/payment.html:5
 msgid "Braintree API could not be created."
 msgstr "Braintree API konnte nicht erstellt werden."
 
 #: templates/shop/includes/payment_fields.html:11
 #: templates/shop/includes/payment_fields.html:14
-msgid "Pay with Card"
-msgstr "Bezahle mit Karte"
+msgid "Pay with PayPal"
+msgstr "Bezahle mit PayPal"
 
 #: templates/shop/includes/payment_fields.html:22
 #: templates/shop/includes/payment_fields.html:25
-msgid "Pay with PayPal"
-msgstr "Bezahle mit PayPal"
+msgid "Pay with Card"
+msgstr "Bezahle mit Karte"
 
 #: templates/shop/includes/payment_fields.html:36
 msgid "Payment Details"
@@ -1219,6 +1161,50 @@ msgstr "Zahlungsart"
 #: templates/shop/includes/payment_fields.html:41
 msgid "Card Expiry"
 msgstr "Ablaufdatum der Kreditkarte"
+
+#~ msgid ""
+#~ "\n"
+#~ "If you have an existing account or would like to create one, please\n"
+#~ "<a href=\"%(login_url)s?next=%(next)s\">log in</a> or\n"
+#~ "<a href=\"%(signup_url)s?next=%(next)s\">sign up</a>.\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Wenn Sie bereits ein Benutzkonto haben oder eines erstellen möchten\n"
+#~ "<a href=\"%(login_url)s?next=%(next)s\">anmelden</a> oder\n"
+#~ "<a href=\"%(signup_url)s?next=%(next)s\">registrieren</a>.\n"
+
+#~ msgid "Billing Details"
+#~ msgstr "Rechnungsanschrift"
+
+#~ msgid "Delivery Details"
+#~ msgstr "Lieferanschrift"
+
+#~ msgid "Order Complete"
+#~ msgstr "Bestellung abgeschlossen"
+
+#~ msgid "Thank you for shopping with us, your order is complete."
+#~ msgstr ""
+#~ "Vielen Dank für Ihren Einkauf bei uns. Ihre Bestellung ist abgeschlossen."
+
+#~ msgid "We've sent you a receipt via email."
+#~ msgstr "Wir haben Ihnen eine Bestätigung per E-Mail gesendet."
+
+#~ msgid "You can also view your invoice using one of the links below."
+#~ msgstr ""
+#~ "Sie können Ihre Rechnung auch über einen der folgenden Verweise "
+#~ "betrachten:"
+
+#~ msgid "Download PDF invoice"
+#~ msgstr "Rechnung als PDF-Datei herunterladen"
+
+#~ msgid "View invoice in your browser"
+#~ msgstr "Rechnung im Browser betrachten"
+
+#~ msgid "Re-send order email"
+#~ msgstr "E-Mail an Benutzer senden"
+
+#~ msgid "Shipping Details"
+#~ msgstr "Lieferanschrift"
 
 #~ msgid "Brunei"
 #~ msgstr "Brunei"

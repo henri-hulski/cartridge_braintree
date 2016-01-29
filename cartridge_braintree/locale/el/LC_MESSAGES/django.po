@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 22:01+0100\n"
+"POT-Creation-Date: 2016-01-28 14:34+0100\n"
 "PO-Revision-Date: 2015-08-23 15:11+0000\n"
 "Last-Translator: Γιάννης Ανθυμίδης <yannanth@gmail.com>\n"
 "Language-Team: Greek (http://www.transifex.com/smileychris/django-countries/"
@@ -1076,60 +1076,43 @@ msgid "Currency for PayPal payments"
 msgstr ""
 
 #: defaults.py:49
-msgid "The currency Braintree PayPal is using for payments."
+msgid "The currency Braintree is using for PayPal payments."
 msgstr ""
 
-#: forms.py:57 templates/shop/includes/payment_fields.html:5
+#: forms.py:56 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr ""
 
-#: forms.py:58
+#: forms.py:57
 msgid "Payment Method Nonce"
 msgstr ""
 
-#: forms.py:59
+#: forms.py:58
 msgid "Braintree Errors"
 msgstr ""
 
-#: forms.py:104 forms.py:106 forms.py:112 forms.py:116
+#: forms.py:103 forms.py:105 forms.py:111 forms.py:115
 msgid "This field is required."
 msgstr ""
 
-#: forms.py:108
+#: forms.py:107
 msgid "A valid card number is required."
 msgstr ""
 
-#: forms.py:110
+#: forms.py:109
 msgid "A valid expiry date is required."
 msgstr ""
 
-#: forms.py:114
+#: forms.py:113
 msgid "A valid CCV is required."
 msgstr ""
 
-#: forms.py:118
+#: forms.py:117
 msgid "The card type selected doesn't match your card number."
 msgstr ""
 
-#: forms.py:120 forms.py:126
+#: forms.py:119 forms.py:125
 msgid "Credit Card Number/CCV could not be processed. Please try again."
-msgstr ""
-
-#: templates/shop/billing_shipping.html:17
-#, python-format
-msgid ""
-"\n"
-"If you have an existing account or would like to create one, please\n"
-"<a href=\"%(login_url)s?next=%(next)s\">log in</a> or\n"
-"<a href=\"%(signup_url)s?next=%(next)s\">sign up</a>.\n"
-msgstr ""
-
-#: templates/shop/billing_shipping.html:30 templates/shop/confirmation.html:10
-msgid "Billing Details"
-msgstr ""
-
-#: templates/shop/billing_shipping.html:35
-msgid "Delivery Details"
 msgstr ""
 
 #: templates/shop/checkout.html:4 templates/shop/checkout.html.py:5
@@ -1144,7 +1127,7 @@ msgstr ""
 msgid "of"
 msgstr ""
 
-#: templates/shop/checkout.html:25 templates/shop/complete.html:69
+#: templates/shop/checkout.html:25
 msgid "Complete"
 msgstr ""
 
@@ -1177,50 +1160,18 @@ msgstr ""
 msgid "Edit Cart"
 msgstr ""
 
-#: templates/shop/complete.html:6 templates/shop/complete.html.py:63
-msgid "Order Complete"
-msgstr ""
-
-#: templates/shop/complete.html:74
-msgid "Thank you for shopping with us, your order is complete."
-msgstr ""
-
-#: templates/shop/complete.html:75
-msgid "We've sent you a receipt via email."
-msgstr ""
-
-#: templates/shop/complete.html:76
-msgid "You can also view your invoice using one of the links below."
-msgstr ""
-
-#: templates/shop/complete.html:81
-msgid "Download PDF invoice"
-msgstr ""
-
-#: templates/shop/complete.html:83
-msgid "View invoice in your browser"
-msgstr ""
-
-#: templates/shop/complete.html:85
-msgid "Re-send order email"
-msgstr ""
-
-#: templates/shop/confirmation.html:25
-msgid "Shipping Details"
-msgstr ""
-
 #: templates/shop/includes/braintreejs.html:36 templates/shop/payment.html:5
 msgid "Braintree API could not be created."
 msgstr ""
 
 #: templates/shop/includes/payment_fields.html:11
 #: templates/shop/includes/payment_fields.html:14
-msgid "Pay with Card"
+msgid "Pay with PayPal"
 msgstr ""
 
 #: templates/shop/includes/payment_fields.html:22
 #: templates/shop/includes/payment_fields.html:25
-msgid "Pay with PayPal"
+msgid "Pay with Card"
 msgstr ""
 
 #: templates/shop/includes/payment_fields.html:36
