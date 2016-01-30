@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-28 14:34+0100\n"
+"POT-Creation-Date: 2016-01-30 23:52+0100\n"
 "PO-Revision-Date: 2016-01-28 14:36+0100\n"
 "Last-Translator: Henri Schumacher <henri.hulski@gazeta.pl>\n"
 "Language-Team: French (http://www.transifex.com/smileychris/django-countries/"
@@ -1056,89 +1056,73 @@ msgstr "Devise pour les paiements par PayPal"
 msgid "The currency Braintree is using for PayPal payments."
 msgstr "La monnaie Braintree utilise pour les paiements par PayPal."
 
-#: forms.py:56 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:57 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr "Méthode de paiement"
 
-#: forms.py:57
+#: forms.py:58
 msgid "Payment Method Nonce"
 msgstr "Méthode de paiement nonce"
 
-#: forms.py:58
+#: forms.py:59
 msgid "Braintree Errors"
 msgstr "Erreurs de Braintree"
 
-#: forms.py:103 forms.py:105 forms.py:111 forms.py:115
+#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
 msgid "This field is required."
 msgstr "Ce champ est obligatoire."
 
-#: forms.py:107
+#: forms.py:116
 msgid "A valid card number is required."
 msgstr "Un numéro de carte valide est requise."
 
-#: forms.py:109
+#: forms.py:118
 msgid "A valid expiry date is required."
 msgstr "Une date d'expiration valide est requise."
 
-#: forms.py:113
+#: forms.py:122
 msgid "A valid CCV is required."
 msgstr "Un cryptograme valide est requise."
 
-#: forms.py:117
+#: forms.py:126
 msgid "The card type selected doesn't match your card number."
 msgstr ""
 "Le moyen de paiement choisi ne correspondent pas avec le numéro de carte."
 
-#: forms.py:119 forms.py:125
+#: forms.py:128 forms.py:134
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 "Numéro de carte/cryptograme n'a pas pu être traité. S'il vous plaît essayer "
 "à nouveau."
 
-#: templates/shop/checkout.html:4 templates/shop/checkout.html.py:5
-msgid "Checkout"
-msgstr "Commande"
-
-#: templates/shop/checkout.html:5
-msgid "Step"
-msgstr "Étape"
-
-#: templates/shop/checkout.html:5
-msgid "of"
-msgstr "de"
-
-#: templates/shop/checkout.html:25
-msgid "Complete"
-msgstr "Complétée"
-
-#: templates/shop/checkout.html:40
+#: templates/shop/checkout.html:16
 msgid "Next"
 msgstr "Poursuivre"
 
-#: templates/shop/checkout.html:42
+#: templates/shop/checkout.html:18
 msgid "Back"
 msgstr "Revenir"
 
-#: templates/shop/checkout.html:46
+#: templates/shop/checkout.html:22
 msgid "Your cart is empty."
 msgstr "Votre panier est vide."
 
-#: templates/shop/checkout.html:47
+#: templates/shop/checkout.html:23
 msgid ""
 "This may be due to your session timing out after a period of inactivity."
 msgstr ""
 "Ceci est peut être dû à votre session ayant expiré après une période "
 "d'inactivité."
 
-#: templates/shop/checkout.html:48
+#: templates/shop/checkout.html:24
 msgid "We apologize for the inconvenience."
 msgstr "Nous nous excusons pour le désagrément."
 
-#: templates/shop/checkout.html:50
+#: templates/shop/checkout.html:26
 msgid "Continue Shopping"
 msgstr " Revenir aux achats"
 
-#: templates/shop/checkout.html:75
+#: templates/shop/checkout.html:51
 msgid "Edit Cart"
 msgstr "Modifier le panier"
 
@@ -1163,6 +1147,18 @@ msgstr "Paiement"
 #: templates/shop/includes/payment_fields.html:41
 msgid "Card Expiry"
 msgstr "Date d'expiration"
+
+#~ msgid "Checkout"
+#~ msgstr "Commande"
+
+#~ msgid "Step"
+#~ msgstr "Étape"
+
+#~ msgid "of"
+#~ msgstr "de"
+
+#~ msgid "Complete"
+#~ msgstr "Complétée"
 
 #~ msgid ""
 #~ "\n"
