@@ -151,11 +151,13 @@ contains these changes.
         }
 
         // Show Card payment details when Django returned errors
-        if ($("#checkout-form.form-errors").length) {
+        if ($("#checkout-form .form-errors").length) {
             activateCardPayment();
         }
 
-        $("#card").click(activateCardPayment());
+        $("#card").click(function() {
+            activateCardPayment();
+        });
 
         var checkout;
 

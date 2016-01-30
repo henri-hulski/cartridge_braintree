@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-1.0b9 (2016-01-30)
+1.0b10 (2016-01-30)
 ------------------
 
 - Overextents templates instead of overwriting them.
