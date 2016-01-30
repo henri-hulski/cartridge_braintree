@@ -24,6 +24,7 @@ class NoNameTextInput(forms.TextInput):
         if attrs is None:
             attrs = {}
         attrs['autocomplete'] = 'off'
+        attrs['pattern'] = '[0-9]*'
         attrs['inputmode'] = 'numeric'
         final_attrs = self.build_attrs(attrs, type=self.input_type)
         # Remove the name from the attributes, as this is what this
@@ -82,11 +83,17 @@ class BraintreeOrderForm(OrderForm):
         # and remain blank when hitting the server.
         if not isinstance(self.fields["card_number"].widget, forms.HiddenInput):
             # Card number is not hidden
-            self.fields["card_number"].widget = NoNameTextInput()
+            attrs = {
+                'placeholder': '---- ---- ---- ----'
+            }
+            self.fields["card_number"].widget = NoNameTextInput(attrs=attrs)
             self.fields["card_number"].required = False
         if not isinstance(self.fields["card_ccv"].widget, forms.HiddenInput):
             # Card CCV is not hidden
-            self.fields["card_ccv"].widget = NoNameTextInput()
+            attrs = {
+                'placeholder': '---'
+            }
+            self.fields["card_ccv"].widget = NoNameTextInput(attrs=attrs)
             self.fields["card_ccv"].required = False
 
     def clean(self):
