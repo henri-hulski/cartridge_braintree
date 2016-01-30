@@ -1,7 +1,8 @@
 cartridge_braintree
 ===================
 
-Braintree Payments processing for Mezzanine/Cartridge
+Braintree Payments processing for Mezzanine/Cartridge.
+Supports Cartridge 0.11 and newer.
 
 Instructions for use
 --------------------
@@ -77,9 +78,8 @@ Instructions for use
    See https://www.braintreepayments.com/docs/python/guide/getting_paid
    for Braintree's tutorial.
 
-6. Include ``cartridge_braintree.urls`` for ``shop/checkout`` in ``urls.py`` before Cartridge urls.
-
-   For Cartrige 0.11 and newer::
+6. Include ``cartridge_braintree.urls`` for ``shop/checkout`` in ``urls.py``
+   before Cartridge urls and define the ``_slash`` variable::
 
       _slash = "/" if settings.APPEND_SLASH else ""
 
@@ -91,20 +91,6 @@ Instructions for use
           # Cartridge URLs.
           url("^shop/", include("cartridge.shop.urls")),
           url("^account/orders/$", order_history, name="shop_order_history"),
-
-   For Cartridge older then version 0.11::
-
-      _slash = "/" if settings.APPEND_SLASH else ""
-
-      urlpatterns += patterns('',
-
-          # cartridge_braintree URLs.
-          ("^shop/checkout%s" % _slash, include("cartridge_braintree.urls")),
-
-          # Cartridge URLs.
-          ("^shop/", include("cartridge.shop.urls")),
-          url("^account/orders/$", "cartridge.shop.views.order_history",
-              name="shop_order_history"),
 
 7. If you want to use PayPal payments with Braintree activate them in
    the Admin Site Settings and set the currency to use with PayPal.

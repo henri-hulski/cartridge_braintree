@@ -21,5 +21,7 @@ CREDITS
 *  Chris Beaven:
 
    The country selection is based on django-countries_.
+   Cartridge_braintree uses also the translations of country names
+   from django-countries.
    
    .. _django-countries: https://github.com/SmileyChris/django-countries

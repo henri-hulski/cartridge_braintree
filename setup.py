@@ -24,7 +24,7 @@ long_description = (
 
 setup(
     name='cartridge_braintree',
-    version='1.0b8',
+    version='1.0b9',
     description="Braintree Payments processing for Mezzanine/Cartridge",
     long_description=long_description,
     maintainer="Henri Hulski",
@@ -40,13 +40,14 @@ setup(
         "Development Status :: 4 - Beta",
         "Environment :: Web Environment",
         "Framework :: Django",
+        "Framework :: Django :: 1.8",
+        "Framework :: Django :: 1.9",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
         "Programming Language :: Python :: 3.5",
         "Topic :: Internet :: WWW/HTTP",
@@ -62,6 +63,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'braintree',
+        'cartridge >= 0.11',
     ],
     extras_require=dict(
         countries_utf8_sorting=['pyuca'],
