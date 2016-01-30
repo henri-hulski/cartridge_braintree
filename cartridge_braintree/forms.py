@@ -84,14 +84,16 @@ class BraintreeOrderForm(OrderForm):
         if not isinstance(self.fields["card_number"].widget, forms.HiddenInput):
             # Card number is not hidden
             attrs = {
-                'placeholder': '---- ---- ---- ----'
+                'placeholder': '0000 0000 0000 0000',
+                'size': '19',
             }
             self.fields["card_number"].widget = NoNameTextInput(attrs=attrs)
             self.fields["card_number"].required = False
         if not isinstance(self.fields["card_ccv"].widget, forms.HiddenInput):
             # Card CCV is not hidden
             attrs = {
-                'placeholder': '---'
+                'placeholder': '000',
+                'size': '4',
             }
             self.fields["card_ccv"].widget = NoNameTextInput(attrs=attrs)
             self.fields["card_ccv"].required = False
