@@ -24,6 +24,10 @@ class NoNameTextInput(forms.TextInput):
         if attrs is None:
             attrs = {}
         attrs['autocomplete'] = 'off'
+        # Triggers number keyboard on iPhone. Using together with
+        # 'novalidate' attribute for checkout form, which prevents
+        # html5 validation errors for spaces. Both can be removed,
+        # 'inputmode = numeric' will be considered by iPhone.
         attrs['pattern'] = '[0-9]*'
         attrs['inputmode'] = 'numeric'
         final_attrs = self.build_attrs(attrs, type=self.input_type)
@@ -84,16 +88,13 @@ class BraintreeOrderForm(OrderForm):
         if not isinstance(self.fields["card_number"].widget, forms.HiddenInput):
             # Card number is not hidden
             attrs = {
-                'placeholder': '0000 0000 0000 0000',
-                'size': '19',
-            }
+                'placeholder': '0000 0000 0000 0000',            }
             self.fields["card_number"].widget = NoNameTextInput(attrs=attrs)
             self.fields["card_number"].required = False
         if not isinstance(self.fields["card_ccv"].widget, forms.HiddenInput):
             # Card CCV is not hidden
             attrs = {
                 'placeholder': '000',
-                'size': '4',
             }
             self.fields["card_ccv"].widget = NoNameTextInput(attrs=attrs)
             self.fields["card_ccv"].required = False
