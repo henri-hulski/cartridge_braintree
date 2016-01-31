@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-30 23:52+0100\n"
-"PO-Revision-Date: 2016-01-30 23:56+0100\n"
-"Last-Translator: Henri Schumacher <henri.hulski@gazeta.pl>\n"
+"POT-Creation-Date: 2016-01-31 16:43+0100\n"
+"PO-Revision-Date: 2016-01-31 17:59+0100\n"
+"Last-Translator: Henri Hulski <henri@openhomeo.info>\n"
 "Language-Team: German (http://www.transifex.com/smileychris/django-countries/"
 "language/de/)\n"
 "Language: de\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: countries.py:15
 msgid "Afghanistan"
@@ -1054,40 +1054,40 @@ msgstr "Währung für PayPal Zahlungen"
 msgid "The currency Braintree is using for PayPal payments."
 msgstr "Die Wāhrung, die Braintree für PayPal Zahlungen benutzt."
 
-#: forms.py:57 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:61 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr "Zahlungsmethode"
 
-#: forms.py:58
+#: forms.py:62
 msgid "Payment Method Nonce"
 msgstr "Zahlungsmethode-Nonce"
 
-#: forms.py:59
+#: forms.py:63
 msgid "Braintree Errors"
 msgstr "Braintree Fehler"
 
-#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
+#: forms.py:113 forms.py:115 forms.py:121 forms.py:125
 msgid "This field is required."
 msgstr "Dieses Feld ist zwingend erforderlich."
 
-#: forms.py:116
+#: forms.py:117
 msgid "A valid card number is required."
 msgstr "Eine gültige Kreditkartennummer ist erforderlich."
 
-#: forms.py:118
+#: forms.py:119
 msgid "A valid expiry date is required."
 msgstr "Ein gültiges Ablaufdatum ist erforderlich."
 
-#: forms.py:122
+#: forms.py:123
 msgid "A valid CCV is required."
 msgstr "Ein gültiger Sicherheitskode isterforderlich."
 
-#: forms.py:126
+#: forms.py:127
 msgid "The card type selected doesn't match your card number."
 msgstr ""
 "Der ausgewählte Kreditkartentyp entspricht nicht deiner Kreditkartennummer."
 
-#: forms.py:128 forms.py:134
+#: forms.py:129 forms.py:135
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 "Kreditkartennummer/Sicherheidskode konnte nicht verarbeitet wedern. Versuch "
@@ -1133,140 +1133,19 @@ msgstr "Braintree API konnte nicht erstellt werden."
 msgid "Pay with PayPal"
 msgstr "Bezahle mit PayPal"
 
-#: templates/shop/includes/payment_fields.html:22
-#: templates/shop/includes/payment_fields.html:25
+#: templates/shop/includes/payment_fields.html:15
+msgid "Loading…"
+msgstr "Laden…"
+
+#: templates/shop/includes/payment_fields.html:23
+#: templates/shop/includes/payment_fields.html:26
 msgid "Pay with Card"
 msgstr "Bezahle mit Karte"
 
-#: templates/shop/includes/payment_fields.html:36
+#: templates/shop/includes/payment_fields.html:37
 msgid "Payment Details"
 msgstr "Zahlungsart"
 
-#: templates/shop/includes/payment_fields.html:41
+#: templates/shop/includes/payment_fields.html:42
 msgid "Card Expiry"
 msgstr "Ablaufdatum der Kreditkarte"
-
-#~ msgid "Checkout"
-#~ msgstr "Kasse"
-
-#~ msgid "Step"
-#~ msgstr "Schritt"
-
-#~ msgid "of"
-#~ msgstr "von"
-
-#~ msgid "Complete"
-#~ msgstr "Abgeschlossen"
-
-#~ msgid ""
-#~ "\n"
-#~ "If you have an existing account or would like to create one, please\n"
-#~ "<a href=\"%(login_url)s?next=%(next)s\">log in</a> or\n"
-#~ "<a href=\"%(signup_url)s?next=%(next)s\">sign up</a>.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Wenn Sie bereits ein Benutzkonto haben oder eines erstellen möchten\n"
-#~ "<a href=\"%(login_url)s?next=%(next)s\">anmelden</a> oder\n"
-#~ "<a href=\"%(signup_url)s?next=%(next)s\">registrieren</a>.\n"
-
-#~ msgid "Billing Details"
-#~ msgstr "Rechnungsanschrift"
-
-#~ msgid "Delivery Details"
-#~ msgstr "Lieferanschrift"
-
-#~ msgid "Order Complete"
-#~ msgstr "Bestellung abgeschlossen"
-
-#~ msgid "Thank you for shopping with us, your order is complete."
-#~ msgstr ""
-#~ "Vielen Dank für Ihren Einkauf bei uns. Ihre Bestellung ist abgeschlossen."
-
-#~ msgid "We've sent you a receipt via email."
-#~ msgstr "Wir haben Ihnen eine Bestätigung per E-Mail gesendet."
-
-#~ msgid "You can also view your invoice using one of the links below."
-#~ msgstr ""
-#~ "Sie können Ihre Rechnung auch über einen der folgenden Verweise "
-#~ "betrachten:"
-
-#~ msgid "Download PDF invoice"
-#~ msgstr "Rechnung als PDF-Datei herunterladen"
-
-#~ msgid "View invoice in your browser"
-#~ msgstr "Rechnung im Browser betrachten"
-
-#~ msgid "Re-send order email"
-#~ msgstr "E-Mail an Benutzer senden"
-
-#~ msgid "Shipping Details"
-#~ msgstr "Lieferanschrift"
-
-#~ msgid "Brunei"
-#~ msgstr "Brunei"
-
-#~ msgid "North Korea"
-#~ msgstr "Nordkorea"
-
-#~ msgid "South Korea"
-#~ msgstr "Südkorea"
-
-#~ msgid "Russia"
-#~ msgstr "Russland"
-
-#~ msgid "Bolivia (Plurinational State of)"
-#~ msgstr "Bolivien"
-
-#~ msgid "Congo (the Democratic Republic of the)"
-#~ msgstr "Kongo (Demokratische Republik)"
-
-#~ msgid "Congo"
-#~ msgstr "Kongo"
-
-#~ msgid "Falkland Islands  [Malvinas]"
-#~ msgstr "Falklandinseln [Malwinen]"
-
-#~ msgid "Holy See"
-#~ msgstr "Vatikanstadt"
-
-#~ msgid "Iran (Islamic Republic of)"
-#~ msgstr "Iran (Islamische Republik)"
-
-#~ msgid "Korea (the Democratic People's Republic of)"
-#~ msgstr "Kora (Demokratische Volksrepublik)"
-
-#~ msgid "Korea (the Republic of)"
-#~ msgstr "Korea (Republik)"
-
-#~ msgid "Lao People's Democratic Republic"
-#~ msgstr "Laos, Demokratische Volksrepublik"
-
-#~ msgid "Macedonia (the former Yugoslav Republic of)"
-#~ msgstr "Mazedonien"
-
-#~ msgid "Micronesia (Federated States of)"
-#~ msgstr "Mikronesien (Föderierte Staaten von)"
-
-#~ msgid "Moldova (the Republic of)"
-#~ msgstr "Moldawien (Republik)"
-
-#~ msgid "Saint Helena, Ascension and Tristan da Cunha"
-#~ msgstr "St. Helena, Ascension und Tristan da Cunha"
-
-#~ msgid "Syrian Arab Republic"
-#~ msgstr "Syrien, Arabische Republik"
-
-#~ msgid "Taiwan (Province of China)"
-#~ msgstr "Taiwan (Provinz Chinas)"
-
-#~ msgid "Tanzania, United Republic of"
-#~ msgstr "Tansania, Vereinigte Republik"
-
-#~ msgid "United Kingdom of Great Britain and Northern Ireland"
-#~ msgstr "Vereinigtes Königreich Großbritannien und Nordirland"
-
-#~ msgid "Venezuela (Bolivarian Republic of)"
-#~ msgstr "Venezuela (Bolivarische Republik)"
-
-#~ msgid "Viet Nam"
-#~ msgstr "Vietnam"

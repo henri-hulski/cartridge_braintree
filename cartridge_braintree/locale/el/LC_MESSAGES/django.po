@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-30 23:52+0100\n"
-"PO-Revision-Date: 2015-08-23 15:11+0000\n"
-"Last-Translator: Γιάννης Ανθυμίδης <yannanth@gmail.com>\n"
+"POT-Creation-Date: 2016-01-31 16:43+0100\n"
+"PO-Revision-Date: 2016-01-31 17:59+0100\n"
+"Last-Translator: Henri Hulski <henri@openhomeo.info>\n"
 "Language-Team: Greek (http://www.transifex.com/smileychris/django-countries/"
 "language/el/)\n"
 "Language: el\n"
@@ -18,16 +18,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: countries.py:15
 msgid "Afghanistan"
 msgstr "Αφγανιστάν"
 
 #: countries.py:16
-#, fuzzy
 #| msgid "Poland"
 msgid "Åland"
-msgstr "Πολωνία"
+msgstr "Νήσοι Ώλαντ"
 
 #: countries.py:17
 msgid "Albania"
@@ -182,7 +182,6 @@ msgid "Canada"
 msgstr "Καναδάς"
 
 #: countries.py:55
-#, fuzzy
 #| msgid "Cabo Verde"
 msgid "Cape Verde"
 msgstr "Πράσινο Ακρωτήριο"
@@ -308,10 +307,9 @@ msgid "Ethiopia"
 msgstr "Αιθιοπία"
 
 #: countries.py:86
-#, fuzzy
 #| msgid "Åland Islands"
 msgid "Falkland Islands"
-msgstr "Νήσοι Ώλαντ"
+msgstr ""
 
 #: countries.py:87
 msgid "Faroe Islands"
@@ -338,7 +336,6 @@ msgid "French Polynesia"
 msgstr "Γαλλική Πολυνησία"
 
 #: countries.py:93
-#, fuzzy
 #| msgid "French Southern Territories"
 msgid "French Southern Lands"
 msgstr "Γαλλικά Νότια Εδάφη"
@@ -412,7 +409,6 @@ msgid "Haiti"
 msgstr "Αϊτή"
 
 #: countries.py:111
-#, fuzzy
 #| msgid "Heard Island and McDonald Islands"
 msgid "Heard and McDonald Islands"
 msgstr "Νήσοι Χερντ και Μακντόναλντ"
@@ -546,7 +542,6 @@ msgid "Luxembourg"
 msgstr "Λουξεμβούργο"
 
 #: countries.py:144
-#, fuzzy
 #| msgid "Macao"
 msgid "Macau"
 msgstr "Μακάο"
@@ -604,7 +599,6 @@ msgid "Mexico"
 msgstr "Μεξικό"
 
 #: countries.py:158
-#, fuzzy
 #| msgid "Indonesia"
 msgid "Micronesia"
 msgstr "Ινδονησία"
@@ -658,10 +652,9 @@ msgid "Netherlands"
 msgstr "Κάτω Χώρες"
 
 #: countries.py:171
-#, fuzzy
 #| msgid "Netherlands"
 msgid "Netherlands Antilles"
-msgstr "Κάτω Χώρες"
+msgstr ""
 
 #: countries.py:172
 msgid "New Caledonia"
@@ -712,7 +705,6 @@ msgid "Palau"
 msgstr "Παλάου"
 
 #: countries.py:184
-#, fuzzy
 #| msgid "Palestine, State of"
 msgid "Palestine"
 msgstr "Παλαιστίνη, Πολιτεία της"
@@ -758,7 +750,6 @@ msgid "Qatar"
 msgstr "Κατάρ"
 
 #: countries.py:195
-#, fuzzy
 #| msgid "Réunion"
 msgid "Reunion"
 msgstr "Ρεϊνιόν"
@@ -780,10 +771,9 @@ msgid "Saint Barthélemy"
 msgstr "Άγιος Βαρθολομαίος"
 
 #: countries.py:200
-#, fuzzy
 #| msgid "Saint Lucia"
 msgid "Saint Helena"
-msgstr "Αγία Λουκία"
+msgstr ""
 
 #: countries.py:201
 msgid "Saint Kitts and Nevis"
@@ -866,7 +856,6 @@ msgid "South Africa"
 msgstr "Νότια Αφρική"
 
 #: countries.py:221
-#, fuzzy
 #| msgid "South Georgia and the South Sandwich Islands"
 msgid "South Georgia and South Sandwich Islands"
 msgstr "Νήσοι Νότια Γεωργία και Νότιες Σάντουιτς"
@@ -892,7 +881,6 @@ msgid "Suriname"
 msgstr "Σουρινάμ"
 
 #: countries.py:227
-#, fuzzy
 #| msgid "Svalbard and Jan Mayen"
 msgid "Svalbard and Jan Mayen Islands"
 msgstr "Νήσοι Σβάλμπαρντ και Γιαν Μαγιέν"
@@ -1018,19 +1006,16 @@ msgid "Vietnam"
 msgstr "Βιετνάμ"
 
 #: countries.py:258
-#, fuzzy
 #| msgid "Virgin Islands (British)"
 msgid "Virgin Islands, British"
 msgstr "Παρθένοι Νήσοι (Βρετανικές)"
 
 #: countries.py:259
-#, fuzzy
 #| msgid "Virgin Islands (U.S.)"
 msgid "Virgin Islands, U.S."
 msgstr "Παρθένες Νήσοι (Η.Π.Α.)"
 
 #: countries.py:260
-#, fuzzy
 #| msgid "Wallis and Futuna"
 msgid "Wallis and Futuna Islands"
 msgstr "Ουαλίς και Φουτουνά"
@@ -1079,39 +1064,39 @@ msgstr ""
 msgid "The currency Braintree is using for PayPal payments."
 msgstr ""
 
-#: forms.py:57 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:61 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr ""
 
-#: forms.py:58
+#: forms.py:62
 msgid "Payment Method Nonce"
 msgstr ""
 
-#: forms.py:59
+#: forms.py:63
 msgid "Braintree Errors"
 msgstr ""
 
-#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
+#: forms.py:113 forms.py:115 forms.py:121 forms.py:125
 msgid "This field is required."
 msgstr ""
 
-#: forms.py:116
+#: forms.py:117
 msgid "A valid card number is required."
 msgstr ""
 
-#: forms.py:118
+#: forms.py:119
 msgid "A valid expiry date is required."
 msgstr ""
 
-#: forms.py:122
+#: forms.py:123
 msgid "A valid CCV is required."
 msgstr ""
 
-#: forms.py:126
+#: forms.py:127
 msgid "The card type selected doesn't match your card number."
 msgstr ""
 
-#: forms.py:128 forms.py:134
+#: forms.py:129 forms.py:135
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 
@@ -1153,84 +1138,19 @@ msgstr ""
 msgid "Pay with PayPal"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:22
-#: templates/shop/includes/payment_fields.html:25
+#: templates/shop/includes/payment_fields.html:15
+msgid "Loading…"
+msgstr ""
+
+#: templates/shop/includes/payment_fields.html:23
+#: templates/shop/includes/payment_fields.html:26
 msgid "Pay with Card"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:36
+#: templates/shop/includes/payment_fields.html:37
 msgid "Payment Details"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:41
+#: templates/shop/includes/payment_fields.html:42
 msgid "Card Expiry"
 msgstr ""
-
-#~ msgid "Brunei"
-#~ msgstr "Μπρούνει"
-
-#~ msgid "North Korea"
-#~ msgstr "Βόρεια Κορέα"
-
-#~ msgid "South Korea"
-#~ msgstr "Νότια Κορέα"
-
-#~ msgid "Russia"
-#~ msgstr "Ρωσία"
-
-#~ msgid "Bolivia (Plurinational State of)"
-#~ msgstr "Βολιβία (Πολυεθνική Πολιτεία της)"
-
-#~ msgid "Congo (the Democratic Republic of the)"
-#~ msgstr "Κονγκό (Λαϊκή Δημοκρατία του)"
-
-#~ msgid "Congo"
-#~ msgstr "Κονγκό"
-
-#~ msgid "Falkland Islands  [Malvinas]"
-#~ msgstr "Νήσοι Φώκλαντ [Μαλβίνας]"
-
-#~ msgid "Holy See"
-#~ msgstr "Αγία Έδρα"
-
-#~ msgid "Iran (Islamic Republic of)"
-#~ msgstr "Ιράν (Ισλαμική Δημοκρατία του)"
-
-#~ msgid "Korea (the Democratic People's Republic of)"
-#~ msgstr "Κορέα (Λαοκρατική Δημοκρατία της)"
-
-#~ msgid "Korea (the Republic of)"
-#~ msgstr "Κορέα (Δημοκρατία της)"
-
-#~ msgid "Lao People's Democratic Republic"
-#~ msgstr "Λαική Δημοκρατία του Λάος"
-
-#~ msgid "Macedonia (the former Yugoslav Republic of)"
-#~ msgstr "Μακεδονία (πρώην Γιουγκοσλαβική Δημοκρατία της)"
-
-#~ msgid "Micronesia (Federated States of)"
-#~ msgstr "Μικρονησία (Ομόσπονδες Πολιτείες της)"
-
-#~ msgid "Moldova (the Republic of)"
-#~ msgstr "Μολδαβία (Δημοκρατία της)"
-
-#~ msgid "Saint Helena, Ascension and Tristan da Cunha"
-#~ msgstr "Αγία Ελένη, Ασενσιόν και Τριστάν ντα Κούνια"
-
-#~ msgid "Syrian Arab Republic"
-#~ msgstr "Αραβική Δημοκρατία της Συρίας"
-
-#~ msgid "Taiwan (Province of China)"
-#~ msgstr "Ταϊβάν (Περιοχή της Κίνας)"
-
-#~ msgid "Tanzania, United Republic of"
-#~ msgstr "Τανζανία, Ενωμένη Δημοκρατία της"
-
-#~ msgid "United Kingdom of Great Britain and Northern Ireland"
-#~ msgstr "Ηνωμένο Βασίλειο της Μεγάλης Βρετανίας και της Βορείου Ιρλανδίας"
-
-#~ msgid "Venezuela (Bolivarian Republic of)"
-#~ msgstr "Βενεζουέλα (Μπολιβαριανή Δημοκρατία της)"
-
-#~ msgid "Viet Nam"
-#~ msgstr "Βιετνάμ"

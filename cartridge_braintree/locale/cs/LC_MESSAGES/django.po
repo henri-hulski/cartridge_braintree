@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-30 23:52+0100\n"
-"PO-Revision-Date: 2015-07-15 04:39+0000\n"
-"Last-Translator: Chris Beaven <smileychris@gmail.com>\n"
+"POT-Creation-Date: 2016-01-31 16:43+0100\n"
+"PO-Revision-Date: 2016-01-31 18:01+0100\n"
+"Last-Translator: Henri Hulski <henri@openhomeo.info>\n"
 "Language-Team: Czech (http://www.transifex.com/smileychris/django-countries/"
 "language/cs/)\n"
 "Language: cs\n"
@@ -19,16 +19,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: countries.py:15
 msgid "Afghanistan"
 msgstr "Afghánistán"
 
 #: countries.py:16
-#, fuzzy
 #| msgid "Poland"
 msgid "Åland"
-msgstr "Polsko"
+msgstr "Alandy"
 
 #: countries.py:17
 msgid "Albania"
@@ -183,7 +183,6 @@ msgid "Canada"
 msgstr "Kanada"
 
 #: countries.py:55
-#, fuzzy
 #| msgid "Cabo Verde"
 msgid "Cape Verde"
 msgstr "Kapverdy"
@@ -309,10 +308,9 @@ msgid "Ethiopia"
 msgstr "Etiopie"
 
 #: countries.py:86
-#, fuzzy
 #| msgid "Åland Islands"
 msgid "Falkland Islands"
-msgstr "Alandy"
+msgstr ""
 
 #: countries.py:87
 msgid "Faroe Islands"
@@ -339,7 +337,6 @@ msgid "French Polynesia"
 msgstr "Francouzská Polynésie"
 
 #: countries.py:93
-#, fuzzy
 #| msgid "French Southern Territories"
 msgid "French Southern Lands"
 msgstr "Francouzská jižní a antarktická území"
@@ -413,7 +410,6 @@ msgid "Haiti"
 msgstr "Haiti"
 
 #: countries.py:111
-#, fuzzy
 #| msgid "Heard Island and McDonald Islands"
 msgid "Heard and McDonald Islands"
 msgstr "Heardův ostrov a McDonaldovy ostrovy"
@@ -547,7 +543,6 @@ msgid "Luxembourg"
 msgstr "Lucembursko"
 
 #: countries.py:144
-#, fuzzy
 #| msgid "Macao"
 msgid "Macau"
 msgstr "Macao"
@@ -605,7 +600,6 @@ msgid "Mexico"
 msgstr "Mexiko"
 
 #: countries.py:158
-#, fuzzy
 #| msgid "Indonesia"
 msgid "Micronesia"
 msgstr "Indonésie"
@@ -659,10 +653,9 @@ msgid "Netherlands"
 msgstr "Nizozemsko"
 
 #: countries.py:171
-#, fuzzy
 #| msgid "Netherlands"
 msgid "Netherlands Antilles"
-msgstr "Nizozemsko"
+msgstr ""
 
 #: countries.py:172
 msgid "New Caledonia"
@@ -713,7 +706,6 @@ msgid "Palau"
 msgstr "Palau"
 
 #: countries.py:184
-#, fuzzy
 #| msgid "Palestine, State of"
 msgid "Palestine"
 msgstr "Palestinské území (okupované)"
@@ -759,7 +751,6 @@ msgid "Qatar"
 msgstr "Katar"
 
 #: countries.py:195
-#, fuzzy
 #| msgid "Réunion"
 msgid "Reunion"
 msgstr "Réunion"
@@ -781,10 +772,9 @@ msgid "Saint Barthélemy"
 msgstr "Svatý Bartoloměj"
 
 #: countries.py:200
-#, fuzzy
 #| msgid "Saint Lucia"
 msgid "Saint Helena"
-msgstr "Svatá Lucie"
+msgstr "Svatá Helena"
 
 #: countries.py:201
 msgid "Saint Kitts and Nevis"
@@ -867,7 +857,6 @@ msgid "South Africa"
 msgstr "Jižní Afrika"
 
 #: countries.py:221
-#, fuzzy
 #| msgid "South Georgia and the South Sandwich Islands"
 msgid "South Georgia and South Sandwich Islands"
 msgstr "Jižní Georgie a Jižní Sandwichovy ostrovy"
@@ -893,7 +882,6 @@ msgid "Suriname"
 msgstr "Surinam"
 
 #: countries.py:227
-#, fuzzy
 #| msgid "Svalbard and Jan Mayen"
 msgid "Svalbard and Jan Mayen Islands"
 msgstr "Svalbard a Jan Mayen"
@@ -1019,19 +1007,16 @@ msgid "Vietnam"
 msgstr "Vietnam"
 
 #: countries.py:258
-#, fuzzy
 #| msgid "Virgin Islands (British)"
 msgid "Virgin Islands, British"
 msgstr "Britské Panenské ostrovy"
 
 #: countries.py:259
-#, fuzzy
 #| msgid "Virgin Islands (U.S.)"
 msgid "Virgin Islands, U.S."
 msgstr "Americké Panenské ostrovy"
 
 #: countries.py:260
-#, fuzzy
 #| msgid "Wallis and Futuna"
 msgid "Wallis and Futuna Islands"
 msgstr "Wallis a Futuna"
@@ -1080,39 +1065,39 @@ msgstr ""
 msgid "The currency Braintree is using for PayPal payments."
 msgstr ""
 
-#: forms.py:57 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:61 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr ""
 
-#: forms.py:58
+#: forms.py:62
 msgid "Payment Method Nonce"
 msgstr ""
 
-#: forms.py:59
+#: forms.py:63
 msgid "Braintree Errors"
 msgstr ""
 
-#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
+#: forms.py:113 forms.py:115 forms.py:121 forms.py:125
 msgid "This field is required."
 msgstr ""
 
-#: forms.py:116
+#: forms.py:117
 msgid "A valid card number is required."
 msgstr ""
 
-#: forms.py:118
+#: forms.py:119
 msgid "A valid expiry date is required."
 msgstr ""
 
-#: forms.py:122
+#: forms.py:123
 msgid "A valid CCV is required."
 msgstr ""
 
-#: forms.py:126
+#: forms.py:127
 msgid "The card type selected doesn't match your card number."
 msgstr ""
 
-#: forms.py:128 forms.py:134
+#: forms.py:129 forms.py:135
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 
@@ -1154,84 +1139,19 @@ msgstr ""
 msgid "Pay with PayPal"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:22
-#: templates/shop/includes/payment_fields.html:25
+#: templates/shop/includes/payment_fields.html:15
+msgid "Loading…"
+msgstr ""
+
+#: templates/shop/includes/payment_fields.html:23
+#: templates/shop/includes/payment_fields.html:26
 msgid "Pay with Card"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:36
+#: templates/shop/includes/payment_fields.html:37
 msgid "Payment Details"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:41
+#: templates/shop/includes/payment_fields.html:42
 msgid "Card Expiry"
 msgstr ""
-
-#~ msgid "Brunei"
-#~ msgstr "Brunej"
-
-#~ msgid "North Korea"
-#~ msgstr "Severní Korea"
-
-#~ msgid "South Korea"
-#~ msgstr "Jižní Korea"
-
-#~ msgid "Russia"
-#~ msgstr "Rusko"
-
-#~ msgid "Bolivia (Plurinational State of)"
-#~ msgstr "Mnohonárodní stát Bolívie"
-
-#~ msgid "Congo (the Democratic Republic of the)"
-#~ msgstr "Kongo, demokratická republika"
-
-#~ msgid "Congo"
-#~ msgstr "Kongo"
-
-#~ msgid "Falkland Islands  [Malvinas]"
-#~ msgstr "Falklandské ostrovy (Malvíny)"
-
-#~ msgid "Holy See"
-#~ msgstr "Vatikán"
-
-#~ msgid "Iran (Islamic Republic of)"
-#~ msgstr "Íránská islámská republika"
-
-#~ msgid "Korea (the Democratic People's Republic of)"
-#~ msgstr "Korea, lidově demokratická republika"
-
-#~ msgid "Korea (the Republic of)"
-#~ msgstr "Korejská republika"
-
-#~ msgid "Lao People's Democratic Republic"
-#~ msgstr "Laoská lidově demokratická republika"
-
-#~ msgid "Macedonia (the former Yugoslav Republic of)"
-#~ msgstr "Makedonie, bývalá jugoslávská republika"
-
-#~ msgid "Micronesia (Federated States of)"
-#~ msgstr "Mikronésie"
-
-#~ msgid "Moldova (the Republic of)"
-#~ msgstr "Moldavská republika"
-
-#~ msgid "Saint Helena, Ascension and Tristan da Cunha"
-#~ msgstr "Svatá Helena, Ascension a Tristan da Cunha"
-
-#~ msgid "Syrian Arab Republic"
-#~ msgstr "Syrská arabská republika"
-
-#~ msgid "Taiwan (Province of China)"
-#~ msgstr "Tchaj-wan (čínská provincie)"
-
-#~ msgid "Tanzania, United Republic of"
-#~ msgstr "Tanzanská sjednocená republika"
-
-#~ msgid "United Kingdom of Great Britain and Northern Ireland"
-#~ msgstr "Spojené království Velké Británie a Severního Irska"
-
-#~ msgid "Venezuela (Bolivarian Republic of)"
-#~ msgstr "Bolívarovská republika Venezuela"
-
-#~ msgid "Viet Nam"
-#~ msgstr "Vietnam"

@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-30 23:52+0100\n"
-"PO-Revision-Date: 2016-01-28 14:35+0100\n"
-"Last-Translator: Henri Schumacher <henri.hulski@gazeta.pl>\n"
+"POT-Creation-Date: 2016-01-31 16:43+0100\n"
+"PO-Revision-Date: 2016-01-31 17:40+0100\n"
+"Last-Translator: Henri Hulski <henri@openhomeo.info>\n"
 "Language-Team: Polish (http://www.transifex.com/smileychris/django-countries/"
 "language/pl/)\n"
 "Language: pl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: countries.py:15
 msgid "Afghanistan"
@@ -1055,39 +1055,39 @@ msgstr "Waluta płatności PayPal"
 msgid "The currency Braintree is using for PayPal payments."
 msgstr "Walutą w obsłudze płatności PayPal."
 
-#: forms.py:57 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:61 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr "Metoda płatności"
 
-#: forms.py:58
+#: forms.py:62
 msgid "Payment Method Nonce"
 msgstr "Metoda płatności nonce"
 
-#: forms.py:59
+#: forms.py:63
 msgid "Braintree Errors"
 msgstr "Błędy Braintree"
 
-#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
+#: forms.py:113 forms.py:115 forms.py:121 forms.py:125
 msgid "This field is required."
 msgstr "To pole jest wymagane."
 
-#: forms.py:116
+#: forms.py:117
 msgid "A valid card number is required."
 msgstr "Wymagana poprawny numer karty."
 
-#: forms.py:118
+#: forms.py:119
 msgid "A valid expiry date is required."
 msgstr "Wymagana ważna data ważności."
 
-#: forms.py:122
+#: forms.py:123
 msgid "A valid CCV is required."
 msgstr "Wymagana ważny CVV."
 
-#: forms.py:126
+#: forms.py:127
 msgid "The card type selected doesn't match your card number."
 msgstr "Typ karty nie pasuje wybrany numer karty."
 
-#: forms.py:128 forms.py:134
+#: forms.py:129 forms.py:135
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr "Numer karty/CVV nie może być przetwarzane. Proszę spróbuj ponownie."
 
@@ -1130,124 +1130,19 @@ msgstr "Braintree API nie może być utworzony."
 msgid "Pay with PayPal"
 msgstr "Zapłać przez PayPal"
 
-#: templates/shop/includes/payment_fields.html:22
-#: templates/shop/includes/payment_fields.html:25
+#: templates/shop/includes/payment_fields.html:15
+msgid "Loading…"
+msgstr "Ładuje…"
+
+#: templates/shop/includes/payment_fields.html:23
+#: templates/shop/includes/payment_fields.html:26
 msgid "Pay with Card"
 msgstr "Zapłać kartą"
 
-#: templates/shop/includes/payment_fields.html:36
+#: templates/shop/includes/payment_fields.html:37
 msgid "Payment Details"
 msgstr "Dane do płatności"
 
-#: templates/shop/includes/payment_fields.html:41
+#: templates/shop/includes/payment_fields.html:42
 msgid "Card Expiry"
 msgstr "Data ważności karty"
-
-#~ msgid "Checkout"
-#~ msgstr "Kasa"
-
-#~ msgid "Step"
-#~ msgstr "Krok"
-
-#~ msgid "of"
-#~ msgstr "z"
-
-#~ msgid "Complete"
-#~ msgstr "Zakończone"
-
-#~ msgid ""
-#~ "\n"
-#~ "If you have an existing account or would like to create one, please\n"
-#~ "<a href=\"%(login_url)s?next=%(next)s\">log in</a> or\n"
-#~ "<a href=\"%(signup_url)s?next=%(next)s\">sign up</a>.\n"
-#~ msgstr ""
-#~ "\n"
-#~ "Jeśli masz konto lub chciałbys je stworzyć, proszę\n"
-#~ "<a href=\"%(login_url)s?next=%(next)s\">log in</a> lub\n"
-#~ " <a href=\"%(signup_url)s?next=%(next)s\">sign up</a>.\n"
-#~ "\n"
-#~ "\n"
-#~ "\n"
-
-#~ msgid "Billing Details"
-#~ msgstr "Dane do fakturacji"
-
-#~ msgid "Delivery Details"
-#~ msgstr "Dane do wysyłki"
-
-#~ msgid "Order Complete"
-#~ msgstr "Zamówienie zakończone"
-
-#~ msgid "Thank you for shopping with us, your order is complete."
-#~ msgstr "Dziękujemy za zakupy u nas, Twoje zamówienie jest zakończone."
-
-#~ msgid "We've sent you a receipt via email."
-#~ msgstr "Wysłaliśmy Ci pokwitowanie drogą mailową."
-
-#~ msgid "You can also view your invoice using one of the links below."
-#~ msgstr ""
-#~ "Możesz również zobaczyć swoja fakturę klikając na jeden z poniższych "
-#~ "linków."
-
-#~ msgid "Download PDF invoice"
-#~ msgstr "Sciągnij fakturę w formacie PDF"
-
-#~ msgid "View invoice in your browser"
-#~ msgstr "Zobacz fakturę w swojej przeglądarce"
-
-#~ msgid "Re-send order email"
-#~ msgstr "Wyslij e-mail do użytkownika"
-
-#~ msgid "Shipping Details"
-#~ msgstr "Dane do wysyłki"
-
-#~ msgid "Brunei"
-#~ msgstr "Brunei"
-
-#~ msgid "North Korea"
-#~ msgstr "Korea Północna"
-
-#~ msgid "South Korea"
-#~ msgstr "Korea Południowa"
-
-#~ msgid "Russia"
-#~ msgstr "Rosja"
-
-#~ msgid "Congo (the Democratic Republic of the)"
-#~ msgstr "Kongo"
-
-#~ msgid "Congo"
-#~ msgstr "Kongo"
-
-#~ msgid "Falkland Islands  [Malvinas]"
-#~ msgstr "Falklandy"
-
-#~ msgid "Korea (the Democratic People's Republic of)"
-#~ msgstr "Korea Północna"
-
-#~ msgid "Korea (the Republic of)"
-#~ msgstr "Korea Południowa"
-
-#~ msgid "Lao People's Democratic Republic"
-#~ msgstr "Laos"
-
-#~ msgid "Macedonia (the former Yugoslav Republic of)"
-#~ msgstr "Macedonia"
-
-#~ msgid "Moldova (the Republic of)"
-#~ msgstr "Mołdawia"
-
-#~ msgid "Saint Helena, Ascension and Tristan da Cunha"
-#~ msgstr "Wyspa Świętej Heleny, Wyspa Wniebowstąpienia i Tristan da Cunha"
-
-#~ msgid "Syrian Arab Republic"
-#~ msgstr "Syria"
-
-#~ msgid "Taiwan (Province of China)"
-#~ msgstr "Tajwan"
-
-#~ msgid "Tanzania, United Republic of"
-#~ msgstr "Tanzania"
-
-#~ msgid "Viet Nam"
-#~ msgstr "Wietnam"
