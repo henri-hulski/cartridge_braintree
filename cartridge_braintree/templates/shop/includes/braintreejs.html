@@ -16,12 +16,12 @@ contains these changes.
 
 {% endcomment %}
 
-<script src="{% static "js/jquery.payform.min.js" %}"></script>
+<script src="{% static "cartridge_braintree/js/jquery.payform.min.js" %}"></script>
 <script type="text/javascript">
     $('#id_card_number').payform('formatCardNumber');
     $('#id_card_ccv').payform('formatCardCVC');
 </script>
-<script src="{% static "js/braintree.js" %}"></script>
+<script src="{% static "cartridge_braintree/js/braintree.js" %}"></script>
 <script type="text/javascript">
     $(function() {
         var client;
@@ -37,9 +37,10 @@ contains these changes.
             $("#no_braintree").removeClass('hidden');
         }
 
-        var form = $('form.checkout-form'),
+        var form = $("#checkout-form"),
             nextButton = form.find(":submit[name='next']"),
             backButton = form.find(":submit[name='back']"),
+            nonceField = $("#id_payment_method_nonce"),
             errorsField = $("#id_braintree_errors");
 
         backButton.click(function() {
@@ -109,11 +110,11 @@ contains these changes.
                     cvv: cardCCV
                 }, function (err, nonce) {
                     // Set the nonce and errors in the form
-                    $("#id_payment_method_nonce").val(nonce);
+                    nonceField.val(nonce);
 
                     if (err && ~err.toLowerCase().indexOf('unable to tokenize card')) {
                         errors.tokenizeCard = 'failed';
-                        $("#id_braintree_errors").val(JSON.stringify(errors));
+                        errorsField.val(JSON.stringify(errors));
                     }
 
                     // Resubmit the form to the server
@@ -123,7 +124,7 @@ contains these changes.
                     form.get(0).submit();
                 });
             } else {
-                $("#id_braintree_errors").val(JSON.stringify(errors));
+                errorsField.val(JSON.stringify(errors));
                 // Re-enable the next button
                 nextButton.removeAttr('disabled');
                 form.get(0).submit();
@@ -135,27 +136,35 @@ contains these changes.
 {% if settings.BRAINTREE_PAYPAL_ACTIVATE %}
 <script type="text/javascript">
     $(function() {
-        var form = $('form.checkout-form'),
-            nextButton = form.find(":submit[name='next']");
+        var form = $('#checkout-form'),
+            nextButton = form.find(":submit[name='next']"),
+            cardButton = $("#card"),
+            paypalButton = $("#paypal"),
+            spinner = $("#paypal-spinner"),
+            card = $("#card-details"),
+            payment = $("#id_payment_method"),
+            nonceField = $("#id_payment_method_nonce")
+            djangoReturnedErrors = form.find(".form-errors").length;
 
         // Disable the next button and hide the card details fieldset.
         nextButton.attr({disabled: true});
-        $("#card-details").addClass('hidden');
+        card.addClass('hidden');
 
         function activateCardPayment() {
             // Show card details form, set payment method to card
             // and re-enable the next button.
-            $("#card-details").removeClass('hidden');
-            $("#id_payment_method").val('card');
+            card.removeClass('hidden');
+            payment.val('card');
             nextButton.removeAttr('disabled');
         }
 
         // Show Card payment details when Django returned errors
-        if ($("#checkout-form .form-errors").length) {
+        if (djangoReturnedErrors) {
             activateCardPayment();
         }
 
-        $("#card").click(function() {
+        cardButton.click(function() {
+            spinner.hide('slow');
             activateCardPayment();
         });
 
@@ -165,10 +174,17 @@ contains these changes.
           onReady: function (integration) {
             checkout = integration;
           },
+          onCancelled: function () {
+            spinner.hide('slow');
+          },
+          onUnsupported: function () {
+            spinner.hide('slow');
+          },
           onPaymentMethodReceived: function (payload) {
             // Set the nonce in the form
-            $("#id_payment_method_nonce").val(payload.nonce);
+            nonceField.val(payload.nonce);
             form.get(0).submit();
+            spinner.hide('slow');
           },
           paypal: {
             singleUse: true,
@@ -180,14 +196,15 @@ contains these changes.
           }
         });
 
-        $("#paypal").click(function(e) {
+        paypalButton.click(function(e) {
             // 'PayPal' button was clicked.
             e.preventDefault();
             // Hide Card details form, set payment method to paypal
             // and disable the next button.
-            $("#card-details").addClass('hidden');
-            $("#id_payment_method").val('paypal');
+            card.addClass('hidden');
+            payment.val('paypal');
             nextButton.attr({disabled: true});
+            spinner.css('display', 'none').removeClass('hidden').show('slow');
             // Invoke the paypal.initAuthFlow method
             // returned from the onReady callback.
             checkout.paypal.initAuthFlow();
