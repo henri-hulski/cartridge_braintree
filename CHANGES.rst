@@ -1,10 +1,18 @@
 CHANGES
 =======
 
+1.0b11 (2016-02-01)
+------------------
+
+- Show spinner inside PayPal button during PayPal processing.
+- Move static content to subfolder.
+- Clean up translation files.
+- Minor fixes.
+
 1.0b10 (2016-01-30)
 ------------------
 
-- Overextents templates instead of overwriting them.
+- Overextents templates instead of overriding them.
 - Show Card payment form when Django returns errors.
 - Add placeholders for card number and CCV
   and trigger numeric keyboard on iPhone.

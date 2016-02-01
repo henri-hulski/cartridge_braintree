@@ -26,8 +26,7 @@ class NoNameTextInput(forms.TextInput):
         attrs['autocomplete'] = 'off'
         # Triggers number keyboard on iPhone. Using together with
         # 'novalidate' attribute for checkout form, which prevents
-        # html5 validation errors for spaces. Both can be removed,
-        # 'inputmode = numeric' will be considered by iPhone.
+        # html5 validation errors for spaces.
         attrs['pattern'] = '[0-9]*'
         attrs['inputmode'] = 'numeric'
         final_attrs = self.build_attrs(attrs, type=self.input_type)
