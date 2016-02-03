@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-31 16:43+0100\n"
+"POT-Creation-Date: 2016-02-03 11:12+0100\n"
 "PO-Revision-Date: 2016-01-31 17:52+0100\n"
 "Last-Translator: Henri Hulski <henri@openhomeo.info>\n"
 "Language-Team: Persian (http://www.transifex.com/smileychris/django-"
@@ -24,7 +24,6 @@ msgid "Afghanistan"
 msgstr "افغانستان"
 
 #: countries.py:16
-#| msgid "Poland"
 msgid "Åland"
 msgstr "جزایر الند"
 
@@ -305,7 +304,6 @@ msgid "Ethiopia"
 msgstr "اتیوپی"
 
 #: countries.py:86
-#| msgid "Åland Islands"
 msgid "Falkland Islands"
 msgstr ""
 
@@ -334,7 +332,6 @@ msgid "French Polynesia"
 msgstr "پلی‌نزی فرانسه"
 
 #: countries.py:93
-#| msgid "French Southern Territories"
 msgid "French Southern Lands"
 msgstr "سرزمین‌های جنوبی و جنوبگانی فرانسه"
 
@@ -407,7 +404,6 @@ msgid "Haiti"
 msgstr "هائیتی"
 
 #: countries.py:111
-#| msgid "Heard Island and McDonald Islands"
 msgid "Heard and McDonald Islands"
 msgstr "جزیره هرد و جزایر مک‌دونالد"
 
@@ -540,7 +536,6 @@ msgid "Luxembourg"
 msgstr "لوکزامبورگ"
 
 #: countries.py:144
-#| msgid "Macao"
 msgid "Macau"
 msgstr "ماکائو"
 
@@ -597,7 +592,6 @@ msgid "Mexico"
 msgstr "مکزیک"
 
 #: countries.py:158
-#| msgid "Indonesia"
 msgid "Micronesia"
 msgstr "اندونزی"
 
@@ -650,7 +644,6 @@ msgid "Netherlands"
 msgstr "هلند"
 
 #: countries.py:171
-#| msgid "Netherlands"
 msgid "Netherlands Antilles"
 msgstr ""
 
@@ -703,7 +696,6 @@ msgid "Palau"
 msgstr "پالائو"
 
 #: countries.py:184
-#| msgid "Palestine, State of"
 msgid "Palestine"
 msgstr "فلسطین"
 
@@ -748,7 +740,6 @@ msgid "Qatar"
 msgstr "قطر"
 
 #: countries.py:195
-#| msgid "Réunion"
 msgid "Reunion"
 msgstr "رئونیون"
 
@@ -769,7 +760,6 @@ msgid "Saint Barthélemy"
 msgstr "سن بارتلمی"
 
 #: countries.py:200
-#| msgid "Saint Lucia"
 msgid "Saint Helena"
 msgstr ""
 
@@ -854,7 +844,6 @@ msgid "South Africa"
 msgstr "آفریقای جنوبی"
 
 #: countries.py:221
-#| msgid "South Georgia and the South Sandwich Islands"
 msgid "South Georgia and South Sandwich Islands"
 msgstr "جزایر جورجیای جنوبی و ساندویچ جنوبی"
 
@@ -879,7 +868,6 @@ msgid "Suriname"
 msgstr "سورینام"
 
 #: countries.py:227
-#| msgid "Svalbard and Jan Mayen"
 msgid "Svalbard and Jan Mayen Islands"
 msgstr "سوالبارد و یان ماین"
 
@@ -1004,17 +992,14 @@ msgid "Vietnam"
 msgstr ""
 
 #: countries.py:258
-#| msgid "Virgin Islands (British)"
 msgid "Virgin Islands, British"
 msgstr "جزایر ویرجین بریتانیا"
 
 #: countries.py:259
-#| msgid "Virgin Islands (U.S.)"
 msgid "Virgin Islands, U.S."
 msgstr "جزایر ویرجین ایالات متحده"
 
 #: countries.py:260
-#| msgid "Wallis and Futuna"
 msgid "Wallis and Futuna Islands"
 msgstr "والیس و فوتونا"
 
@@ -1062,39 +1047,39 @@ msgstr ""
 msgid "The currency Braintree is using for PayPal payments."
 msgstr ""
 
-#: forms.py:61 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:60 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr ""
 
-#: forms.py:62
+#: forms.py:61
 msgid "Payment Method Nonce"
 msgstr ""
 
-#: forms.py:63
+#: forms.py:62
 msgid "Braintree Errors"
 msgstr ""
 
-#: forms.py:113 forms.py:115 forms.py:121 forms.py:125
+#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
 msgid "This field is required."
 msgstr ""
 
-#: forms.py:117
+#: forms.py:116
 msgid "A valid card number is required."
 msgstr ""
 
-#: forms.py:119
+#: forms.py:118
 msgid "A valid expiry date is required."
 msgstr ""
 
-#: forms.py:123
+#: forms.py:122
 msgid "A valid CCV is required."
 msgstr ""
 
-#: forms.py:127
+#: forms.py:126
 msgid "The card type selected doesn't match your card number."
 msgstr ""
 
-#: forms.py:129 forms.py:135
+#: forms.py:128 forms.py:134
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 
@@ -1136,19 +1121,15 @@ msgstr ""
 msgid "Pay with PayPal"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:15
-msgid "Loading…"
-msgstr ""
-
-#: templates/shop/includes/payment_fields.html:23
-#: templates/shop/includes/payment_fields.html:26
+#: templates/shop/includes/payment_fields.html:22
+#: templates/shop/includes/payment_fields.html:25
 msgid "Pay with Card"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:37
+#: templates/shop/includes/payment_fields.html:36
 msgid "Payment Details"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:42
+#: templates/shop/includes/payment_fields.html:41
 msgid "Card Expiry"
 msgstr ""

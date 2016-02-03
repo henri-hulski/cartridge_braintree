@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-31 16:43+0100\n"
-"PO-Revision-Date: 2016-01-31 17:40+0100\n"
-"Last-Translator: Henri Hulski <henri@openhomeo.info>\n"
+"POT-Creation-Date: 2016-02-03 11:12+0100\n"
+"PO-Revision-Date: 2016-02-03 11:15+0100\n"
+"Last-Translator: Henri Schumacher <henri.hulski@gazeta.pl>\n"
 "Language-Team: Polish (http://www.transifex.com/smileychris/django-countries/"
 "language/pl/)\n"
 "Language: pl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #: countries.py:15
 msgid "Afghanistan"
@@ -1055,39 +1055,39 @@ msgstr "Waluta płatności PayPal"
 msgid "The currency Braintree is using for PayPal payments."
 msgstr "Walutą w obsłudze płatności PayPal."
 
-#: forms.py:61 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:60 templates/shop/includes/payment_fields.html.py:5
 msgid "Payment Method"
 msgstr "Metoda płatności"
 
-#: forms.py:62
+#: forms.py:61
 msgid "Payment Method Nonce"
 msgstr "Metoda płatności nonce"
 
-#: forms.py:63
+#: forms.py:62
 msgid "Braintree Errors"
 msgstr "Błędy Braintree"
 
-#: forms.py:113 forms.py:115 forms.py:121 forms.py:125
+#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
 msgid "This field is required."
 msgstr "To pole jest wymagane."
 
-#: forms.py:117
+#: forms.py:116
 msgid "A valid card number is required."
 msgstr "Wymagana poprawny numer karty."
 
-#: forms.py:119
+#: forms.py:118
 msgid "A valid expiry date is required."
 msgstr "Wymagana ważna data ważności."
 
-#: forms.py:123
+#: forms.py:122
 msgid "A valid CCV is required."
 msgstr "Wymagana ważny CVV."
 
-#: forms.py:127
+#: forms.py:126
 msgid "The card type selected doesn't match your card number."
 msgstr "Typ karty nie pasuje wybrany numer karty."
 
-#: forms.py:129 forms.py:135
+#: forms.py:128 forms.py:134
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr "Numer karty/CVV nie może być przetwarzane. Proszę spróbuj ponownie."
 
@@ -1130,19 +1130,15 @@ msgstr "Braintree API nie może być utworzony."
 msgid "Pay with PayPal"
 msgstr "Zapłać przez PayPal"
 
-#: templates/shop/includes/payment_fields.html:15
-msgid "Loading…"
-msgstr "Ładuje…"
-
-#: templates/shop/includes/payment_fields.html:23
-#: templates/shop/includes/payment_fields.html:26
+#: templates/shop/includes/payment_fields.html:22
+#: templates/shop/includes/payment_fields.html:25
 msgid "Pay with Card"
 msgstr "Zapłać kartą"
 
-#: templates/shop/includes/payment_fields.html:37
+#: templates/shop/includes/payment_fields.html:36
 msgid "Payment Details"
 msgstr "Dane do płatności"
 
-#: templates/shop/includes/payment_fields.html:42
+#: templates/shop/includes/payment_fields.html:41
 msgid "Card Expiry"
 msgstr "Data ważności karty"

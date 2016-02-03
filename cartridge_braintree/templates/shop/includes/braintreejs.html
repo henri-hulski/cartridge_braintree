@@ -140,10 +140,9 @@ contains these changes.
             nextButton = form.find(":submit[name='next']"),
             cardButton = $("#card"),
             paypalButton = $("#paypal"),
-            spinner = $("#paypal-spinner"),
             card = $("#card-details"),
             payment = $("#id_payment_method"),
-            nonceField = $("#id_payment_method_nonce")
+            nonceField = $("#id_payment_method_nonce"),
             djangoReturnedErrors = form.find(".form-errors").length;
 
         // Disable the next button and hide the card details fieldset.
@@ -164,7 +163,6 @@ contains these changes.
         }
 
         cardButton.click(function() {
-            spinner.hide('slow');
             activateCardPayment();
         });
 
@@ -174,17 +172,10 @@ contains these changes.
           onReady: function (integration) {
             checkout = integration;
           },
-          onCancelled: function () {
-            spinner.hide('slow');
-          },
-          onUnsupported: function () {
-            spinner.hide('slow');
-          },
           onPaymentMethodReceived: function (payload) {
             // Set the nonce in the form
             nonceField.val(payload.nonce);
             form.get(0).submit();
-            spinner.hide('slow');
           },
           paypal: {
             singleUse: true,
@@ -204,7 +195,6 @@ contains these changes.
             card.addClass('hidden');
             payment.val('paypal');
             nextButton.attr({disabled: true});
-            spinner.css('display', 'none').removeClass('hidden').show('slow');
             // Invoke the paypal.initAuthFlow method
             // returned from the onReady callback.
             checkout.paypal.initAuthFlow();

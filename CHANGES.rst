@@ -1,13 +1,12 @@
 CHANGES
 =======
 
-1.0b11 (2016-02-01)
+1.0b13 (2016-02-03)
 ------------------
 
-- Show spinner inside PayPal button during PayPal processing.
 - Move static content to subfolder.
 - Clean up translation files.
-- Minor fixes.
+- Minor fixes and javascript optimizations.
 
 1.0b10 (2016-01-30)
 ------------------

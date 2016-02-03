@@ -1,4 +1,4 @@
-{% load i18n mezzanine_tags staticfiles %}
+{% load i18n mezzanine_tags %}
 
 {% if settings.BRAINTREE_PAYPAL_ACTIVATE %}
 <fieldset id="payment-method">
@@ -9,11 +9,9 @@
                 <span id="paypal">
                     <button type="button" class="btn btn-lg btn-primary hidden-xs">
                         {% trans "Pay with PayPal" %}
-                        <span id="paypal-spinner" class="hidden">&nbsp;<img src="{% static 'cartridge_braintree/img/spinner.gif' %}" alt="{% trans "Loading…" %}"></span>
                     </button>
                     <button type="button" class="btn btn-lg btn-primary btn-block visible-xs-block">
                         {% trans "Pay with PayPal" %}
-                        <span id="paypal-spinner" class="hidden">&nbsp;<img src="{% static 'cartridge_braintree/img/spinner.gif' %}" alt="{% trans "Loading…" %}"></span>
                     </button>
                 </span>
             </div>
