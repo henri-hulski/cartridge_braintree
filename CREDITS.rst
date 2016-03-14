@@ -11,12 +11,12 @@ CREDITS
    - Include PayPal payments.
    - Make it a full PyPI package.
 
-*  Jonathan D. Johnson:
+*  Stripe:
 
-   Cartridge_braintree is using the jQuery plugin from payform_
+   Cartridge_braintree is using `jquery.payment`_ from stripe
    for client-side credit card validation and number formatting.
    
-   .. _payform: https://github.com/jondavidjohn/payform
+   .. _jquery.payment: https://github.com/stripe/jquery.payment
 
 *  Chris Beaven:
 

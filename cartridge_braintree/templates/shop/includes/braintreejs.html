@@ -16,10 +16,10 @@ contains these changes.
 
 {% endcomment %}
 
-<script src="{% static "cartridge_braintree/js/jquery.payform.min.js" %}"></script>
+<script src="{% static "cartridge_braintree/js/jquery.payment.js" %}"></script>
 <script type="text/javascript">
-    $('#id_card_number').payform('formatCardNumber');
-    $('#id_card_ccv').payform('formatCardCVC');
+    $('#id_card_number').payment('formatCardNumber');
+    $('#id_card_ccv').payment('formatCardCVC');
 </script>
 <script src="{% static "cartridge_braintree/js/braintree.js" %}"></script>
 <script type="text/javascript">
@@ -80,18 +80,18 @@ contains these changes.
             if (!cardNumber.trim()) {
                 errors.cardNumber = 'blank';
                 calculatedType = cardType.toLowerCase();
-            } else if ($.payform.validateCardNumber(cardNumber) === true) {
-                calculatedType = $.payform.parseCardType(cardNumber);
+            } else if ($.payment.validateCardNumber(cardNumber) === true) {
+                calculatedType = $.payment.cardType(cardNumber);
             } else {
                 errors.cardNumber = 'invalid';
                 calculatedType = cardType.toLowerCase();
             }
-            if ($.payform.validateCardExpiry(expiryMonth, expiryYear) !== true) {
+            if ($.payment.validateCardExpiry(expiryMonth, expiryYear) !== true) {
                 errors.cardExpiry = 'invalid';
             }
             if (!cardCCV.trim()) {
                 errors.cardCCV = 'blank';
-            } else if ($.payform.validateCardCVC(cardCCV, calculatedType) !== true) {
+            } else if ($.payment.validateCardCVC(cardCCV, calculatedType) !== true) {
                 errors.cardCCV = 'invalid';
             }
             if (!cardType) {
@@ -141,7 +141,7 @@ contains these changes.
             cardButton = $("#card"),
             paypalButton = $("#paypal"),
             card = $("#card-details"),
-            payment = $("#id_payment_method"),
+            paymentMethod = $("#id_payment_method"),
             nonceField = $("#id_payment_method_nonce"),
             djangoReturnedErrors = form.find(".form-errors").length;
 
@@ -153,7 +153,7 @@ contains these changes.
             // Show card details form, set payment method to card
             // and re-enable the next button.
             card.removeClass('hidden');
-            payment.val('card');
+            paymentMethod.val('card');
             nextButton.removeAttr('disabled');
         }
 
@@ -193,7 +193,7 @@ contains these changes.
             // Hide Card details form, set payment method to paypal
             // and disable the next button.
             card.addClass('hidden');
-            payment.val('paypal');
+            paymentMethod.val('paypal');
             nextButton.attr({disabled: true});
             // Invoke the paypal.initAuthFlow method
             // returned from the onReady callback.

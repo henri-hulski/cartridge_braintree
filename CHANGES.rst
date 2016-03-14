@@ -1,15 +1,23 @@
 CHANGES
 =======
 
+1.0b14 (2016-03-14)
+-------------------
+
+- Replace the payform jQuery plugin with
+  `jquery.payment <https://github.com/stripe/jquery.payment>`_
+  from stripe.
+  This fixes some bugs with card number and CCV formatting.
+
 1.0b13 (2016-02-03)
-------------------
+-------------------
 
 - Move static content to subfolder.
 - Clean up translation files.
 - Minor fixes and javascript optimizations.
 
 1.0b10 (2016-01-30)
-------------------
+-------------------
 
 - Overextents templates instead of overriding them.
 - Show Card payment form when Django returns errors.

@@ -61,9 +61,9 @@ Instructions for use
      ``payment_method_nonce``, which is then stored in a hidden form
      element.
 
-   - Uses `payform <https://github.com/jondavidjohn/payform>`_ for client-side
-     validation of the payment form and submits the errors in the hidden
-     ``braintree_errors`` field to the server to handle them as Django errors.
+   - Uses `jquery.payment <https://github.com/stripe/jquery.payment>`_ from stripe
+     for client-side validation of the payment form and submits the errors in the
+     hidden ``braintree_errors`` field to the server to handle them as Django errors.
 
    See
    https://developers.braintreepayments.com/guides/transactions/python

@@ -51,8 +51,9 @@ class BraintreeOrderForm(OrderForm):
       NoNameTextInput widget so that the data is not submitted to the server.
       Javascript processes these fields to create a payment_method_nonce,
       which is then stored in a hidden form element.
-    - Using payform for client-side validation of the payment form and submit the errors
-      in the hidden braintree_errors field to the server to handle them as Django errors.
+    - Using jquery.payment from stripe for client-side validation of the payment
+      form and submit the errors in the hidden braintree_errors field to the server
+      to handle them as Django errors.
 
       See https://developers.braintreepayments.com/guides/transactions/python
     """
