@@ -16,13 +16,10 @@ contains these changes.
 
 {% endcomment %}
 
-<script src="{% static "cartridge_braintree/js/payform.min.js" %}"></script>
+<script src="{% static "cartridge_braintree/js/jquery.payform.min.js" %}"></script>
 <script type="text/javascript">
-  // Format input for card number entry and
-  var card_number_input = document.getElementById('id_card_number');
-  payform.cardNumberInput(card_number_input);
-  var ccv_input = document.getElementById('id_card_ccv');
-  payform.cvcInput(ccv_input);
+    $('#id_card_number').payform('formatCardNumber');
+    $('#id_card_ccv').payform('formatCardCVC');
 </script>
 <script src="{% static "cartridge_braintree/js/braintree.js" %}"></script>
 <script type="text/javascript">
@@ -83,18 +80,18 @@ contains these changes.
             if (!cardNumber.trim()) {
                 errors.cardNumber = 'blank';
                 calculatedType = cardType.toLowerCase();
-            } else if (payform.validateCardNumber(cardNumber) === true) {
-                calculatedType = payform.parseCardType(cardNumber);
+            } else if ($.payform.validateCardNumber(cardNumber) === true) {
+                calculatedType = $.payform.parseCardType(cardNumber);
             } else {
                 errors.cardNumber = 'invalid';
                 calculatedType = cardType.toLowerCase();
             }
-            if (payform.validateCardExpiry(expiryMonth, expiryYear) !== true) {
+            if ($.payform.validateCardExpiry(expiryMonth, expiryYear) !== true) {
                 errors.cardExpiry = 'invalid';
             }
             if (!cardCCV.trim()) {
                 errors.cardCCV = 'blank';
-            } else if (payform.validateCardCVC(cardCCV, calculatedType) !== true) {
+            } else if ($.payform.validateCardCVC(cardCCV, calculatedType) !== true) {
                 errors.cardCCV = 'invalid';
             }
             if (!cardType) {

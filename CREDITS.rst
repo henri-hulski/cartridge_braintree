@@ -13,7 +13,7 @@ CREDITS
 
 *  Jonathan D. Johnson:
 
-   Cartridge_braintree is using payform_
+   Cartridge_braintree is using the jQuery plugin from payform_
    for client-side credit card validation and number formatting.
    
    .. _payform: https://github.com/jondavidjohn/payform
