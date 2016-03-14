@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+1.0b14 (2016-03-12)
+------------------
+
+- Use Payform directly without the jquery plugin.
+  This fixes a bug where the cursor jumps before the input
+  in the Card number and CCV fields.
+
 1.0b13 (2016-02-03)
 ------------------
 
