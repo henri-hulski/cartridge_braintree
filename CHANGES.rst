@@ -9,6 +9,21 @@ CHANGES
   from stripe.
   This fixes some bugs with card number and CCV formatting.
 
+1.0b15 (2016-04-16)
+-------------------
+
+- Fix documentation bug.
+  It should be ``BRAINTREE_MERCHANT_ID`` not ``BRAINTREE_MERCHANT``
+  in ``settings.py``.
+
+1.0b14 (2016-03-14)
+-------------------
+
+- Replace the payform jQuery plugin with
+  `jquery.payment <https://github.com/stripe/jquery.payment>`_
+  from stripe.
+  This fixes some bugs with card number and CCV formatting.
+
 1.0b13 (2016-02-03)
 -------------------
 

@@ -10,11 +10,11 @@ Instructions for use
 1. Install cartridge_braintree::
 
       pip install cartridge_braintree
-    
+
    If you need the correct sorting of not ASCII country names use::
-    
+
       pip install cartridge_braintree[countries_utf8_sorting]
-        
+
    This will add 'pyuca' to the requirements.
 
 2. Add 'cartridge_braintree' to your ``INSTALLED_APPS``. List it higher than
@@ -23,11 +23,11 @@ Instructions for use
 
 3. Set up the following settings in your ``settings.py`` or ``local_settings.py``::
 
-      BRAINTREE_MERCHANT = <your merchant ID>
+      BRAINTREE_MERCHANT_ID = <your merchant ID>
       BRAINTREE_PUBLIC_KEY = <your public key>
       BRAINTREE_PRIVATE_KEY = <your private key>
 
-   .. Note:: 
+   .. Note::
       When ``DEBUG`` is ``True`` the *Braintree Sandbox environment* will be
       used, otherwise the *Braintree Production environment* is used.
 
