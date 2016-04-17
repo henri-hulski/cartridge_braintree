@@ -1,15 +1,7 @@
 CHANGES
 =======
 
-1.0b14 (2016-03-14)
--------------------
-
-- Replace the payform jQuery plugin with
-  `jquery.payment <https://github.com/stripe/jquery.payment>`_
-  from stripe.
-  This fixes some bugs with card number and CCV formatting.
-
-1.0b15 (2016-04-16)
+1.0b16 (2016-04-17)
 -------------------
 
 - Fix documentation bug.
