@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+1.0b17 (2016-04-17)
+-------------------
+
+- Upgrade jquery.payment.js to v1.3.3. [ryneeverett]
+
+1.0b16 (2016-04-17)
+-------------------
+
+- Fix documentation bug.
+  It should be ``BRAINTREE_MERCHANT_ID`` not ``BRAINTREE_MERCHANT``
+  in ``settings.py``.
+
 1.0b16 (2016-04-17)
 -------------------
 
