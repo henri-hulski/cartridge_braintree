@@ -16,10 +16,8 @@ if sys.argv[:2] == ["setup.py", "bdist_wheel"]:
 
 long_description = (
     io.open('README.rst', encoding='utf-8').read() +
-    '\n' +
-    io.open('CHANGES.rst', encoding='utf-8').read() +
-    '\n' +
-    io.open('CREDITS.rst', encoding='utf-8').read()
+    '\n\n' +
+    io.open('CHANGES.rst', encoding='utf-8').read()
 )
 
 setup(
