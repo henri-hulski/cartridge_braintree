@@ -79,14 +79,12 @@ Instructions for use
    for Braintree's tutorial.
 
 6. Include ``cartridge_braintree.urls`` for ``shop/checkout`` in ``urls.py``
-   before Cartridge urls and define the ``_slash`` variable::
-
-      _slash = "/" if settings.APPEND_SLASH else ""
+   before Cartridge urls::
 
       urlpatterns += [
 
           # cartridge_braintree URLs.
-          url("^shop/checkout%s" % _slash, include("cartridge_braintree.urls")),
+          url("^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),
 
           # Cartridge URLs.
           url("^shop/", include("cartridge.shop.urls")),
