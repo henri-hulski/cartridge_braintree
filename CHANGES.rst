@@ -1,6 +1,10 @@
 CHANGES
 =======
 
+- **Breaking change**: Simplify urls setup.
+  In ``urls.py``, change cartridge_braintree urls to
+  ``url("^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),``.
+
 1.0b17 (2016-04-17)
 -------------------
 
