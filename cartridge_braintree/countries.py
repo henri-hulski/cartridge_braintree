@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 # This module defines the dictionary of countries (ISO-3166) supported by
 # Braintree, with Alpha2 codes as keys and translatable country names as values
 
-# Data originally copied from 
+# Data originally copied from
 # https://developers.braintreepayments.com/reference/general/countries/python
 # on 25 November 2015
 

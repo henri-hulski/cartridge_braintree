@@ -11,11 +11,13 @@ CREDITS
    - Include PayPal payments.
    - Make it a full PyPI package.
 
+* ryneeverett
+
 *  Stripe:
 
    Cartridge_braintree is using `jquery.payment`_ from stripe
    for client-side credit card validation and number formatting.
-   
+
    .. _jquery.payment: https://github.com/stripe/jquery.payment
 
 *  Chris Beaven:
@@ -23,5 +25,5 @@ CREDITS
    The country selection is based on django-countries_.
    Cartridge_braintree uses also the translations of country names
    from django-countries.
-   
+
    .. _django-countries: https://github.com/SmileyChris/django-countries

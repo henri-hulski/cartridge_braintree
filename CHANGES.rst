@@ -1,9 +1,18 @@
 CHANGES
 =======
 
-- **Breaking change**: Simplify urls setup.
-  In ``urls.py``, change cartridge_braintree urls to
-  ``url("^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),``.
+1.0.0 (2016-07-08)
+-------------------
+
+- **Breaking change**: Simplify urls setup. [ryneeverett]
+  When upgrading, change cartridge_braintree urls to
+  ``url("^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),``
+   in ``urls.py``.
+- Make it a stable release version as it's already well tested.
+- Introduce `semantic versioning`_.
+- Use zest.releaser for release.
+
+.. _semantic versioning: http://semver.org
 
 1.0b17 (2016-04-17)
 -------------------
