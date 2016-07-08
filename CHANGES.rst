@@ -2,7 +2,7 @@ CHANGES
 =======
 
 1.0.0 (2016-07-08)
--------------------
+------------------
 
 - **Breaking change**: Simplify urls setup. [ryneeverett]
   When upgrading, change cartridge_braintree urls to
