@@ -11,9 +11,11 @@ CHANGES
 ------------------
 
 - **Breaking change**: Simplify urls setup. [ryneeverett]
-  When upgrading, change cartridge_braintree urls to
-  ``url("^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),``
-   in ``urls.py``.
+
+  When upgrading to 1.0.0 change cartridge_braintree urls in ``urls.py`` to::
+
+     url("^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),
+
 - Make it a stable release version as it's already well tested.
 - Introduce `semantic versioning`_.
 - Use zest.releaser for release.
