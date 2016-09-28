@@ -99,3 +99,34 @@ Instructions for use
       BRAINTREE_PAYPAL_CURRENCY = "EUR"
 
    In this case the settings will not be shown in the Admin.
+
+8. Optionally add logging to your Django configuration if you want to have more details
+   on transactions::
+
+     LOGGING = {
+         'version': 1,
+         'disable_existing_loggers': False,
+         'handlers': {
+             'braintree_file': {
+                 'class': 'logging.FileHandler',
+                 'filename': '/path/to/django/braintree.log',
+             },
+         },
+         'loggers': {
+             'braintree_payment': {
+                 'handlers': ['braintree_file'],
+                 'level': 'DEBUG',
+             },
+         },
+     }
+
+   See https://docs.djangoproject.com/en/1.10/topics/logging/#configuring-logging for all
+   configuration options
+
+   Log levels are as follows:
+    - Client token creation: info
+    - Transaction start: debug
+    - Transaction complete: debug
+    - Transaction fail: warning
+
+   Confidential information is never output to the logger.
