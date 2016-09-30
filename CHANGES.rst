@@ -4,7 +4,7 @@ CHANGES
 1.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add logging to payment process
 
 
 1.0.0 (2016-07-08)

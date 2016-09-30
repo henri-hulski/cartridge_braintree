@@ -1,9 +1,13 @@
 from __future__ import unicode_literals
 from future.builtins import str
+import logging
+
 from django.core.exceptions import ImproperlyConfigured
 from mezzanine.conf import settings
 
 from cartridge.shop.checkout import CheckoutError
+
+logger = logging.getLogger('braintree_payment')
 
 # Requires Braintree package -- install from pypi: pip install braintree.
 try:
@@ -46,8 +50,9 @@ def client_token():
     # verify that braintree has been configured, if not, call configure()
     if not BRAINTREE_IS_CONFIGURED:
         configure()
-
-    return braintree.ClientToken.generate()
+    token = braintree.ClientToken.generate()
+    logger.info("Generated Braintree client token '%s...%s'" % (token[:5], token[-5:]))
+    return token
 
 
 def payment_handler(request, order_form, order):
@@ -102,9 +107,16 @@ def payment_handler(request, order_form, order):
         }
     }
 
-    # Send transaction to braintree
+    logger.debug("Sending order %s to Braintree ..." % order.id)
     result = braintree.Transaction.sale(trans)
     if result.is_success:
-        return result.transaction.id
+        transaction_id = result.transaction.id
+        logger.debug("Transaction completed with Braintree ID: %s" % transaction_id)
+        return transaction_id
     else:
+        all_errors = ""
+        for error in result.errors.deep_errors:
+            all_errors += " [code: %s, attribute: %s, '%s']" % (error.code, error.attribute, error.message)
+        logger.error("Order %s failed with%s" % (order.id, all_errors))
+
         raise CheckoutError("Credit Card error: " + result.message)
