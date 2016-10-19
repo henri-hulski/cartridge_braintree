@@ -21,6 +21,17 @@ register_setting(
 )
 
 register_setting(
+    name="SHOP_DEFAULT_COUNTRY",
+    description=_("Default country in the country selection field. "
+                  "If ``None``, the user is forced to select a country (default). "
+                  "If a 2 letter country code is specified, that country will be used. "
+                  "If ``True``, the country is selected by alphabetical order according to "
+                  "``SHOP_PRIMARY_COUNTRIES`` (v1.0.0 behavior)."),
+    editable=False,
+    default=None
+)
+
+register_setting(
     name="BRAINTREE_MERCHANT_ID",
     editable=False
 )

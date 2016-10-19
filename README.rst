@@ -51,9 +51,14 @@ Instructions for use
             'MK', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SE', 'SI'
          ]
 
+     A pre-selected country in the select field can be specified using
+     ``settings.SHOP_DEFAULT_COUNTRY`` as an alpha2 code.
+     By default the user is expected to choose their country (set to ``None``).
+
      The country/countries (as alpha2 codes) listed in
      ``settings.SHOP_PRIMARY_COUNTRIES`` will show up at the top of the
-     country selection fields.
+     country selection fields, after the ``settings.SHOP_DEFAULT_COUNTRY``
+     if set.
 
    - Credit Card number and CCV fields are rendered using the
      ``NoNameTextInput`` widget so that the data is not submitted to the

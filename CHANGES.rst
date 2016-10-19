@@ -1,10 +1,12 @@
 CHANGES
 =======
 
-1.0.1 (unreleased)
+1.1.0 (unreleased)
 ------------------
 
-- Add logging to payment process
+- Add logging to payment process. [ianare]
+- **Breaking change**: add ``SHOP_DEFAULT_COUNTRY`` setting and by default
+  force the user to select a country (set to ``True`` for v1.0.0 behavior). [ianare]
 
 
 1.0.0 (2016-07-08)
