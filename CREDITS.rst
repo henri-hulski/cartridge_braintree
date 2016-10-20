@@ -13,6 +13,8 @@ CREDITS
 
 * ryneeverett
 
+* ianaré sévi
+
 *  Stripe:
 
    Cartridge_braintree is using `jquery.payment`_ from stripe

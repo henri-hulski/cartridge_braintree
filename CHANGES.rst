@@ -5,7 +5,7 @@ CHANGES
 ------------------
 
 - Add logging to payment process. [ianare]
-- **Breaking change**: add ``SHOP_DEFAULT_COUNTRY`` setting and by default
+- **Breaking change**: Add ``SHOP_DEFAULT_COUNTRY`` setting and by default
   force the user to select a country (set to ``True`` for v1.0.0 behavior). [ianare]
 
 

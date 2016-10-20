@@ -25,8 +25,8 @@ register_setting(
     description=_("Default country in the country selection field. "
                   "If ``None``, the user is forced to select a country (default). "
                   "If a 2 letter country code is specified, that country will be used. "
-                  "If ``True``, the country is selected by alphabetical order according to "
-                  "``SHOP_PRIMARY_COUNTRIES`` (v1.0.0 behavior)."),
+                  "If ``True``, the country is selected in alphabetical order using "
+                  "``SHOP_PRIMARY_COUNTRIES`` if set (v1.0.0 behavior)."),
     editable=False,
     default=None
 )
