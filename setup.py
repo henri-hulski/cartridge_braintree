@@ -22,7 +22,7 @@ long_description = (
 
 setup(
     name='cartridge_braintree',
-    version='1.1.0',
+    version='1.1.1.dev0',
     description="Braintree Payments processing for Mezzanine/Cartridge",
     long_description=long_description,
     maintainer="Henri Hulski",
