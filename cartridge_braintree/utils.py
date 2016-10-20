@@ -22,35 +22,55 @@ else:
             .encode('ascii', 'ignore').decode('ascii'))
 
 
-def get_country_list():
-    # Get a sorted list of tuples with 2 elements in the form of (alpha2, translated_country_name)
-    # for the countries set in SHOP_SUPPORTED_COUNTRIES or if not set for all countries Braintree supports.
-    # The countries in SHOP_PRIMARY_COUNTRIES get moved at the beginning.
-    # Used for the checkout form to make Country a drop down list
+def get_first_country():
+    """
+    Get a list of the first country
+    """
+    if not settings.SHOP_DEFAULT_COUNTRY:
+        return [('', '')]
+    # don't simplify, 'True' has a specific meaning here
+    elif settings.SHOP_DEFAULT_COUNTRY != True:
+        return [get_country(settings.SHOP_DEFAULT_COUNTRY)]
+    else:
+        return []
 
+
+def get_country_list():
+    """
+    Get a sorted list of tuples with 2 elements in the form of (alpha2, translated_country_name)
+    for the countries set in SHOP_SUPPORTED_COUNTRIES or if not set for all countries Braintree supports.
+    The countries in SHOP_PRIMARY_COUNTRIES get moved at the beginning.
+    Used for the checkout form to make Country a drop down list
+    """
     primary_countries = []
     if settings.SHOP_PRIMARY_COUNTRIES:
         primary_countries = [
-            get_country(country) for country in settings.SHOP_PRIMARY_COUNTRIES
+            get_country(country) for country in settings.SHOP_PRIMARY_COUNTRIES if
+            country is not settings.SHOP_DEFAULT_COUNTRY
             ]
         primary_countries = sorted(primary_countries, key=sort_key)
 
     if settings.SHOP_SUPPORTED_COUNTRIES:
         country_list = [
             get_country(country) for country in settings.SHOP_SUPPORTED_COUNTRIES if
-            country not in settings.SHOP_PRIMARY_COUNTRIES
+            country not in settings.SHOP_PRIMARY_COUNTRIES and
+            country is not settings.SHOP_DEFAULT_COUNTRY
             ]
 
     else:
         country_list = [
-            (code, force_text(name)) for code, name in COUNTRIES.items() if code not in settings.SHOP_PRIMARY_COUNTRIES
+            (code, force_text(name)) for code, name in COUNTRIES.items() if
+            code not in settings.SHOP_PRIMARY_COUNTRIES and
+            code is not settings.SHOP_DEFAULT_COUNTRY
             ]
 
-    return primary_countries + sorted(country_list, key=sort_key)
+    return get_first_country() + primary_countries + sorted(country_list, key=sort_key)
 
 
 def get_country(country):
-    # Get the country tuple in the form of (alpha2, local_name) for given alpha2 country code
+    """
+    Get the country tuple in the form of (alpha2, local_name) for given alpha2 country code
+    """
     if country and isinstance(country, six.string_types):
         return country, force_text(COUNTRIES[country])
     else:
