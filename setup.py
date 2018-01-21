@@ -25,8 +25,8 @@ setup(
     version='1.1.1.dev0',
     description="Braintree Payments processing for Mezzanine/Cartridge",
     long_description=long_description,
-    maintainer="Henri Hulski",
-    maintainer_email="henri@openhomeo.info",
+    author="Henri Hulski",
+    author_email="henri.hulski@gazeta.pl",
     license="BSD",
     url="https://github.com/henri-hulski/cartridge_braintree",
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
