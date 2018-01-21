@@ -1,16 +1,19 @@
-*.pyc
-*.pyo
-*.swp
-*.swo
-*.bak
-*.orig
-*~
-.project
-.pydevproject
+# Byte-compiled / optimized
+__pycache__/
+*.py[co]
+
+# Distribution / packaging
+*.egg-info/
+/build/
+/dist/
+
+# Virtualenv
+/env/
+/venv/
+
 *.db
+*.mo
+
 .DS_Store
 .coverage
 /static
-/build
-/*.egg-info
-/dist

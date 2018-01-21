@@ -1,2 +1,2 @@
-include LICENSE README.rst CREDITS.rst CHANGES.rst
-recursive-include cartridge_braintree *
+include *.rst *.cfg *.py LICENSE
+recursive-include cartridge_braintree *.py *.html *.js *.po
