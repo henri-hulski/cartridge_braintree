@@ -2,7 +2,7 @@ cartridge_braintree
 ===================
 
 Braintree Payments processing for Mezzanine/Cartridge.
-Supports Cartridge 0.11 and newer.
+Supports Cartridge 0.13 and newer and Django 1.11.x.
 
 Instructions for use
 --------------------

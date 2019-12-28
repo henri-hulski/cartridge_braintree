@@ -29,7 +29,7 @@ class NoNameTextInput(forms.TextInput):
         # html5 validation errors for spaces.
         attrs['pattern'] = '[0-9]*'
         attrs['inputmode'] = 'numeric'
-        final_attrs = self.build_attrs(attrs, type=self.input_type)
+        final_attrs = self.build_attrs(attrs, {'type': self.input_type})
         # Remove the name from the attributes, as this is what this
         # widget is for!
         if 'name' in final_attrs:
