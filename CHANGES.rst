@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-1.2.1 (unreleased)
+1.2.1 (2019-12-28)
 ------------------
 
 - Upgrade to Django 1.11 and Cartridge 0.13.
