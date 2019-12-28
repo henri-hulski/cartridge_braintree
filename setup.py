@@ -61,7 +61,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'braintree',
-        'cartridge >= 0.11',
+        'cartridge >= 0.13',
+        'django >= 1.11.27, < 2.0.0'
     ],
     extras_require=dict(
         countries_utf8_sorting=['pyuca'],

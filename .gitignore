@@ -8,8 +8,8 @@ __pycache__/
 /dist/
 
 # Virtualenv
-/env/
-/venv/
+/env
+/venv
 
 *.db
 *.mo
