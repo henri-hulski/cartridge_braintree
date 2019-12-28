@@ -2,7 +2,7 @@ cartridge_braintree
 ===================
 
 Braintree Payments processing for Mezzanine/Cartridge.
-Supports Cartridge 0.13 and newer and Django 1.11.x.
+Supports Django 1.11.x and Cartridge 0.13 or newer.
 
 Instructions for use
 --------------------
@@ -125,7 +125,7 @@ Instructions for use
          },
      }
 
-   See https://docs.djangoproject.com/en/1.10/topics/logging/#configuring-logging for all
+   See https://docs.djangoproject.com/en/1.11/topics/logging/#configuring-logging for all
    configuration options
 
    Log levels are as follows:
