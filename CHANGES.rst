@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-1.2.2 (unreleased)
+1.2.2 (2021-04-19)
 ------------------
 
 - Set minimum Django version to 1.11.29 and maximum version under 1.12
