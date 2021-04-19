@@ -15,9 +15,9 @@ if sys.argv[:2] == ["setup.py", "bdist_wheel"]:
 
 
 long_description = (
-    io.open('README.rst', encoding='utf-8').read() +
-    '\n\n' +
-    io.open('CHANGES.rst', encoding='utf-8').read()
+    io.open('README.rst', encoding='utf-8').read()
+    + '\n\n'
+    + io.open('CHANGES.rst', encoding='utf-8').read()
 )
 
 setup(
@@ -54,7 +54,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Application Frameworks",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-
     keywords='django mezzanine cartridge payment',
     packages=find_packages(),
     include_package_data=True,
@@ -62,9 +61,7 @@ setup(
     install_requires=[
         'braintree',
         'cartridge >= 0.13',
-        'django >= 1.11.27, < 2.0.0'
+        'django >= 1.11.29, < 1.12',
     ],
-    extras_require=dict(
-        countries_utf8_sorting=['pyuca'],
-    ),
+    extras_require=dict(countries_utf8_sorting=['pyuca'],),
 )
