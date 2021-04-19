@@ -4,7 +4,8 @@ CHANGES
 1.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Set minimum Django version to 1.11.29 and maximum version under 1.12
+  to fix security vulnerabilities.
 
 
 1.2.1 (2019-12-28)
