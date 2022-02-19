@@ -64,5 +64,13 @@ setup(
         'cartridge >= 0.13',
         'django >= 1.11.29, < 1.12',
     ],
-    extras_require=dict(countries_utf8_sorting=['pyuca'],),
+    extras_require=dict(
+        countries_utf8_sorting=["pyuca"],
+        codestyle=[
+            "flake8 >= 3",
+            "black",
+            "isort >= 5",
+            "pyupgrade >= 2",
+        ],
+    ),
 )

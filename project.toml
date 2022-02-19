@@ -1,0 +1,15 @@
+[tool.black]
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.tox
+    | \.venv
+    | build
+    | dist
+    | env
+    | venv
+  )/
+)
+'''
