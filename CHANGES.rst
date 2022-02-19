@@ -1,10 +1,16 @@
 CHANGES
 =======
 
-1.2.3 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+This is a service release which has breaking changes for dependencies.
+
+- Upgrade to Cartridge 1.0+ (for now we use the repo at henri-hulski/cartridge).
+- Using Mezannine 5.1+.
+- Supporting Django 3.2 and 4.0.
+- Drop Python support for Python 2 and support only Python 3.7+.
+- Adding Code style tools: black, flake8, isort and pyupgrade.
 
 
 1.2.2 (2021-04-19)
