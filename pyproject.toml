@@ -8,7 +8,7 @@ version = "2.0.0b1"
 description = "Braintree Payments processing for Mezzanine/Cartridge"
 readme = "README.rst"
 authors = [{ name = "Henri Hulski", email = "henri@yacoma.it" }]
-license = "BSD"
+license = { text = "BSD" }
 requires-python = ">=3.7"
 dependencies = [
     "braintree",
@@ -52,7 +52,7 @@ codestyle = [
 countries_utf8_sorting = ["pyuca"]
 
 [tool.black]
-target-version = ['py39']
+target-version = ['py37']
 include = '\.pyi?$'
 exclude = '''
 (
