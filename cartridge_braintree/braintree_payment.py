@@ -1,13 +1,10 @@
-from __future__ import unicode_literals
-from future.builtins import str
 import logging
 
+from cartridge.shop.checkout import CheckoutError
 from django.core.exceptions import ImproperlyConfigured
 from mezzanine.conf import settings
 
-from cartridge.shop.checkout import CheckoutError
-
-logger = logging.getLogger('braintree_payment')
+logger = logging.getLogger("braintree_payment")
 
 # Requires Braintree package -- install from pypi: pip install braintree.
 try:
@@ -26,10 +23,12 @@ try:
     BRAINTREE_PUBLIC_KEY = settings.BRAINTREE_PUBLIC_KEY
     BRAINTREE_PRIVATE_KEY = settings.BRAINTREE_PRIVATE_KEY
 except AttributeError:
-    raise ImproperlyConfigured("You need to define BRAINTREE_MERCHANT_ID, "
-                               "BRAINTREE_PUBLIC_KEY and BRAINTREE_PRIVATE_KEY "
-                               "in your settings module to use the "
-                               "Braintree v.zero payment processor.")
+    raise ImproperlyConfigured(
+        "You need to define BRAINTREE_MERCHANT_ID, "
+        "BRAINTREE_PUBLIC_KEY and BRAINTREE_PRIVATE_KEY "
+        "in your settings module to use the "
+        "Braintree v.zero payment processor."
+    )
 
 
 BRAINTREE_IS_CONFIGURED = False
@@ -41,7 +40,7 @@ def configure():
         BRAINTREE_ENVIROMENT,
         BRAINTREE_MERCHANT_ID,
         BRAINTREE_PUBLIC_KEY,
-        BRAINTREE_PRIVATE_KEY
+        BRAINTREE_PRIVATE_KEY,
     )
     BRAINTREE_IS_CONFIGURED = True
 
@@ -51,7 +50,7 @@ def client_token():
     if not BRAINTREE_IS_CONFIGURED:
         configure()
     token = braintree.ClientToken.generate()
-    logger.info("Generated Braintree client token '%s...%s'" % (token[:5], token[-5:]))
+    logger.info(f"Generated Braintree client token '{token[:5]}...{token[-5:]}'")
     return token
 
 
@@ -75,36 +74,34 @@ def payment_handler(request, order_form, order):
     data = order_form.cleaned_data
 
     trans = {
-        'payment_method_nonce': data['payment_method_nonce'],
-        'amount': order.total,
-        'order_id': str(order.id),
-        'customer': {
-            'first_name': data['billing_detail_first_name'],
-            'last_name': data['billing_detail_last_name'],
-            'email': data['billing_detail_email'],
-            'phone': data['billing_detail_phone'],
+        "payment_method_nonce": data["payment_method_nonce"],
+        "amount": order.total,
+        "order_id": str(order.id),
+        "customer": {
+            "first_name": data["billing_detail_first_name"],
+            "last_name": data["billing_detail_last_name"],
+            "email": data["billing_detail_email"],
+            "phone": data["billing_detail_phone"],
         },
-        'billing': {
-            'first_name': data['billing_detail_first_name'],
-            'last_name': data['billing_detail_last_name'],
-            'street_address': data['billing_detail_street'],
-            'locality': data['billing_detail_city'],
-            'region': data['billing_detail_state'],
-            'postal_code': data['billing_detail_postcode'],
-            'country_code_alpha2': data['billing_detail_country'],
+        "billing": {
+            "first_name": data["billing_detail_first_name"],
+            "last_name": data["billing_detail_last_name"],
+            "street_address": data["billing_detail_street"],
+            "locality": data["billing_detail_city"],
+            "region": data["billing_detail_state"],
+            "postal_code": data["billing_detail_postcode"],
+            "country_code_alpha2": data["billing_detail_country"],
         },
-        'shipping': {
-            'first_name': data['shipping_detail_first_name'],
-            'last_name': data['shipping_detail_last_name'],
-            'street_address': data['shipping_detail_street'],
-            'locality': data['shipping_detail_city'],
-            'region': data['shipping_detail_state'],
-            'postal_code': data['shipping_detail_postcode'],
-            'country_code_alpha2': data['shipping_detail_country'],
+        "shipping": {
+            "first_name": data["shipping_detail_first_name"],
+            "last_name": data["shipping_detail_last_name"],
+            "street_address": data["shipping_detail_street"],
+            "locality": data["shipping_detail_city"],
+            "region": data["shipping_detail_state"],
+            "postal_code": data["shipping_detail_postcode"],
+            "country_code_alpha2": data["shipping_detail_country"],
         },
-        'options': {
-            'submit_for_settlement': True
-        }
+        "options": {"submit_for_settlement": True},
     }
 
     logger.debug("Sending order %s to Braintree ..." % order.id)
@@ -116,7 +113,7 @@ def payment_handler(request, order_form, order):
     else:
         all_errors = ""
         for error in result.errors.deep_errors:
-            all_errors += " [code: %s, attribute: %s, '%s']" % (error.code, error.attribute, error.message)
-        logger.error("Order %s failed with%s" % (order.id, all_errors))
+            all_errors += f" [code: {error.code}, attribute: {error.attribute}, '{error.message}']"
+        logger.error(f"Order {order.id} failed with{all_errors}")
 
         raise CheckoutError("Credit Card error: " + result.message)

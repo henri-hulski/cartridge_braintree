@@ -1,7 +1,7 @@
-import io
 import sys
-from setuptools import setup, find_packages
 from shutil import rmtree
+
+from setuptools import find_packages, setup
 
 if sys.argv[:2] == ["setup.py", "bdist_wheel"]:
     # Remove previous build dir when creating a wheel build,
@@ -10,14 +10,14 @@ if sys.argv[:2] == ["setup.py", "bdist_wheel"]:
     # as part of the build, which is really neat!
     try:
         rmtree("build")
-    except:
+    except Exception:
         pass
 
 
 long_description = (
-    io.open('README.rst', encoding='utf-8').read()
-    + '\n\n'
-    + io.open('CHANGES.rst', encoding='utf-8').read()
+    open("README.rst", encoding="utf-8").read()
+    + "\n\n"
+    + open("CHANGES.rst", encoding="utf-8").read()
 )
 
 setup(
@@ -54,11 +54,12 @@ setup(
         "Topic :: Software Development :: Libraries :: Application Frameworks",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    keywords='django mezzanine cartridge payment',
+    keywords="django mezzanine cartridge payment",
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        "braintree",
         'braintree',
         'cartridge >= 0.13',
         'django >= 1.11.29, < 1.12',
