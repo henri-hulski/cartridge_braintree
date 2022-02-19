@@ -87,11 +87,11 @@ Instructions for use
       urlpatterns += [
 
           # cartridge_braintree URLs.
-          url("^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),
+          re_path(r"^shop/(?=checkout(/?)$)", include("cartridge_braintree.urls")),
 
           # Cartridge URLs.
-          url("^shop/", include("cartridge.shop.urls")),
-          url("^account/orders/$", order_history, name="shop_order_history"),
+          path("shop/", include("cartridge.shop.urls")),
+          path("account/orders/", order_history, name="shop_order_history"),
 
 7. If you want to use PayPal payments with Braintree activate them in
    the Admin Site Settings and set the currency to use with PayPal.
