@@ -20,7 +20,7 @@ CREDITS
    Cartridge_braintree is using `jquery.payment`_ from stripe
    for client-side credit card validation and number formatting.
 
-   .. _jquery.payment: https://github.com/stripe/jquery.payment
+   .. _jquery.payment: https://github.com/stripe-archive/jquery.payment
 
 *  Chris Beaven:
 

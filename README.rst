@@ -32,7 +32,7 @@ Instructions for use
       used, otherwise the *Braintree Production environment* is used.
 
    See also
-   https://articles.braintreepayments.com/control-panel/important-gateway-credentials
+   https://developer.paypal.com/braintree/articles/control-panel/important-gateway-credentials
 
 4. cartridge_braintree uses a modified checkout form, which does the following:
 
@@ -66,12 +66,12 @@ Instructions for use
      ``payment_method_nonce``, which is then stored in a hidden form
      element.
 
-   - Uses `jquery.payment <https://github.com/stripe/jquery.payment>`_ from stripe
+   - Uses `jquery.payment <https://github.com/stripe-archive/jquery.payment>`_ from stripe
      for client-side validation of the payment form and submits the errors in the
      hidden ``braintree_errors`` field to the server to handle them as Django errors.
 
    See
-   https://developers.braintreepayments.com/guides/transactions/python
+   https://developer.paypal.com/braintree/docs/guides/transactions/python
 
 5. Set the payment handler to be the Braintree payment handler::
 
@@ -79,9 +79,6 @@ Instructions for use
 
    If you are overriding the templates in your own apps, then be sure to
    include the relevant ``braintreejs.html`` template.
-
-   See https://www.braintreepayments.com/docs/python/guide/getting_paid
-   for Braintree's tutorial.
 
 6. Include ``cartridge_braintree.urls`` for ``shop/checkout`` in ``urls.py``
    before Cartridge urls::
@@ -125,7 +122,7 @@ Instructions for use
          },
      }
 
-   See https://docs.djangoproject.com/en/1.11/topics/logging/#configuring-logging for all
+   See https://docs.djangoproject.com/en/4.0/topics/logging/#configuring-logging for all
    configuration options
 
    Log levels are as follows:
