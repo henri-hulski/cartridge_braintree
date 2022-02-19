@@ -1,8 +1,8 @@
 CHANGES
 =======
 
-2.0.0 (unreleased)
-------------------
+2.0.0b1 (2022-02-19)
+--------------------
 
 This is a service release which has breaking changes for dependencies.
 
