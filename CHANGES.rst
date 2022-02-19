@@ -72,7 +72,7 @@ This is a service release which has breaking changes for dependencies.
 -------------------
 
 - Replace the payform jQuery plugin with
-  `jquery.payment <https://github.com/stripe/jquery.payment>`_
+  jquery.payment <https://github.com/stripe-archive/jquery.payment>
   from stripe.
   This fixes some bugs with card number and CCV formatting.
 
