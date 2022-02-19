@@ -1,2 +1,0 @@
-include *.rst *.cfg *.py *.toml LICENSE
-recursive-include cartridge_braintree *.py *.html *.js *.po
