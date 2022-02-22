@@ -10,11 +10,13 @@ Instructions for use
 
 1. Install cartridge_braintree::
 
-      pip install cartridge_braintree
+      pip install cartridge_braintree @ https://github.com/henri-hulski/cartridge_braintree/archive/refs/tags/2.0.0b1.tar.gz
+
 
    If you need the correct sorting of not ASCII country names use::
 
-      pip install cartridge_braintree[countries_utf8_sorting]
+      pip install cartridge_braintree[countries_utf8_sorting] @ https://github.com/henri-hulski/cartridge_braintree/archive/refs/tags/2.0.0b1.tar.gz
+
 
    This will add 'pyuca' to the requirements.
 
