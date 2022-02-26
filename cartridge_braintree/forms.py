@@ -15,7 +15,7 @@ class NoNameTextInput(forms.TextInput):
     should prevent them from being submitted to the server.
     """
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         # See django.forms.widgets.py,
         # class Input, method render()
         if attrs is None:
