@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.0.0b2 (2022-02-26)
+--------------------
+
+- Bugfix: update signature for the NoNameTextInput widget render method
+
+
 2.0.0b1 (2022-02-19)
 --------------------
 
