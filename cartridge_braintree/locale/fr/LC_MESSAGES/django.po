@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 11:12+0100\n"
+"POT-Creation-Date: 2022-02-27 20:31+0100\n"
 "PO-Revision-Date: 2016-02-03 11:14+0100\n"
 "Last-Translator: Henri Schumacher <henri.hulski@gazeta.pl>\n"
 "Language-Team: French (http://www.transifex.com/smileychris/django-countries/"
@@ -26,1013 +26,1013 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#: countries.py:15
+#: cartridge_braintree/countries.py:11
 msgid "Afghanistan"
 msgstr "Afghanistan"
 
-#: countries.py:16
+#: cartridge_braintree/countries.py:12
 msgid "Åland"
 msgstr "Åland, Îles"
 
-#: countries.py:17
+#: cartridge_braintree/countries.py:13
 msgid "Albania"
 msgstr "Albanie"
 
-#: countries.py:18
+#: cartridge_braintree/countries.py:14
 msgid "Algeria"
 msgstr "Algérie"
 
-#: countries.py:19
+#: cartridge_braintree/countries.py:15
 msgid "American Samoa"
 msgstr "Samoa américaines"
 
-#: countries.py:20
+#: cartridge_braintree/countries.py:16
 msgid "Andorra"
 msgstr "Andorre"
 
-#: countries.py:21
+#: cartridge_braintree/countries.py:17
 msgid "Angola"
 msgstr "Angola"
 
-#: countries.py:22
+#: cartridge_braintree/countries.py:18
 msgid "Anguilla"
 msgstr "Anguilla"
 
-#: countries.py:23
+#: cartridge_braintree/countries.py:19
 msgid "Antarctica"
 msgstr "Antarctique"
 
-#: countries.py:24
+#: cartridge_braintree/countries.py:20
 msgid "Antigua and Barbuda"
 msgstr "Antigua-et-Barbuda"
 
-#: countries.py:25
+#: cartridge_braintree/countries.py:21
 msgid "Argentina"
 msgstr "Argentine"
 
-#: countries.py:26
+#: cartridge_braintree/countries.py:22
 msgid "Armenia"
 msgstr "Arménie"
 
-#: countries.py:27
+#: cartridge_braintree/countries.py:23
 msgid "Aruba"
 msgstr "Aruba"
 
-#: countries.py:28
+#: cartridge_braintree/countries.py:24
 msgid "Australia"
 msgstr "Australie"
 
-#: countries.py:29
+#: cartridge_braintree/countries.py:25
 msgid "Austria"
 msgstr "Autriche"
 
-#: countries.py:30
+#: cartridge_braintree/countries.py:26
 msgid "Azerbaijan"
 msgstr "Azerbaïdjan"
 
-#: countries.py:31
+#: cartridge_braintree/countries.py:27
 msgid "Bahamas"
 msgstr "Bahamas"
 
-#: countries.py:32
+#: cartridge_braintree/countries.py:28
 msgid "Bahrain"
 msgstr "Bahreïn"
 
-#: countries.py:33
+#: cartridge_braintree/countries.py:29
 msgid "Bangladesh"
 msgstr "Bangladesh"
 
-#: countries.py:34
+#: cartridge_braintree/countries.py:30
 msgid "Barbados"
 msgstr "Barbade"
 
-#: countries.py:35
+#: cartridge_braintree/countries.py:31
 msgid "Belarus"
 msgstr "Biélorussie"
 
-#: countries.py:36
+#: cartridge_braintree/countries.py:32
 msgid "Belgium"
 msgstr "Belgique"
 
-#: countries.py:37
+#: cartridge_braintree/countries.py:33
 msgid "Belize"
 msgstr "Bélize"
 
-#: countries.py:38
+#: cartridge_braintree/countries.py:34
 msgid "Benin"
 msgstr "Bénin"
 
-#: countries.py:39
+#: cartridge_braintree/countries.py:35
 msgid "Bermuda"
 msgstr "Bermudes"
 
-#: countries.py:40
+#: cartridge_braintree/countries.py:36
 msgid "Bhutan"
 msgstr "Bhoutan"
 
-#: countries.py:41
+#: cartridge_braintree/countries.py:37
 msgid "Bolivia"
 msgstr "Bolivie"
 
-#: countries.py:42
+#: cartridge_braintree/countries.py:38
 msgid "Bonaire, Sint Eustatius and Saba"
 msgstr "Bonaire, Saint Eustache et Saba"
 
-#: countries.py:43
+#: cartridge_braintree/countries.py:39
 msgid "Bosnia and Herzegovina"
 msgstr "Bosnie-Herzégovine"
 
-#: countries.py:44
+#: cartridge_braintree/countries.py:40
 msgid "Botswana"
 msgstr "Botswana"
 
-#: countries.py:45
+#: cartridge_braintree/countries.py:41
 msgid "Bouvet Island"
 msgstr "Île Bouvet"
 
-#: countries.py:46
+#: cartridge_braintree/countries.py:42
 msgid "Brazil"
 msgstr "Brésil"
 
-#: countries.py:47
+#: cartridge_braintree/countries.py:43
 msgid "British Indian Ocean Territory"
 msgstr "Territoire britannique de l'océan Indien"
 
-#: countries.py:48
+#: cartridge_braintree/countries.py:44
 msgid "Brunei Darussalam"
 msgstr "Bruneï Darussalam"
 
-#: countries.py:49
+#: cartridge_braintree/countries.py:45
 msgid "Bulgaria"
 msgstr "Bulgarie"
 
-#: countries.py:50
+#: cartridge_braintree/countries.py:46
 msgid "Burkina Faso"
 msgstr "Burkina Faso"
 
-#: countries.py:51
+#: cartridge_braintree/countries.py:47
 msgid "Burundi"
 msgstr "Burundi"
 
-#: countries.py:52
+#: cartridge_braintree/countries.py:48
 msgid "Cambodia"
 msgstr "Cambodge"
 
-#: countries.py:53
+#: cartridge_braintree/countries.py:49
 msgid "Cameroon"
 msgstr "Cameroun"
 
-#: countries.py:54
+#: cartridge_braintree/countries.py:50
 msgid "Canada"
 msgstr "Canada"
 
-#: countries.py:55
+#: cartridge_braintree/countries.py:51
 msgid "Cape Verde"
 msgstr "Cap-Vert"
 
-#: countries.py:56
+#: cartridge_braintree/countries.py:52
 msgid "Cayman Islands"
 msgstr "Îles Caïmans"
 
-#: countries.py:57
+#: cartridge_braintree/countries.py:53
 msgid "Central African Republic"
 msgstr "République centrafricaine"
 
-#: countries.py:58
+#: cartridge_braintree/countries.py:54
 msgid "Chad"
 msgstr "Tchad"
 
-#: countries.py:59
+#: cartridge_braintree/countries.py:55
 msgid "Chile"
 msgstr "Chili"
 
-#: countries.py:60
+#: cartridge_braintree/countries.py:56
 msgid "China"
 msgstr "Chine"
 
-#: countries.py:61
+#: cartridge_braintree/countries.py:57
 msgid "Christmas Island"
 msgstr "Île Christmas"
 
-#: countries.py:62
+#: cartridge_braintree/countries.py:58
 msgid "Cocos (Keeling) Islands"
 msgstr "Îles Cocos"
 
-#: countries.py:63
+#: cartridge_braintree/countries.py:59
 msgid "Colombia"
 msgstr "Colombie"
 
-#: countries.py:64
+#: cartridge_braintree/countries.py:60
 msgid "Comoros"
 msgstr "Comores"
 
-#: countries.py:65
+#: cartridge_braintree/countries.py:61
 msgid "Congo (Brazzaville)"
 msgstr "Congo (Brazzaville)"
 
-#: countries.py:66
+#: cartridge_braintree/countries.py:62
 msgid "Congo (Kinshasa)"
 msgstr "Congo (Kinshasa)"
 
-#: countries.py:67
+#: cartridge_braintree/countries.py:63
 msgid "Cook Islands"
 msgstr "Îles Cook"
 
-#: countries.py:68
+#: cartridge_braintree/countries.py:64
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
-#: countries.py:69
+#: cartridge_braintree/countries.py:65
 msgid "Côte d'Ivoire"
 msgstr "Côte d'Ivoire"
 
-#: countries.py:70
+#: cartridge_braintree/countries.py:66
 msgid "Croatia"
 msgstr "Croatie"
 
-#: countries.py:71
+#: cartridge_braintree/countries.py:67
 msgid "Cuba"
 msgstr "Cuba"
 
-#: countries.py:72
+#: cartridge_braintree/countries.py:68
 msgid "Curaçao"
 msgstr "Curaçao"
 
-#: countries.py:73
+#: cartridge_braintree/countries.py:69
 msgid "Cyprus"
 msgstr "Chypre"
 
-#: countries.py:74
+#: cartridge_braintree/countries.py:70
 msgid "Czech Republic"
 msgstr "République tchèque"
 
-#: countries.py:75
+#: cartridge_braintree/countries.py:71
 msgid "Denmark"
 msgstr "Danemark"
 
-#: countries.py:76
+#: cartridge_braintree/countries.py:72
 msgid "Djibouti"
 msgstr "Djibouti"
 
-#: countries.py:77
+#: cartridge_braintree/countries.py:73
 msgid "Dominica"
 msgstr "Dominique"
 
-#: countries.py:78
+#: cartridge_braintree/countries.py:74
 msgid "Dominican Republic"
 msgstr "République dominicaine"
 
-#: countries.py:79
+#: cartridge_braintree/countries.py:75
 msgid "Ecuador"
 msgstr "Équateur"
 
-#: countries.py:80
+#: cartridge_braintree/countries.py:76
 msgid "Egypt"
 msgstr "Égypte"
 
-#: countries.py:81
+#: cartridge_braintree/countries.py:77
 msgid "El Salvador"
 msgstr "Salvador"
 
-#: countries.py:82
+#: cartridge_braintree/countries.py:78
 msgid "Equatorial Guinea"
 msgstr "Guinée équatoriale"
 
-#: countries.py:83
+#: cartridge_braintree/countries.py:79
 msgid "Eritrea"
 msgstr "Érythrée"
 
-#: countries.py:84
+#: cartridge_braintree/countries.py:80
 msgid "Estonia"
 msgstr "Estonie"
 
-#: countries.py:85
+#: cartridge_braintree/countries.py:81
 msgid "Ethiopia"
 msgstr "Éthiopie"
 
-#: countries.py:86
+#: cartridge_braintree/countries.py:82
 msgid "Falkland Islands"
 msgstr "Falkland, Îles"
 
-#: countries.py:87
+#: cartridge_braintree/countries.py:83
 msgid "Faroe Islands"
 msgstr "Îles Féroé"
 
-#: countries.py:88
+#: cartridge_braintree/countries.py:84
 msgid "Fiji"
 msgstr "Fidji"
 
-#: countries.py:89
+#: cartridge_braintree/countries.py:85
 msgid "Finland"
 msgstr "Finlande"
 
-#: countries.py:90
+#: cartridge_braintree/countries.py:86
 msgid "France"
 msgstr "France"
 
-#: countries.py:91
+#: cartridge_braintree/countries.py:87
 msgid "French Guiana"
 msgstr "Guyane française"
 
-#: countries.py:92
+#: cartridge_braintree/countries.py:88
 msgid "French Polynesia"
 msgstr "Polynésie française"
 
-#: countries.py:93
+#: cartridge_braintree/countries.py:89
 msgid "French Southern Lands"
 msgstr "Terres australes et antarctiques françaises"
 
-#: countries.py:94
+#: cartridge_braintree/countries.py:90
 msgid "Gabon"
 msgstr "Gabon"
 
-#: countries.py:95
+#: cartridge_braintree/countries.py:91
 msgid "Gambia"
 msgstr "Gambie"
 
-#: countries.py:96
+#: cartridge_braintree/countries.py:92
 msgid "Georgia"
 msgstr "Géorgie"
 
-#: countries.py:97
+#: cartridge_braintree/countries.py:93
 msgid "Germany"
 msgstr "Allemagne"
 
-#: countries.py:98
+#: cartridge_braintree/countries.py:94
 msgid "Ghana"
 msgstr "Ghana"
 
-#: countries.py:99
+#: cartridge_braintree/countries.py:95
 msgid "Gibraltar"
 msgstr "Gibraltar"
 
-#: countries.py:100
+#: cartridge_braintree/countries.py:96
 msgid "Greece"
 msgstr "Grèce"
 
-#: countries.py:101
+#: cartridge_braintree/countries.py:97
 msgid "Greenland"
 msgstr "Groenland"
 
-#: countries.py:102
+#: cartridge_braintree/countries.py:98
 msgid "Grenada"
 msgstr "Grenade"
 
-#: countries.py:103
+#: cartridge_braintree/countries.py:99
 msgid "Guadeloupe"
 msgstr "Guadeloupe"
 
-#: countries.py:104
+#: cartridge_braintree/countries.py:100
 msgid "Guam"
 msgstr "Guam"
 
-#: countries.py:105
+#: cartridge_braintree/countries.py:101
 msgid "Guatemala"
 msgstr "Guatémala"
 
-#: countries.py:106
+#: cartridge_braintree/countries.py:102
 msgid "Guernsey"
 msgstr "Guernesey"
 
-#: countries.py:107
+#: cartridge_braintree/countries.py:103
 msgid "Guinea"
 msgstr "Guinée"
 
-#: countries.py:108
+#: cartridge_braintree/countries.py:104
 msgid "Guinea-Bissau"
 msgstr "Guinée-Bissau"
 
-#: countries.py:109
+#: cartridge_braintree/countries.py:105
 msgid "Guyana"
 msgstr "Guyane"
 
-#: countries.py:110
+#: cartridge_braintree/countries.py:106
 msgid "Haiti"
 msgstr "Haïti"
 
-#: countries.py:111
+#: cartridge_braintree/countries.py:107
 msgid "Heard and McDonald Islands"
 msgstr "Heard, Île et McDonald, Îles"
 
-#: countries.py:112
+#: cartridge_braintree/countries.py:108
 msgid "Honduras"
 msgstr "Honduras"
 
-#: countries.py:113
+#: cartridge_braintree/countries.py:109
 msgid "Hong Kong"
 msgstr "Hong Kong "
 
-#: countries.py:114
+#: cartridge_braintree/countries.py:110
 msgid "Hungary"
 msgstr "Hongrie"
 
-#: countries.py:115
+#: cartridge_braintree/countries.py:111
 msgid "Iceland"
 msgstr "Islande"
 
-#: countries.py:116
+#: cartridge_braintree/countries.py:112
 msgid "India"
 msgstr "Inde"
 
-#: countries.py:117
+#: cartridge_braintree/countries.py:113
 msgid "Indonesia"
 msgstr "Indonésie"
 
-#: countries.py:118
+#: cartridge_braintree/countries.py:114
 msgid "Iran"
 msgstr "Iran"
 
-#: countries.py:119
+#: cartridge_braintree/countries.py:115
 msgid "Iraq"
 msgstr "Irak"
 
-#: countries.py:120
+#: cartridge_braintree/countries.py:116
 msgid "Ireland"
 msgstr "Irlande"
 
-#: countries.py:121
+#: cartridge_braintree/countries.py:117
 msgid "Isle of Man"
 msgstr "Île de Man"
 
-#: countries.py:122
+#: cartridge_braintree/countries.py:118
 msgid "Israel"
 msgstr "Israël"
 
-#: countries.py:123
+#: cartridge_braintree/countries.py:119
 msgid "Italy"
 msgstr "Italie"
 
-#: countries.py:124
+#: cartridge_braintree/countries.py:120
 msgid "Jamaica"
 msgstr "Jamaïque"
 
-#: countries.py:125
+#: cartridge_braintree/countries.py:121
 msgid "Japan"
 msgstr "Japon"
 
-#: countries.py:126
+#: cartridge_braintree/countries.py:122
 msgid "Jersey"
 msgstr "Jersey"
 
-#: countries.py:127
+#: cartridge_braintree/countries.py:123
 msgid "Jordan"
 msgstr "Jordanie"
 
-#: countries.py:128
+#: cartridge_braintree/countries.py:124
 msgid "Kazakhstan"
 msgstr "Kazakhstan"
 
-#: countries.py:129
+#: cartridge_braintree/countries.py:125
 msgid "Kenya"
 msgstr "Kenya"
 
-#: countries.py:130
+#: cartridge_braintree/countries.py:126
 msgid "Kiribati"
 msgstr "Kiribati"
 
-#: countries.py:131
+#: cartridge_braintree/countries.py:127
 msgid "Korea, North"
 msgstr "Corée du Nord"
 
-#: countries.py:132
+#: cartridge_braintree/countries.py:128
 msgid "Korea, South"
 msgstr "Corée du Sud"
 
-#: countries.py:133
+#: cartridge_braintree/countries.py:129
 msgid "Kuwait"
 msgstr "Koweït"
 
-#: countries.py:134
+#: cartridge_braintree/countries.py:130
 msgid "Kyrgyzstan"
 msgstr "Kirghizistan"
 
-#: countries.py:135
+#: cartridge_braintree/countries.py:131
 msgid "Laos"
 msgstr "Laos"
 
-#: countries.py:136
+#: cartridge_braintree/countries.py:132
 msgid "Latvia"
 msgstr "Lettonie"
 
-#: countries.py:137
+#: cartridge_braintree/countries.py:133
 msgid "Lebanon"
 msgstr "Liban"
 
-#: countries.py:138
+#: cartridge_braintree/countries.py:134
 msgid "Lesotho"
 msgstr "Lesotho"
 
-#: countries.py:139
+#: cartridge_braintree/countries.py:135
 msgid "Liberia"
 msgstr "Libéria"
 
-#: countries.py:140
+#: cartridge_braintree/countries.py:136
 msgid "Libya"
 msgstr "Libye"
 
-#: countries.py:141
+#: cartridge_braintree/countries.py:137
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
-#: countries.py:142
+#: cartridge_braintree/countries.py:138
 msgid "Lithuania"
 msgstr "Lituanie"
 
-#: countries.py:143
+#: cartridge_braintree/countries.py:139
 msgid "Luxembourg"
 msgstr "Luxembourg"
 
-#: countries.py:144
+#: cartridge_braintree/countries.py:140
 msgid "Macau"
 msgstr "Macao"
 
-#: countries.py:145
+#: cartridge_braintree/countries.py:141
 msgid "Macedonia"
 msgstr "Macédoine"
 
-#: countries.py:146
+#: cartridge_braintree/countries.py:142
 msgid "Madagascar"
 msgstr "Madagascar"
 
-#: countries.py:147
+#: cartridge_braintree/countries.py:143
 msgid "Malawi"
 msgstr "Malawi"
 
-#: countries.py:148
+#: cartridge_braintree/countries.py:144
 msgid "Malaysia"
 msgstr "Malaisie"
 
-#: countries.py:149
+#: cartridge_braintree/countries.py:145
 msgid "Maldives"
 msgstr "Maldives"
 
-#: countries.py:150
+#: cartridge_braintree/countries.py:146
 msgid "Mali"
 msgstr "Mali"
 
-#: countries.py:151
+#: cartridge_braintree/countries.py:147
 msgid "Malta"
 msgstr "Malte"
 
-#: countries.py:152
+#: cartridge_braintree/countries.py:148
 msgid "Marshall Islands"
 msgstr "Îles Marshal"
 
-#: countries.py:153
+#: cartridge_braintree/countries.py:149
 msgid "Martinique"
 msgstr "Martinique"
 
-#: countries.py:154
+#: cartridge_braintree/countries.py:150
 msgid "Mauritania"
 msgstr "Mauritanie"
 
-#: countries.py:155
+#: cartridge_braintree/countries.py:151
 msgid "Mauritius"
 msgstr "Maurice"
 
-#: countries.py:156
+#: cartridge_braintree/countries.py:152
 msgid "Mayotte"
 msgstr "Mayotte"
 
-#: countries.py:157
+#: cartridge_braintree/countries.py:153
 msgid "Mexico"
 msgstr "Mexique"
 
-#: countries.py:158
+#: cartridge_braintree/countries.py:154
 msgid "Micronesia"
 msgstr "Indonésie"
 
-#: countries.py:159
+#: cartridge_braintree/countries.py:155
 msgid "Moldova"
 msgstr "Moldavie"
 
-#: countries.py:160
+#: cartridge_braintree/countries.py:156
 msgid "Monaco"
 msgstr "Monaco"
 
-#: countries.py:161
+#: cartridge_braintree/countries.py:157
 msgid "Mongolia"
 msgstr "Mongolie"
 
-#: countries.py:162
+#: cartridge_braintree/countries.py:158
 msgid "Montenegro"
 msgstr "Monténégro"
 
-#: countries.py:163
+#: cartridge_braintree/countries.py:159
 msgid "Montserrat"
 msgstr "Montserrat"
 
-#: countries.py:164
+#: cartridge_braintree/countries.py:160
 msgid "Morocco"
 msgstr "Maroc"
 
-#: countries.py:165
+#: cartridge_braintree/countries.py:161
 msgid "Mozambique"
 msgstr "Mozambique"
 
-#: countries.py:166
+#: cartridge_braintree/countries.py:162
 msgid "Myanmar"
 msgstr "Birmanie"
 
-#: countries.py:167
+#: cartridge_braintree/countries.py:163
 msgid "Namibia"
 msgstr "Namibie"
 
-#: countries.py:168
+#: cartridge_braintree/countries.py:164
 msgid "Nauru"
 msgstr "Nauru"
 
-#: countries.py:169
+#: cartridge_braintree/countries.py:165
 msgid "Nepal"
 msgstr "Népal"
 
-#: countries.py:170
+#: cartridge_braintree/countries.py:166
 msgid "Netherlands"
 msgstr "Pays-Bas"
 
-#: countries.py:171
+#: cartridge_braintree/countries.py:167
 msgid "Netherlands Antilles"
 msgstr "Antilles néerlandaises"
 
-#: countries.py:172
+#: cartridge_braintree/countries.py:168
 msgid "New Caledonia"
 msgstr "Nouvelle-Calédonie"
 
-#: countries.py:173
+#: cartridge_braintree/countries.py:169
 msgid "New Zealand"
 msgstr "Nouvelle-Zélande"
 
-#: countries.py:174
+#: cartridge_braintree/countries.py:170
 msgid "Nicaragua"
 msgstr "Nicaragua"
 
-#: countries.py:175
+#: cartridge_braintree/countries.py:171
 msgid "Niger"
 msgstr "Niger"
 
-#: countries.py:176
+#: cartridge_braintree/countries.py:172
 msgid "Nigeria"
 msgstr "Nigeria"
 
-#: countries.py:177
+#: cartridge_braintree/countries.py:173
 msgid "Niue"
 msgstr "Niue"
 
-#: countries.py:178
+#: cartridge_braintree/countries.py:174
 msgid "Norfolk Island"
 msgstr "Île Norfolk"
 
-#: countries.py:179
+#: cartridge_braintree/countries.py:175
 msgid "Northern Mariana Islands"
 msgstr "Îles Mariannes du Nord"
 
-#: countries.py:180
+#: cartridge_braintree/countries.py:176
 msgid "Norway"
 msgstr "Norvège"
 
-#: countries.py:181
+#: cartridge_braintree/countries.py:177
 msgid "Oman"
 msgstr "Oman"
 
-#: countries.py:182
+#: cartridge_braintree/countries.py:178
 msgid "Pakistan"
 msgstr "Pakistan"
 
-#: countries.py:183
+#: cartridge_braintree/countries.py:179
 msgid "Palau"
 msgstr "Palaos"
 
-#: countries.py:184
+#: cartridge_braintree/countries.py:180
 msgid "Palestine"
 msgstr "Palestine, État de"
 
-#: countries.py:185
+#: cartridge_braintree/countries.py:181
 msgid "Panama"
 msgstr "Panama"
 
-#: countries.py:186
+#: cartridge_braintree/countries.py:182
 msgid "Papua New Guinea"
 msgstr "Papouasie-Nouvelle-Guinée"
 
-#: countries.py:187
+#: cartridge_braintree/countries.py:183
 msgid "Paraguay"
 msgstr "Paraguay"
 
-#: countries.py:188
+#: cartridge_braintree/countries.py:184
 msgid "Peru"
 msgstr "Pérou"
 
-#: countries.py:189
+#: cartridge_braintree/countries.py:185
 msgid "Philippines"
 msgstr "Philippines"
 
-#: countries.py:190
+#: cartridge_braintree/countries.py:186
 msgid "Pitcairn"
 msgstr "Île Pitcairn"
 
-#: countries.py:191
+#: cartridge_braintree/countries.py:187
 msgid "Poland"
 msgstr "Pologne"
 
-#: countries.py:192
+#: cartridge_braintree/countries.py:188
 msgid "Portugal"
 msgstr "Portugal"
 
-#: countries.py:193
+#: cartridge_braintree/countries.py:189
 msgid "Puerto Rico"
 msgstr "Porto Rico"
 
-#: countries.py:194
+#: cartridge_braintree/countries.py:190
 msgid "Qatar"
 msgstr "Qatar"
 
-#: countries.py:195
+#: cartridge_braintree/countries.py:191
 msgid "Reunion"
 msgstr "Réunion, La"
 
-#: countries.py:196
+#: cartridge_braintree/countries.py:192
 msgid "Romania"
 msgstr "Roumanie"
 
-#: countries.py:197
+#: cartridge_braintree/countries.py:193
 msgid "Russian Federation"
 msgstr "Russie, Fédération de"
 
-#: countries.py:198
+#: cartridge_braintree/countries.py:194
 msgid "Rwanda"
 msgstr "Rwanda"
 
-#: countries.py:199
+#: cartridge_braintree/countries.py:195
 msgid "Saint Barthélemy"
 msgstr "Saint Barthélemy"
 
-#: countries.py:200
+#: cartridge_braintree/countries.py:196
 msgid "Saint Helena"
 msgstr "Sainte Helena"
 
-#: countries.py:201
+#: cartridge_braintree/countries.py:197
 msgid "Saint Kitts and Nevis"
 msgstr "Saint-Christophe-et-Niévès"
 
-#: countries.py:202
+#: cartridge_braintree/countries.py:198
 msgid "Saint Lucia"
 msgstr "Sainte-Lucie"
 
-#: countries.py:203
+#: cartridge_braintree/countries.py:199
 msgid "Saint Martin (French part)"
 msgstr "Saint-Martin (Antilles françaises)"
 
-#: countries.py:204
+#: cartridge_braintree/countries.py:200
 msgid "Saint Pierre and Miquelon"
 msgstr "Saint-Pierre-et-Miquelon"
 
-#: countries.py:205
+#: cartridge_braintree/countries.py:201
 msgid "Saint Vincent and the Grenadines"
 msgstr "Saint-Vincent-et-les-Grenadines"
 
-#: countries.py:206
+#: cartridge_braintree/countries.py:202
 msgid "Samoa"
 msgstr "Samoa"
 
-#: countries.py:207
+#: cartridge_braintree/countries.py:203
 msgid "San Marino"
 msgstr "Saint-Marin"
 
-#: countries.py:208
+#: cartridge_braintree/countries.py:204
 msgid "Sao Tome and Principe"
 msgstr "Sao Tomé-et-Principe"
 
-#: countries.py:209
+#: cartridge_braintree/countries.py:205
 msgid "Saudi Arabia"
 msgstr "Arabie Saoudite"
 
-#: countries.py:210
+#: cartridge_braintree/countries.py:206
 msgid "Senegal"
 msgstr "Sénégal"
 
-#: countries.py:211
+#: cartridge_braintree/countries.py:207
 msgid "Serbia"
 msgstr "Serbie"
 
-#: countries.py:212
+#: cartridge_braintree/countries.py:208
 msgid "Seychelles"
 msgstr "Seychelles"
 
-#: countries.py:213
+#: cartridge_braintree/countries.py:209
 msgid "Sierra Leone"
 msgstr "Sierra Leone"
 
-#: countries.py:214
+#: cartridge_braintree/countries.py:210
 msgid "Singapore"
 msgstr "Singapour"
 
-#: countries.py:215
+#: cartridge_braintree/countries.py:211
 msgid "Sint Maarten (Dutch part)"
 msgstr "Saint-Martin (Royaume des Pays-Bas)"
 
-#: countries.py:216
+#: cartridge_braintree/countries.py:212
 msgid "Slovakia"
 msgstr "Slovaquie"
 
-#: countries.py:217
+#: cartridge_braintree/countries.py:213
 msgid "Slovenia"
 msgstr "Slovénie"
 
-#: countries.py:218
+#: cartridge_braintree/countries.py:214
 msgid "Solomon Islands"
 msgstr "Salomon"
 
-#: countries.py:219
+#: cartridge_braintree/countries.py:215
 msgid "Somalia"
 msgstr "Somalie"
 
-#: countries.py:220
+#: cartridge_braintree/countries.py:216
 msgid "South Africa"
 msgstr "Afrique du Sud"
 
-#: countries.py:221
+#: cartridge_braintree/countries.py:217
 msgid "South Georgia and South Sandwich Islands"
 msgstr "Géorgie du Sud et les îles Sandwich du Sud"
 
-#: countries.py:222
+#: cartridge_braintree/countries.py:218
 msgid "South Sudan"
 msgstr "Soudan du Sud"
 
-#: countries.py:223
+#: cartridge_braintree/countries.py:219
 msgid "Spain"
 msgstr "Espagne"
 
-#: countries.py:224
+#: cartridge_braintree/countries.py:220
 msgid "Sri Lanka"
 msgstr "Sri Lanka"
 
-#: countries.py:225
+#: cartridge_braintree/countries.py:221
 msgid "Sudan"
 msgstr "Soudan"
 
-#: countries.py:226
+#: cartridge_braintree/countries.py:222
 msgid "Suriname"
 msgstr "Suriname"
 
-#: countries.py:227
+#: cartridge_braintree/countries.py:223
 msgid "Svalbard and Jan Mayen Islands"
 msgstr "Île Jan Mayen"
 
-#: countries.py:228
+#: cartridge_braintree/countries.py:224
 msgid "Swaziland"
 msgstr "Swaziland"
 
-#: countries.py:229
+#: cartridge_braintree/countries.py:225
 msgid "Sweden"
 msgstr "Suède"
 
-#: countries.py:230
+#: cartridge_braintree/countries.py:226
 msgid "Switzerland"
 msgstr "Suisse"
 
-#: countries.py:231
+#: cartridge_braintree/countries.py:227
 msgid "Syria"
 msgstr "Syrie"
 
-#: countries.py:232
+#: cartridge_braintree/countries.py:228
 msgid "Taiwan"
 msgstr "Taïwan"
 
-#: countries.py:233
+#: cartridge_braintree/countries.py:229
 msgid "Tajikistan"
 msgstr "Tadjikistan"
 
-#: countries.py:234
+#: cartridge_braintree/countries.py:230
 msgid "Tanzania"
 msgstr "Tanzanie"
 
-#: countries.py:235
+#: cartridge_braintree/countries.py:231
 msgid "Thailand"
 msgstr "Thaïlande"
 
-#: countries.py:236
+#: cartridge_braintree/countries.py:232
 msgid "Timor-Leste"
 msgstr "Timor Oriental"
 
-#: countries.py:237
+#: cartridge_braintree/countries.py:233
 msgid "Togo"
 msgstr "Togo"
 
-#: countries.py:238
+#: cartridge_braintree/countries.py:234
 msgid "Tokelau"
 msgstr "Tokelau"
 
-#: countries.py:239
+#: cartridge_braintree/countries.py:235
 msgid "Tonga"
 msgstr "Tonga"
 
-#: countries.py:240
+#: cartridge_braintree/countries.py:236
 msgid "Trinidad and Tobago"
 msgstr "Trinidad et Tobago"
 
-#: countries.py:241
+#: cartridge_braintree/countries.py:237
 msgid "Tunisia"
 msgstr "Tunisie"
 
-#: countries.py:242
+#: cartridge_braintree/countries.py:238
 msgid "Turkey"
 msgstr "Turquie"
 
-#: countries.py:243
+#: cartridge_braintree/countries.py:239
 msgid "Turkmenistan"
 msgstr "Turkménistan"
 
-#: countries.py:244
+#: cartridge_braintree/countries.py:240
 msgid "Turks and Caicos Islands"
 msgstr "Îles Turques-et-Caïques"
 
-#: countries.py:245
+#: cartridge_braintree/countries.py:241
 msgid "Tuvalu"
 msgstr "Tuvalu"
 
-#: countries.py:246
+#: cartridge_braintree/countries.py:242
 msgid "Uganda"
 msgstr "Ouganda"
 
-#: countries.py:247
+#: cartridge_braintree/countries.py:243
 msgid "Ukraine"
 msgstr "Ukraine"
 
-#: countries.py:248
+#: cartridge_braintree/countries.py:244
 msgid "United Arab Emirates"
 msgstr "Émirats arabes unis"
 
-#: countries.py:249
+#: cartridge_braintree/countries.py:245
 msgid "United Kingdom"
 msgstr "Royaume-Uni"
 
-#: countries.py:250
+#: cartridge_braintree/countries.py:246
 msgid "United States Minor Outlying Islands"
 msgstr "Îles mineures éloignées des États-Unis"
 
-#: countries.py:251
+#: cartridge_braintree/countries.py:247
 msgid "United States of America"
 msgstr "Etats Unis d'Amérique"
 
-#: countries.py:252
+#: cartridge_braintree/countries.py:248
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#: countries.py:253
+#: cartridge_braintree/countries.py:249
 msgid "Uzbekistan"
 msgstr "Ouzbékistan"
 
-#: countries.py:254
+#: cartridge_braintree/countries.py:250
 msgid "Vanuatu"
 msgstr "Vanuatu"
 
-#: countries.py:255
+#: cartridge_braintree/countries.py:251
 msgid "Vatican City"
 msgstr "Cité du Vatican"
 
-#: countries.py:256
+#: cartridge_braintree/countries.py:252
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: countries.py:257
+#: cartridge_braintree/countries.py:253
 msgid "Vietnam"
 msgstr "Viêt Nam "
 
-#: countries.py:258
+#: cartridge_braintree/countries.py:254
 msgid "Virgin Islands, British"
 msgstr "Îles Vierges britanniques"
 
-#: countries.py:259
+#: cartridge_braintree/countries.py:255
 msgid "Virgin Islands, U.S."
 msgstr "Îles Vierges des États-Unis"
 
-#: countries.py:260
+#: cartridge_braintree/countries.py:256
 msgid "Wallis and Futuna Islands"
 msgstr "Wallis et Futuna"
 
-#: countries.py:261
+#: cartridge_braintree/countries.py:257
 msgid "Western Sahara"
 msgstr "Sahara occidental"
 
-#: countries.py:262
+#: cartridge_braintree/countries.py:258
 msgid "Yemen"
 msgstr "Yémen"
 
-#: countries.py:263
+#: cartridge_braintree/countries.py:259
 msgid "Zambia"
 msgstr "Zambie"
 
-#: countries.py:264
+#: cartridge_braintree/countries.py:260
 msgid "Zimbabwe"
 msgstr "Zimbabwe"
 
-#: defaults.py:9
+#: cartridge_braintree/defaults.py:7
 msgid ""
 "Countries that show up at the top of the country selection fields. A list of "
 "alpha2 codes."
 msgstr "Les pays qui apparaissent en haut des champs de sélection de pays."
 
-#: defaults.py:17
+#: cartridge_braintree/defaults.py:17
 msgid ""
 "Countries which are supported for billing/shipping. A list of alpha2 codes "
 "and/or tuples in the form (alpha2, country_name)."
@@ -1040,110 +1040,116 @@ msgstr ""
 "Les pays qui sont pris en charge pour la facturation/livraison. Une liste "
 "des alpha2 codes et/ou tuples dans la forme (alpha2, country_name)."
 
-#: defaults.py:40
+#: cartridge_braintree/defaults.py:45
 msgid "Activate PayPal for payment"
 msgstr "Activer PayPal pour le paiement"
 
-#: defaults.py:41
+#: cartridge_braintree/defaults.py:46
 msgid "If ``True``, PayPal will be included as a payment method."
 msgstr "Si ``True``, PayPal sera incluse comme méthode de paiement."
 
-#: defaults.py:48
+#: cartridge_braintree/defaults.py:53
 msgid "Currency for PayPal payments"
 msgstr "Devise pour les paiements par PayPal"
 
-#: defaults.py:49
+#: cartridge_braintree/defaults.py:54
 msgid "The currency Braintree is using for PayPal payments."
 msgstr "La monnaie Braintree utilise pour les paiements par PayPal."
 
-#: forms.py:60 templates/shop/includes/payment_fields.html.py:5
+#: cartridge_braintree/forms.py:63 cartridge_braintree/forms.py:66
+msgid "State/Region"
+msgstr "Département"
+
+#: cartridge_braintree/forms.py:91
+#: cartridge_braintree/templates/shop/includes/payment_fields.html:5
 msgid "Payment Method"
 msgstr "Méthode de paiement"
 
-#: forms.py:61
+#: cartridge_braintree/forms.py:93
 msgid "Payment Method Nonce"
 msgstr "Méthode de paiement nonce"
 
-#: forms.py:62
+#: cartridge_braintree/forms.py:95
 msgid "Braintree Errors"
 msgstr "Erreurs de Braintree"
 
-#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
+#: cartridge_braintree/forms.py:155 cartridge_braintree/forms.py:159
+#: cartridge_braintree/forms.py:175
 msgid "This field is required."
 msgstr "Ce champ est obligatoire."
 
-#: forms.py:116
+#: cartridge_braintree/forms.py:163
+msgid "This card is not supported."
+msgstr "Cette carte n'est pas prise en charge."
+
+#: cartridge_braintree/forms.py:167
 msgid "A valid card number is required."
 msgstr "Un numéro de carte valide est requise."
 
-#: forms.py:118
+#: cartridge_braintree/forms.py:171
 msgid "A valid expiry date is required."
 msgstr "Une date d'expiration valide est requise."
 
-#: forms.py:122
+#: cartridge_braintree/forms.py:179
 msgid "A valid CCV is required."
 msgstr "Un cryptograme valide est requise."
 
-#: forms.py:126
-msgid "The card type selected doesn't match your card number."
-msgstr ""
-"Le moyen de paiement choisi ne correspondent pas avec le numéro de carte."
-
-#: forms.py:128 forms.py:134
+#: cartridge_braintree/forms.py:184 cartridge_braintree/forms.py:194
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 "Numéro de carte/cryptograme n'a pas pu être traité. S'il vous plaît essayer "
 "à nouveau."
 
-#: templates/shop/checkout.html:16
+#: cartridge_braintree/templates/shop/checkout.html:16
 msgid "Next"
 msgstr "Poursuivre"
 
-#: templates/shop/checkout.html:18
+#: cartridge_braintree/templates/shop/checkout.html:18
 msgid "Back"
 msgstr "Revenir"
 
-#: templates/shop/checkout.html:22
+#: cartridge_braintree/templates/shop/checkout.html:22
 msgid "Your cart is empty."
 msgstr "Votre panier est vide."
 
-#: templates/shop/checkout.html:23
+#: cartridge_braintree/templates/shop/checkout.html:23
 msgid ""
 "This may be due to your session timing out after a period of inactivity."
 msgstr ""
 "Ceci est peut être dû à votre session ayant expiré après une période "
 "d'inactivité."
 
-#: templates/shop/checkout.html:24
+#: cartridge_braintree/templates/shop/checkout.html:24
 msgid "We apologize for the inconvenience."
 msgstr "Nous nous excusons pour le désagrément."
 
-#: templates/shop/checkout.html:26
+#: cartridge_braintree/templates/shop/checkout.html:26
 msgid "Continue Shopping"
 msgstr " Revenir aux achats"
 
-#: templates/shop/checkout.html:51
+#: cartridge_braintree/templates/shop/checkout.html:51
 msgid "Edit Cart"
 msgstr "Modifier le panier"
 
-#: templates/shop/includes/braintreejs.html:36 templates/shop/payment.html:5
+#: cartridge_braintree/templates/shop/includes/braintreejs.html:35
+#: cartridge_braintree/templates/shop/payment.html:5
 msgid "Braintree API could not be created."
 msgstr "Braintree API n'a pas pu être créé."
 
-#: templates/shop/includes/payment_fields.html:11
-#: templates/shop/includes/payment_fields.html:14
+#: cartridge_braintree/templates/shop/includes/payment_fields.html:11
+#: cartridge_braintree/templates/shop/includes/payment_fields.html:14
 msgid "Pay with PayPal"
 msgstr "Payer par PayPal"
 
-#: templates/shop/includes/payment_fields.html:22
-#: templates/shop/includes/payment_fields.html:25
+#: cartridge_braintree/templates/shop/includes/payment_fields.html:22
+#: cartridge_braintree/templates/shop/includes/payment_fields.html:25
 msgid "Pay with Card"
 msgstr "Payer par carte"
 
-#: templates/shop/includes/payment_fields.html:36
+#: cartridge_braintree/templates/shop/includes/payment_fields.html:36
 msgid "Payment Details"
 msgstr "Paiement"
 
-#: templates/shop/includes/payment_fields.html:41
+#: cartridge_braintree/templates/shop/includes/payment_fields.html:40
 msgid "Card Expiry"
 msgstr "Date d'expiration"

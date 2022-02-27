@@ -23,7 +23,7 @@ register_setting(
 
 register_setting(
     name="SHOP_DEFAULT_COUNTRY",
-    description=_(
+    description=(
         "Default country in the country selection field. "
         "If ``None``, the user is forced to select a country (default). "
         "If a 2 letter country code is specified, that country will be used. "
