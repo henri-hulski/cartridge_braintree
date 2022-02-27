@@ -27,7 +27,7 @@ except AttributeError:
         "You need to define BRAINTREE_MERCHANT_ID, "
         "BRAINTREE_PUBLIC_KEY and BRAINTREE_PRIVATE_KEY "
         "in your settings module to use the "
-        "Braintree v.zero payment processor."
+        "Braintree payment processor."
     )
 
 
