@@ -41,6 +41,9 @@ class NoNameTextInput(forms.TextInput):
 class BraintreeOrderForm(OrderForm):
     """
     The following change are made to the cartridge order form:
+    - Remove card type field
+    - Make state/region fields optional.
+    - Rearrange field order.
     - Shipping and Billing country fields are rendered using
       a Select widget. This ensures the country selected can be
       converted to a valid code for Braintree's payment processing.
@@ -54,6 +57,36 @@ class BraintreeOrderForm(OrderForm):
 
       See https://developers.braintreepayments.com/guides/transactions/python
     """
+
+    card_type = None
+    billing_detail_state = forms.CharField(
+        label=_("State/Region"), max_length=100, required=False
+    )
+    shipping_detail_state = forms.CharField(
+        label=_("State/Region"), max_length=100, required=False
+    )
+
+    field_order = [
+        "billing_detail_first_name",
+        "billing_detail_last_name",
+        "billing_detail_street",
+        "billing_detail_postcode",
+        "billing_detail_city",
+        "billing_detail_state",
+        "billing_detail_country",
+        "billing_detail_phone",
+        "billing_detail_email",
+        "shipping_detail_first_name",
+        "shipping_detail_last_name",
+        "shipping_detail_street",
+        "shipping_detail_postcode",
+        "shipping_detail_city",
+        "shipping_detail_state",
+        "shipping_detail_country",
+        "shipping_detail_phone",
+        "additional_instructions",
+        "discount_code",
+    ]
 
     payment_method = forms.CharField(label=_("Payment Method"), required=False)
     payment_method_nonce = forms.CharField(
@@ -125,6 +158,10 @@ class BraintreeOrderForm(OrderForm):
                         self._errors["card_number"] = self.error_class(
                             [_("This field is required.")]
                         )
+                    elif "cardNumber" in errors and errors["cardNumber"] == "invalid_type":
+                        self._errors["card_number"] = self.error_class(
+                            [_("This card is not supported.")]
+                        )
                     elif "cardNumber" in errors and errors["cardNumber"] == "invalid":
                         self._errors["card_number"] = self.error_class(
                             [_("A valid card number is required.")]
@@ -140,18 +177,6 @@ class BraintreeOrderForm(OrderForm):
                     elif "cardCCV" in errors and errors["cardCCV"] == "invalid":
                         self._errors["card_ccv"] = self.error_class(
                             [_("A valid CCV is required.")]
-                        )
-                    if "cardType" in errors and errors["cardType"] == "blank":
-                        self._errors["card_type"] = self.error_class(
-                            [_("This field is required.")]
-                        )
-                    elif "cardType" in errors and errors["cardType"] == "invalid":
-                        self._errors["card_type"] = self.error_class(
-                            [
-                                _(
-                                    "The card type selected doesn't match your card number."
-                                )
-                            ]
                         )
                     if "tokenizeCard" in errors and errors["tokenizeCard"] == "failed":
                         raise forms.ValidationError(
@@ -172,8 +197,7 @@ class BraintreeOrderForm(OrderForm):
 
             else:
                 # PayPal Payment
-                # Remove blank card_name and card_type from errors
+                # Remove blank card_name from errors
                 self.errors.pop("card_name", None)
-                self.errors.pop("card_type", None)
 
         return super().clean()

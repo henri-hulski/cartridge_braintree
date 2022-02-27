@@ -40,7 +40,8 @@ contains these changes.
             nextButton = form.find(":submit[name='next']"),
             backButton = form.find(":submit[name='back']"),
             nonceField = $("#id_payment_method_nonce"),
-            errorsField = $("#id_braintree_errors");
+            errorsField = $("#id_braintree_errors"),
+            allowedCartTypes = {{ settings.SHOP_CARD_TYPES|lower|safe }};
 
         backButton.click(function() {
             // Clicking the 'back' button is always OK.
@@ -67,36 +68,28 @@ contains these changes.
                 expiryMonth = $('#id_card_expiry_month').val(),
                 expiryYear = $('#id_card_expiry_year').val(),
                 cardCCV = $('#id_card_ccv').val(),
-                cardType = $('#checkout-form').find("input[type='radio'][name='card_type']:checked").val(),
-                calculatedType = '',
+                cardType = '',
                 errors = {};
-            if (!cardType) {
-                cardType = "";
-            }
             if (!cardName.trim()) {
                 errors.cardName = 'blank';
             }
             if (!cardNumber.trim()) {
                 errors.cardNumber = 'blank';
-                calculatedType = cardType.toLowerCase();
             } else if ($.payment.validateCardNumber(cardNumber) === true) {
-                calculatedType = $.payment.cardType(cardNumber);
+                cardType = $.payment.cardType(cardNumber);
+                if (!allowedCartTypes.includes(cardType)) {
+                    errors.cardNumber = 'invalid_type';
+                }
             } else {
                 errors.cardNumber = 'invalid';
-                calculatedType = cardType.toLowerCase();
             }
             if ($.payment.validateCardExpiry(expiryMonth, expiryYear) !== true) {
                 errors.cardExpiry = 'invalid';
             }
             if (!cardCCV.trim()) {
                 errors.cardCCV = 'blank';
-            } else if ($.payment.validateCardCVC(cardCCV, calculatedType) !== true) {
+            } else if (cardType && $.payment.validateCardCVC(cardCCV, cardType) !== true) {
                 errors.cardCCV = 'invalid';
-            }
-            if (!cardType) {
-                errors.cardType = 'blank';
-            } else if (calculatedType.toLowerCase() !== cardType.toLowerCase()) {
-                errors.cardType = 'invalid';
             }
 
 

@@ -63,3 +63,19 @@ register_setting(
     default=("BRAINTREE_PAYPAL_ACTIVATE", "BRAINTREE_PAYPAL_CURRENCY"),
     append=True,
 )
+
+register_setting(
+    name="SHOP_CARD_TYPES",
+    description="List of available credit card types for payment.",
+    editable=False,
+    default=[
+        "Visa",
+        "MasterCard",
+        "Maestro",
+        "Amex",
+        "Discover",
+        "DinersClub",
+        "JCB",
+        "UnionPay",
+    ]
+)
