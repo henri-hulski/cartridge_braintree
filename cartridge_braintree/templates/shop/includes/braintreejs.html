@@ -40,8 +40,7 @@ contains these changes.
             nextButton = form.find(":submit[name='next']"),
             backButton = form.find(":submit[name='back']"),
             nonceField = $("#id_payment_method_nonce"),
-            errorsField = $("#id_braintree_errors"),
-            allowedCartTypes = {{ settings.SHOP_CARD_TYPES|lower|safe }};
+            errorsField = $("#id_braintree_errors");
 
         backButton.click(function() {
             // Clicking the 'back' button is always OK.
@@ -68,6 +67,7 @@ contains these changes.
                 expiryMonth = $('#id_card_expiry_month').val(),
                 expiryYear = $('#id_card_expiry_year').val(),
                 cardCCV = $('#id_card_ccv').val(),
+                allowedCartTypes = {{ settings.SHOP_CARD_TYPES|lower|safe }},
                 cardType = '',
                 errors = {};
             if (!cardName.trim()) {
