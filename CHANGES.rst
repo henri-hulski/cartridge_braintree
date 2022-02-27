@@ -1,10 +1,22 @@
 CHANGES
 =======
 
+2.0.0b3 (2022-02-27)
+--------------------
+
+- Remove card type field from checkout form.
+- Check if the detected card type is in SHOP_CARD_TYPES setting.
+- SHOP_CARD_TYPES defaults now to all cards which are supported by Braintree.
+- Make state/region fields optional.
+- Rearrange field order.
+- Update translations.
+
+
 2.0.0b2 (2022-02-26)
 --------------------
 
-- Bugfix: update signature for the NoNameTextInput widget render method
+- Bugfix: update signature for the NoNameTextInput widget render method.
+- Upgrade Braintree.js SDK to 2.32.1.
 
 
 2.0.0b1 (2022-02-19)
