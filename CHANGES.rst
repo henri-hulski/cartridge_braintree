@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+2.0.0b4 (2022-03-01)
+--------------------
+
+- Use new template tag to the get order_total amount for PayPal.
+
+
 2.0.0b3 (2022-02-27)
 --------------------
 
