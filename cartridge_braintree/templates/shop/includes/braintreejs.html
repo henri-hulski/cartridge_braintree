@@ -1,4 +1,4 @@
-{% load i18n mezzanine_tags shop_tags static %}
+{% load i18n mezzanine_tags checkout_tags static %}
 {% comment %}
 Set up braintree.js to create a payment_method_nonce for payment processing.
 Based on cartridge-pinpayments.
@@ -126,6 +126,7 @@ contains these changes.
 </script>
 
 {% if settings.BRAINTREE_PAYPAL_ACTIVATE %}
+{% get_order_total as order_total %}
 <script type="text/javascript">
     $(function() {
         var form = $('#checkout-form'),
@@ -171,7 +172,7 @@ contains these changes.
           },
           paypal: {
             singleUse: true,
-            amount: '{{ order_total }}',
+            amount: {{ order_total }},
             currency: '{{ settings.BRAINTREE_PAYPAL_CURRENCY }}',
             locale: '{{ LANGUAGE_CODE }}',
             enableShippingAddress: false,
