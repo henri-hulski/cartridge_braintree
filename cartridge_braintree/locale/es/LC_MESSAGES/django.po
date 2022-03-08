@@ -1080,10 +1080,6 @@ msgstr ""
 msgid "A valid CCV is required."
 msgstr ""
 
-#: forms.py:126
-msgid "The card type selected doesn't match your card number."
-msgstr ""
-
 #: forms.py:128 forms.py:134
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
