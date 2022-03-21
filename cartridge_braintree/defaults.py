@@ -77,5 +77,5 @@ register_setting(
         "DinersClub",
         "JCB",
         "UnionPay",
-    ]
+    ],
 )
