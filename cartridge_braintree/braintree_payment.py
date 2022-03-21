@@ -75,7 +75,7 @@ def payment_handler(request, order_form, order):
 
     trans = {
         "payment_method_nonce": data["payment_method_nonce"],
-        "amount": order.total,
+        "amount": f"{order.total:.2f}",
         "order_id": str(order.id),
         "customer": {
             "first_name": data["billing_detail_first_name"],

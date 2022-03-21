@@ -170,7 +170,7 @@ contains these changes.
             },
             paypal: {
                 singleUse: true,
-                amount: {{ order_total }},
+                amount: {{ order_total }}.toFixed(2),
                 currency: '{{ settings.BRAINTREE_PAYPAL_CURRENCY }}',
                 locale: '{{ LANGUAGE_CODE }}',
                 headless: true,
