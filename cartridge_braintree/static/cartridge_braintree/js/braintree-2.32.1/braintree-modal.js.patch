@@ -1,0 +1,28 @@
+--- braintree.js	2022-03-21 23:54:14.384717635 +0100
++++ braintree-modal.js	2022-03-22 00:13:05.469839398 +0100
+@@ -1,3 +1,9 @@
++/*
++ * This is a patched version of braintree.js which sets isPopupSupported() to false.
++ * So instead of the PayPal popup a modal will be used,
++ * The reason is, that browsers are blocking the popup.
++ */
++
+ /*!
+  * Braintree End-to-End Encryption Library
+  * https://www.braintreepayments.com
+@@ -13692,6 +13698,7 @@
+ }
+ 
+ function isPopupSupported() {
++/*
+   if (browser.isOperaMini()) {
+     return false;
+   }
+@@ -13734,6 +13741,7 @@
+       return true;
+     }
+   }
++ */
+ 
+   return false;
+ }

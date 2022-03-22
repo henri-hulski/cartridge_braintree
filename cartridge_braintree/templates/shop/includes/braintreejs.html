@@ -21,7 +21,7 @@ contains these changes.
     $('#id_card_number').payment('formatCardNumber');
     $('#id_card_ccv').payment('formatCardCVC');
 </script>
-<script src="{% static "cartridge_braintree/js/braintree-2.32.1.min.js" %}"></script>
+<script src="{% static "cartridge_braintree/js/braintree-2.32.1/braintree-modal.js" %}"></script>
 <script type="text/javascript">
     var client,
         form = $("#checkout-form"),
@@ -160,6 +160,7 @@ contains these changes.
         var checkout;
 
         braintree.setup("{{ client_token }}", "custom", {
+            enableCORS: true,
             onReady: function (integration) {
                 checkout = integration;
             },
@@ -174,6 +175,9 @@ contains these changes.
                 currency: '{{ settings.BRAINTREE_PAYPAL_CURRENCY }}',
                 locale: '{{ LANGUAGE_CODE }}',
                 headless: true,
+            },
+            onError: function(paypalErr) {
+                console.error(paypalErr.type + ' error when creating PayPal:', paypalErr);
             }
         });
 
