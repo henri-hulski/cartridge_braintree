@@ -1,6 +1,24 @@
 CHANGES
 =======
 
+2.0.0b5 (2022-03-22)
+--------------------
+
+Features:
+- use JavaScript compression
+- remove name from card payment form
+
+Fixes:
+- fix error reporting for card expire fields
+- round order_total to 2 digits
+- use paypal as a modal instead of a popup
+
+Refactor, Style and Traslation:
+- clean up braintree.html javascript
+- remove unused translations and English translation
+- some minor style fixes
+
+
 2.0.0b4 (2022-03-01)
 --------------------
 

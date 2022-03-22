@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "cartridge_braintree"
-version = "2.0.0b4"
+version = "2.0.0b5"
 description = "Braintree Payments processing for Mezzanine/Cartridge"
 readme = "README.rst"
 authors = [{ name = "Henri Hulski", email = "henri@yacoma.it" }]
