@@ -12,7 +12,7 @@ license = { text = "BSD" }
 requires-python = ">=3.7"
 dependencies = [
     "braintree",
-    "cartridge@https://github.com/henri-hulski/cartridge/archive/master.tar.gz",
+    "cartridge >= 1.1",
     "django >= 3.2.4, < 4.1",
     "mezzanine >= 5.1",
 ]

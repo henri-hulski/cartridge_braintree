@@ -2,8 +2,8 @@ cartridge_braintree
 ===================
 
 Braintree Payments processing for Mezzanine/Cartridge.
-Supports Django 3.2 or 4.0 and Cartridge 1.0 or newer.
-We use Mezzanine 5.1 or newer.
+Supports Django 3.2 or 4.0, Mezzanine 5.1 or newer and
+Cartridge 1.1 or newer.
 
 Instructions for use
 --------------------
