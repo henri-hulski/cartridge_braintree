@@ -22,7 +22,7 @@ contains these changes.
     $('#id_card_number').payment('formatCardNumber');
     $('#id_card_ccv').payment('formatCardCVC');
 </script>
-<script src="{% static "cartridge_braintree/js/braintree-2.32.1/braintree-modal.js" %}"></script>
+<script src="{% static "cartridge_braintree/js/braintree-3.85.2/client.js" %}"></script>
 <script type="text/javascript">
     var client,
         form = $("#checkout-form"),
@@ -35,6 +35,7 @@ contains these changes.
         // Clear previous errors
         errorsField.val("");
         $("#no_braintree").addClass('hidden');
+        $("#paypal_popup_blocked").addClass('hidden');
     }
 
     $(function() {
@@ -44,18 +45,6 @@ contains these changes.
             // continue with form submission
             return;
         });
-
-        try {
-            client = new braintree.api.Client({
-                clientToken: "{{ client_token }}"
-            });
-        }
-        catch (err) {
-            // The braintree.js script was not loaded successfully, so we want to
-            // display an error to the user.
-            console.error("{% trans "Braintree API could not be created." %}");
-            $("#no_braintree").removeClass('hidden');
-        }
 
         nextButton.click(function(e) {
             // 'Next' button was clicked.
@@ -95,12 +84,21 @@ contains these changes.
 
             if ($.isEmptyObject(errors)) {
                 // Create nonce for the card
-                client.tokenizeCard({
-                    number:  cardNumber,
-                    expirationMonth:  expiryMonth,
-                    expirationYear: expiryYear,
-                    cvv: cardCCV,
-                }, function (err, nonce) {
+                client.request({
+                    endpoint: 'payment_methods/credit_cards',
+                    method: 'post',
+                    data: {
+                        creditCard: {
+                            number:  cardNumber,
+                            expirationMonth:  expiryMonth,
+                            expirationYear: expiryYear,
+                            cvv: cardCCV,
+                            options: {
+                                validate: false
+                            }
+                        }
+                    }
+                }, function (err, result) {
                     // Set the nonce and errors in the form
                     if (err) {
                         errors.tokenizeCard = 'failed';
@@ -108,7 +106,7 @@ contains these changes.
                         console.error('Braintree request could not be processed.');
                         console.error(err);
                     } else {
-                        nonceField.val(nonce);
+                        nonceField.val(result.creditCards[0].nonce);
                     }
 
                     // Resubmit the form to the server
@@ -124,11 +122,23 @@ contains these changes.
                 form[0].submit();
             }
         });
+
+        braintree.client.create({
+            authorization: "{{ client_token }}"
+        }, function (clientErr, clientInstance) {
+            if (clientErr) {
+                console.error("{% trans "Braintree API could not be created." %}");
+                $("#no_braintree").removeClass('hidden');
+                return;
+            }
+            client = clientInstance;
+        });
     });
 </script>
 
 {% if settings.BRAINTREE_PAYPAL_ACTIVATE %}
 {% get_order_total as order_total %}
+<script src="{% static "cartridge_braintree/js/braintree-3.85.2/paypal-modal.js" %}"></script>
 <script type="text/javascript">
     $(function() {
         var cardButton = $("#card").find("button:visible")[0],
@@ -158,49 +168,84 @@ contains these changes.
             activateCardPayment();
         });
 
-        var checkout;
-
-        braintree.setup("{{ client_token }}", "custom", {
-            enableCORS: true,
-            onReady: function (integration) {
-                checkout = integration;
-            },
-            onPaymentMethodReceived: function (payload) {
-                // Set the nonce in the form
-                nonceField.val(payload.nonce);
-                form[0].submit();
-            },
-            paypal: {
-                singleUse: true,
-                amount: {{ order_total }}.toFixed(2),
-                currency: '{{ settings.BRAINTREE_PAYPAL_CURRENCY }}',
-                locale: '{{ LANGUAGE_CODE }}',
-                headless: true,
-            },
-            onError: function(paypalErr) {
-                console.error(paypalErr.type + ' error when creating PayPal:', paypalErr);
+        braintree.client.create({
+            authorization: "{{ client_token }}"
+        }, function (clientErr, clientInstance) {
+            if (clientErr) {
+                console.error("{% trans "Braintree API could not be created." %}");
+                $("#no_braintree").removeClass('hidden');
+                return;
             }
-        });
+            
+            braintree.paypal.create({
+                client: clientInstance
+            }, function (paypalErr, paypalInstance) {
+                if (paypalErr) {
+                    console.error('Error creating PayPal:', paypalErr);
+                    paypalButton.removeAttribute('disabled');
+                    return;
+                }
+        
+                clearErrors()
 
-        clearErrors()
+                paypalButton.removeAttribute('disabled');
+            
+                // When the button is clicked, attempt to tokenize.
+                paypalButton.addEventListener('click', function(event) {
+                    // 'PayPal' button was clicked.
 
-        paypalButton.removeAttribute('disabled');
+                    // Disable the button so that we don't attempt to open multiple popups.
+                    paypalButton.setAttribute('disabled', true);
+                    // Hide Card details form, set payment method to paypal
+                    // and disable the next button and the paypal button.
+                    card.addClass('hidden');
+                    paymentMethod.val('paypal');
+                    nextButton.attr({disabled: true});
+                    paypalButton.setAttribute('disabled', true);
 
-        paypalButton.addEventListener('click', function(event) {
-            // 'PayPal' button was clicked.
+                    // Create nonce
+                    paypalInstance.tokenize({
+                        flow: 'checkout',
+                        amount: {{ order_total }}.toFixed(2),
+                        currency: '{{ settings.BRAINTREE_PAYPAL_CURRENCY }}',
+                        locale: '{{ LANGUAGE_CODE }}',
+                        displayName: '{{ settings.CONTACT_NAME }}',
+                        offerCredit: false,
+                        offerPayLater: false,
+                    }, function (tokenizeErr, payload) {
+                        paypalButton.removeAttribute('disabled');
+                        if (tokenizeErr) {
+                            // Handle tokenization errors or premature flow closure
 
-            // Disable the button so that we don't attempt to open multiple popups.
-            paypalButton.setAttribute('disabled', true);
-            // Hide Card details form, set payment method to paypal
-            // and disable the next button and the paypal button.
-            card.addClass('hidden');
-            paymentMethod.val('paypal');
-            nextButton.attr({disabled: true});
-            paypalButton.setAttribute('disabled', true);
-
-            // Invoke the paypal.initAuthFlow method
-            // returned from the onReady callback.
-            checkout.paypal.initAuthFlow();
+                            switch (tokenizeErr.code) {
+                                case 'PAYPAL_POPUP_CLOSED':
+                                case 'PAYPAL_POPUP_OPEN_FAILED':
+                                    console.error('PayPal popup probably blocked by browser.', tokenizeErr);
+                                    $("#paypal_popup_blocked").removeClass('hidden');
+                                    break;
+                                case 'PAYPAL_ACCOUNT_TOKENIZATION_FAILED':
+                                    console.error('PayPal tokenization failed. See details:', tokenizeErr.details);
+                                    break;
+                                case 'PAYPAL_FLOW_FAILED':
+                                    console.error('Unable to initialize PayPal flow. Are your options correct?', tokenizeErr.details);
+                                    break;
+                                default:
+                                    console.error('Error tokenizing:', tokenizeErr);
+                            }
+                            paypalInstance.closeWindow();
+                            paypalButton.removeAttribute('disabled');
+                            return;
+                        }
+                
+                        // Tokenization succeeded
+                        // Set the nonce in the form
+                        nonceField.val(payload.nonce);
+                        paypalInstance.closeWindow();
+                        paypalInstance.teardown();
+                        form[0].submit();
+                    });
+                });
+            });
         });
     });
 </script>

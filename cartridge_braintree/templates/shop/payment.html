@@ -2,7 +2,12 @@
 {% load mezzanine_tags i18n %}
 
 {% block before-form %}
-    <div id="no_braintree" class="alert alert-danger hidden">{% trans "Braintree API could not be created." %}</div>
+    <div id="no_braintree" class="alert alert-danger hidden">
+        {% trans "Braintree API could not be created." %}
+    </div>
+    <div id="paypal_popup_blocked" class="alert alert-danger hidden">
+        {% trans "PayPal popup probably blocked by browser." %}
+    </div>
 {% endblock %}
 
 {% block after-form %}
