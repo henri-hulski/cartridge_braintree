@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "cartridge_braintree"
-version = "2.0.0b5"
+version = "2.0.0"
 description = "Braintree Payments processing for Mezzanine/Cartridge"
 readme = "README.rst"
 authors = [{ name = "Henri Hulski", email = "henri@yacoma.it" }]
@@ -17,7 +17,7 @@ dependencies = [
     "mezzanine >= 5.1",
 ]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Environment :: Web Environment",
     "Framework :: Django",
     "Framework :: Django :: 3.2",
