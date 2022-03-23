@@ -1,14 +1,15 @@
 {% load i18n mezzanine_tags checkout_tags static %}
 {% comment %}
-Set up braintree.js to create a payment_method_nonce for payment processing.
-Based on cartridge-pinpayments.
+Set up braintree.js to create a nonce for payment processing.
 
-See also https://developer.paypal.com/braintree/docs/guides/client-sdk/setup/javascript/v2.
+See also https://braintree.github.io/braintree-web/current/Client.html#request
+and for paypal https://braintree.github.io/braintree-web/current/PayPal.html.
 
 NOTE: This requires the following modifications to the 'checkout.html' template:
 
-id='checkout-form' on the form element
-name='next' on the 'Next' submit button.
+- id='checkout-form' on the form element,
+- name='next' on the 'Next' submit button,
+- name='back' on the 'Back' submit button.
 
 If you override the 'checkout.html' template, make sure your template also
 contains these changes.
