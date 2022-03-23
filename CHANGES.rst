@@ -4,12 +4,6 @@ CHANGES
 3.0.1 (2022-03-23)
 --------------------
 
-- Using the right files for v3 from stash.
-
-
-3.0.0 (2022-03-23)
---------------------
-
 - Switch to braintree-web API v3.
 
 BREAKING CHANGE: Some older browsers will not work anymore.
