@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+3.0.0 (2022-03-23)
+--------------------
+
+- Switch to braintree-web API v3.
+
+BREAKING CHANGE: Some older browsers will not work anymore.
+    For supported browsers see
+    https://braintree.github.io/braintree-web/3.85.2/#browser-support.
+
+
 2.0.0 (2022-03-23)
 --------------------
 
