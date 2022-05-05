@@ -60,12 +60,6 @@ class BraintreeOrderForm(OrderForm):
 
     card_name = None
     card_type = None
-    billing_detail_state = forms.CharField(
-        label=_("State/Region"), max_length=100, required=False
-    )
-    shipping_detail_state = forms.CharField(
-        label=_("State/Region"), max_length=100, required=False
-    )
 
     field_order = [
         "billing_detail_first_name",
