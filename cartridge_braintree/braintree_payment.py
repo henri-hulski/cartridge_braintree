@@ -116,4 +116,4 @@ def payment_handler(request, order_form, order):
             all_errors += f" [code: {error.code}, attribute: {error.attribute}, '{error.message}']"
         logger.error(f"Order {order.id} failed with{all_errors}")
 
-        raise CheckoutError("Credit Card error: " + result.message)
+        raise CheckoutError("Payment error: " + result.message)
