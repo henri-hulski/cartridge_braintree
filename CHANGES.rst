@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+3.0.2 (2022-05-06)
+--------------------
+
+- Use Cartridge stable release 1.3+.
+- State/Region fields are now already optional in Cartridge. So removing them from form.py.
+- Fix CheckoutError message.
+
+
 3.0.1 (2022-03-23)
 --------------------
 
