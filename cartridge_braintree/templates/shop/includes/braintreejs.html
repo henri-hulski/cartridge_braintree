@@ -72,7 +72,7 @@ contains these changes.
             } else {
                 errors.cardNumber = 'invalid';
             }
-            if ($.payment.validateCardExpiry(expiryMonth, expiryYear) !== true) {
+            if (expiryYear && $.payment.validateCardExpiry(expiryMonth, expiryYear) !== true) {
                 errors.cardExpiry = 'invalid';
             }
             if (!cardCCV.trim()) {
