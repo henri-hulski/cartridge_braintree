@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+3.0.3 (2022-05-14)
+--------------------
+
+- Validate card expiry fields only if they're not hidden.
+- Remove double javascript compression from braintreejs.html.
+- Update translations and add error translations.
+
+
 3.0.2 (2022-05-06)
 --------------------
 
