@@ -2,6 +2,7 @@ import logging
 
 from cartridge.shop.checkout import CheckoutError
 from django.core.exceptions import ImproperlyConfigured
+from django.utils.translation import gettext_lazy as _
 from mezzanine.conf import settings
 
 logger = logging.getLogger("braintree_payment")
@@ -10,7 +11,7 @@ logger = logging.getLogger("braintree_payment")
 try:
     import braintree
 except ImportError:
-    raise ImproperlyConfigured("Braintree package must be installed.")
+    raise ImproperlyConfigured(_("Braintree package must be installed."))
 
 
 if settings.DEBUG:
@@ -24,10 +25,10 @@ try:
     BRAINTREE_PRIVATE_KEY = settings.BRAINTREE_PRIVATE_KEY
 except AttributeError:
     raise ImproperlyConfigured(
-        "You need to define BRAINTREE_MERCHANT_ID, "
+        _("You need to define BRAINTREE_MERCHANT_ID, "
         "BRAINTREE_PUBLIC_KEY and BRAINTREE_PRIVATE_KEY "
         "in your settings module to use the "
-        "Braintree payment processor."
+        "Braintree payment processor.")
     )
 
 
@@ -116,4 +117,4 @@ def payment_handler(request, order_form, order):
             all_errors += f" [code: {error.code}, attribute: {error.attribute}, '{error.message}']"
         logger.error(f"Order {order.id} failed with{all_errors}")
 
-        raise CheckoutError("Payment error: " + result.message)
+        raise CheckoutError(_("Payment error:") + " " + result.message)

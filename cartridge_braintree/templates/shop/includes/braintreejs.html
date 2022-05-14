@@ -103,7 +103,7 @@ contains these changes.
                     if (err) {
                         errors.tokenizeCard = 'failed';
                         errorsField.val(JSON.stringify(errors));
-                        console.error('Braintree request could not be processed.');
+                        console.error(_('Braintree request could not be processed.'));
                         console.error(err);
                     } else {
                         nonceField.val(result.creditCards[0].nonce);
@@ -127,7 +127,7 @@ contains these changes.
             authorization: "{{ client_token }}"
         }, function (clientErr, clientInstance) {
             if (clientErr) {
-                console.error("{% trans "Braintree API could not be created." %}");
+                console.error(_("Braintree API could not be created."));
                 $("#no_braintree").removeClass('hidden');
                 return;
             }
@@ -172,7 +172,7 @@ contains these changes.
             authorization: "{{ client_token }}"
         }, function (clientErr, clientInstance) {
             if (clientErr) {
-                console.error("{% trans "Braintree API could not be created." %}");
+                console.error(_("Braintree API could not be created."));
                 $("#no_braintree").removeClass('hidden');
                 return;
             }
@@ -181,7 +181,7 @@ contains these changes.
                 client: clientInstance
             }, function (paypalErr, paypalInstance) {
                 if (paypalErr) {
-                    console.error('Error creating PayPal:', paypalErr);
+                    console.error(_('Error creating PayPal:'), paypalErr);
                     paypalButton.removeAttribute('disabled');
                     return;
                 }
@@ -220,17 +220,17 @@ contains these changes.
                             switch (tokenizeErr.code) {
                                 case 'PAYPAL_POPUP_CLOSED':
                                 case 'PAYPAL_POPUP_OPEN_FAILED':
-                                    console.error('PayPal popup probably blocked by browser.', tokenizeErr);
+                                    console.error(_('PayPal popup probably blocked by browser.'), tokenizeErr);
                                     $("#paypal_popup_blocked").removeClass('hidden');
                                     break;
                                 case 'PAYPAL_ACCOUNT_TOKENIZATION_FAILED':
-                                    console.error('PayPal tokenization failed. See details:', tokenizeErr.details);
+                                    console.error(_('PayPal tokenization failed. See details:'), tokenizeErr.details);
                                     break;
                                 case 'PAYPAL_FLOW_FAILED':
-                                    console.error('Unable to initialize PayPal flow. Are your options correct?', tokenizeErr.details);
+                                    console.error(_('Unable to initialize PayPal flow. Are your options correct?'), tokenizeErr.details);
                                     break;
                                 default:
-                                    console.error('Error tokenizing:', tokenizeErr);
+                                    console.error(_('Error tokenizing:'), tokenizeErr);
                             }
                             paypalInstance.closeWindow();
                             paypalButton.removeAttribute('disabled');

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-countries\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-03 11:12+0100\n"
+"POT-Creation-Date: 2022-05-14 10:57+0200\n"
 "PO-Revision-Date: 2016-01-31 17:43+0100\n"
 "Last-Translator: Henri Hulski <henri@yacoma.it>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/smileychris/django-"
@@ -23,1007 +23,1022 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: countries.py:15
+#: braintree_payment.py:14
+msgid "Braintree package must be installed."
+msgstr ""
+
+#: braintree_payment.py:28
+msgid ""
+"You need to define BRAINTREE_MERCHANT_ID, BRAINTREE_PUBLIC_KEY and "
+"BRAINTREE_PRIVATE_KEY in your settings module to use the Braintree payment "
+"processor."
+msgstr ""
+
+#: braintree_payment.py:120
+msgid "Payment error:"
+msgstr ""
+
+#: countries.py:11
 msgid "Afghanistan"
 msgstr "Afghanistan"
 
-#: countries.py:16
+#: countries.py:12
 msgid "Åland"
 msgstr "Åland"
 
-#: countries.py:17
+#: countries.py:13
 msgid "Albania"
 msgstr "Albania"
 
-#: countries.py:18
+#: countries.py:14
 msgid "Algeria"
 msgstr "Algerie"
 
-#: countries.py:19
+#: countries.py:15
 msgid "American Samoa"
 msgstr "Amerikansk Samoa"
 
-#: countries.py:20
+#: countries.py:16
 msgid "Andorra"
 msgstr "Andorra"
 
-#: countries.py:21
+#: countries.py:17
 msgid "Angola"
 msgstr "Angola"
 
-#: countries.py:22
+#: countries.py:18
 msgid "Anguilla"
 msgstr "Anguilla"
 
-#: countries.py:23
+#: countries.py:19
 msgid "Antarctica"
 msgstr "Antarktika"
 
-#: countries.py:24
+#: countries.py:20
 msgid "Antigua and Barbuda"
 msgstr "Antigua og Barbuda"
 
-#: countries.py:25
+#: countries.py:21
 msgid "Argentina"
 msgstr "Argentina"
 
-#: countries.py:26
+#: countries.py:22
 msgid "Armenia"
 msgstr "Armenia"
 
-#: countries.py:27
+#: countries.py:23
 msgid "Aruba"
 msgstr "Aruba"
 
-#: countries.py:28
+#: countries.py:24
 msgid "Australia"
 msgstr "Australia"
 
-#: countries.py:29
+#: countries.py:25
 msgid "Austria"
 msgstr "Østerrike"
 
-#: countries.py:30
+#: countries.py:26
 msgid "Azerbaijan"
 msgstr "Aserbajdsjan"
 
-#: countries.py:31
+#: countries.py:27
 msgid "Bahamas"
 msgstr "Bahamas"
 
-#: countries.py:32
+#: countries.py:28
 msgid "Bahrain"
 msgstr "Bahrain"
 
-#: countries.py:33
+#: countries.py:29
 msgid "Bangladesh"
 msgstr "Bangladesh"
 
-#: countries.py:34
+#: countries.py:30
 msgid "Barbados"
 msgstr "Barbados"
 
-#: countries.py:35
+#: countries.py:31
 msgid "Belarus"
 msgstr "Hviterussland"
 
-#: countries.py:36
+#: countries.py:32
 msgid "Belgium"
 msgstr "Belgia"
 
-#: countries.py:37
+#: countries.py:33
 msgid "Belize"
 msgstr "Belize"
 
-#: countries.py:38
+#: countries.py:34
 msgid "Benin"
 msgstr "Benin"
 
-#: countries.py:39
+#: countries.py:35
 msgid "Bermuda"
 msgstr "Bermuda"
 
-#: countries.py:40
+#: countries.py:36
 msgid "Bhutan"
 msgstr "Bhutan"
 
-#: countries.py:41
+#: countries.py:37
 msgid "Bolivia"
 msgstr "Bolivia"
 
-#: countries.py:42
+#: countries.py:38
 msgid "Bonaire, Sint Eustatius and Saba"
 msgstr "Bonaire, Sint Eustatius og Saba"
 
-#: countries.py:43
+#: countries.py:39
 msgid "Bosnia and Herzegovina"
 msgstr "Bosnia-Hercegovina"
 
-#: countries.py:44
+#: countries.py:40
 msgid "Botswana"
 msgstr "Botswana"
 
-#: countries.py:45
+#: countries.py:41
 msgid "Bouvet Island"
 msgstr "Bouvetøya"
 
-#: countries.py:46
+#: countries.py:42
 msgid "Brazil"
 msgstr "Brasil"
 
-#: countries.py:47
+#: countries.py:43
 msgid "British Indian Ocean Territory"
 msgstr "Det britiske territoriet i Indiahavet"
 
-#: countries.py:48
+#: countries.py:44
 msgid "Brunei Darussalam"
 msgstr "Brunei"
 
-#: countries.py:49
+#: countries.py:45
 msgid "Bulgaria"
 msgstr "Bulgaria"
 
-#: countries.py:50
+#: countries.py:46
 msgid "Burkina Faso"
 msgstr "Burkina Faso"
 
-#: countries.py:51
+#: countries.py:47
 msgid "Burundi"
 msgstr "Burundi"
 
-#: countries.py:52
+#: countries.py:48
 msgid "Cambodia"
 msgstr "Kambodsja"
 
-#: countries.py:53
+#: countries.py:49
 msgid "Cameroon"
 msgstr "Kamerun"
 
-#: countries.py:54
+#: countries.py:50
 msgid "Canada"
 msgstr "Canada"
 
-#: countries.py:55
+#: countries.py:51
 msgid "Cape Verde"
 msgstr "Kapp Verde"
 
-#: countries.py:56
+#: countries.py:52
 msgid "Cayman Islands"
 msgstr "Caymanøyene"
 
-#: countries.py:57
+#: countries.py:53
 msgid "Central African Republic"
 msgstr "Den sentralafrikanske republikk"
 
-#: countries.py:58
+#: countries.py:54
 msgid "Chad"
 msgstr "Tsjad"
 
-#: countries.py:59
+#: countries.py:55
 msgid "Chile"
 msgstr "Chile"
 
-#: countries.py:60
+#: countries.py:56
 msgid "China"
 msgstr "Kina"
 
-#: countries.py:61
+#: countries.py:57
 msgid "Christmas Island"
 msgstr "Christmasøya"
 
-#: countries.py:62
+#: countries.py:58
 msgid "Cocos (Keeling) Islands"
 msgstr "Kokosøyene"
 
-#: countries.py:63
+#: countries.py:59
 msgid "Colombia"
 msgstr "Colombia"
 
-#: countries.py:64
+#: countries.py:60
 msgid "Comoros"
 msgstr "Komorene"
 
-#: countries.py:65
+#: countries.py:61
 msgid "Congo (Brazzaville)"
 msgstr ""
 
-#: countries.py:66
+#: countries.py:62
 msgid "Congo (Kinshasa)"
 msgstr ""
 
-#: countries.py:67
+#: countries.py:63
 msgid "Cook Islands"
 msgstr "Cookøyene"
 
-#: countries.py:68
+#: countries.py:64
 msgid "Costa Rica"
 msgstr "Costa Rica"
 
-#: countries.py:69
+#: countries.py:65
 msgid "Côte d'Ivoire"
 msgstr "Elfenbenskysten"
 
-#: countries.py:70
+#: countries.py:66
 msgid "Croatia"
 msgstr "Kroatia"
 
-#: countries.py:71
+#: countries.py:67
 msgid "Cuba"
 msgstr "Cuba"
 
-#: countries.py:72
+#: countries.py:68
 msgid "Curaçao"
 msgstr "Curaçao"
 
-#: countries.py:73
+#: countries.py:69
 msgid "Cyprus"
 msgstr "Kypros"
 
-#: countries.py:74
+#: countries.py:70
 msgid "Czech Republic"
 msgstr "Tsjekkia"
 
-#: countries.py:75
+#: countries.py:71
 msgid "Denmark"
 msgstr "Danmark"
 
-#: countries.py:76
+#: countries.py:72
 msgid "Djibouti"
 msgstr "Djibouti"
 
-#: countries.py:77
+#: countries.py:73
 msgid "Dominica"
 msgstr "Dominica"
 
-#: countries.py:78
+#: countries.py:74
 msgid "Dominican Republic"
 msgstr "Den dominikanske republikk"
 
-#: countries.py:79
+#: countries.py:75
 msgid "Ecuador"
 msgstr "Ecuador"
 
-#: countries.py:80
+#: countries.py:76
 msgid "Egypt"
 msgstr "Egypt"
 
-#: countries.py:81
+#: countries.py:77
 msgid "El Salvador"
 msgstr "El Salvador"
 
-#: countries.py:82
+#: countries.py:78
 msgid "Equatorial Guinea"
 msgstr "Ekvatorial-Guinea"
 
-#: countries.py:83
+#: countries.py:79
 msgid "Eritrea"
 msgstr "Eritrea"
 
-#: countries.py:84
+#: countries.py:80
 msgid "Estonia"
 msgstr "Estland"
 
-#: countries.py:85
+#: countries.py:81
 msgid "Ethiopia"
 msgstr "Etiopia"
 
-#: countries.py:86
+#: countries.py:82
 msgid "Falkland Islands"
 msgstr ""
 
-#: countries.py:87
+#: countries.py:83
 msgid "Faroe Islands"
 msgstr "Færøyene"
 
-#: countries.py:88
+#: countries.py:84
 msgid "Fiji"
 msgstr "Fiji"
 
-#: countries.py:89
+#: countries.py:85
 msgid "Finland"
 msgstr "Finland"
 
-#: countries.py:90
+#: countries.py:86
 msgid "France"
 msgstr "Frankrike"
 
-#: countries.py:91
+#: countries.py:87
 msgid "French Guiana"
 msgstr "Fransk Guyana"
 
-#: countries.py:92
+#: countries.py:88
 msgid "French Polynesia"
 msgstr "Fransk Polynesia"
 
-#: countries.py:93
+#: countries.py:89
 msgid "French Southern Lands"
 msgstr "De franske sørterritorier"
 
-#: countries.py:94
+#: countries.py:90
 msgid "Gabon"
 msgstr "Gabon"
 
-#: countries.py:95
+#: countries.py:91
 msgid "Gambia"
 msgstr "Gambia"
 
-#: countries.py:96
+#: countries.py:92
 msgid "Georgia"
 msgstr "Georgia"
 
-#: countries.py:97
+#: countries.py:93
 msgid "Germany"
 msgstr "Tyskland"
 
-#: countries.py:98
+#: countries.py:94
 msgid "Ghana"
 msgstr "Ghana"
 
-#: countries.py:99
+#: countries.py:95
 msgid "Gibraltar"
 msgstr "Gibraltar"
 
-#: countries.py:100
+#: countries.py:96
 msgid "Greece"
 msgstr "Hellas"
 
-#: countries.py:101
+#: countries.py:97
 msgid "Greenland"
 msgstr "Grønland"
 
-#: countries.py:102
+#: countries.py:98
 msgid "Grenada"
 msgstr "Grenada"
 
-#: countries.py:103
+#: countries.py:99
 msgid "Guadeloupe"
 msgstr "Guadeloupe"
 
-#: countries.py:104
+#: countries.py:100
 msgid "Guam"
 msgstr "Guam"
 
-#: countries.py:105
+#: countries.py:101
 msgid "Guatemala"
 msgstr "Guatemala"
 
-#: countries.py:106
+#: countries.py:102
 msgid "Guernsey"
 msgstr "Guernsey"
 
-#: countries.py:107
+#: countries.py:103
 msgid "Guinea"
 msgstr "Guinea"
 
-#: countries.py:108
+#: countries.py:104
 msgid "Guinea-Bissau"
 msgstr "Guinea-Bissau"
 
-#: countries.py:109
+#: countries.py:105
 msgid "Guyana"
 msgstr "Guyana"
 
-#: countries.py:110
+#: countries.py:106
 msgid "Haiti"
 msgstr "Haiti"
 
-#: countries.py:111
+#: countries.py:107
 msgid "Heard and McDonald Islands"
 msgstr "Heard- og McDonaldøyene"
 
-#: countries.py:112
+#: countries.py:108
 msgid "Honduras"
 msgstr "Honduras"
 
-#: countries.py:113
+#: countries.py:109
 msgid "Hong Kong"
 msgstr "Hongkong"
 
-#: countries.py:114
+#: countries.py:110
 msgid "Hungary"
 msgstr "Ungarn"
 
-#: countries.py:115
+#: countries.py:111
 msgid "Iceland"
 msgstr "Island"
 
-#: countries.py:116
+#: countries.py:112
 msgid "India"
 msgstr "India"
 
-#: countries.py:117
+#: countries.py:113
 msgid "Indonesia"
 msgstr "Indonesia"
 
-#: countries.py:118
+#: countries.py:114
 msgid "Iran"
 msgstr "Iran"
 
-#: countries.py:119
+#: countries.py:115
 msgid "Iraq"
 msgstr "Irak"
 
-#: countries.py:120
+#: countries.py:116
 msgid "Ireland"
 msgstr "Irland"
 
-#: countries.py:121
+#: countries.py:117
 msgid "Isle of Man"
 msgstr "Man"
 
-#: countries.py:122
+#: countries.py:118
 msgid "Israel"
 msgstr "Israel"
 
-#: countries.py:123
+#: countries.py:119
 msgid "Italy"
 msgstr "Italia"
 
-#: countries.py:124
+#: countries.py:120
 msgid "Jamaica"
 msgstr "Jamaica"
 
-#: countries.py:125
+#: countries.py:121
 msgid "Japan"
 msgstr "Japan"
 
-#: countries.py:126
+#: countries.py:122
 msgid "Jersey"
 msgstr "Jersey"
 
-#: countries.py:127
+#: countries.py:123
 msgid "Jordan"
 msgstr "Jordan"
 
-#: countries.py:128
+#: countries.py:124
 msgid "Kazakhstan"
 msgstr "Kasakhstan"
 
-#: countries.py:129
+#: countries.py:125
 msgid "Kenya"
 msgstr "Kenya"
 
-#: countries.py:130
+#: countries.py:126
 msgid "Kiribati"
 msgstr "Kiribati"
 
-#: countries.py:131
+#: countries.py:127
 msgid "Korea, North"
 msgstr ""
 
-#: countries.py:132
+#: countries.py:128
 msgid "Korea, South"
 msgstr ""
 
-#: countries.py:133
+#: countries.py:129
 msgid "Kuwait"
 msgstr "Kuwait"
 
-#: countries.py:134
+#: countries.py:130
 msgid "Kyrgyzstan"
 msgstr "Kirgisistan"
 
-#: countries.py:135
+#: countries.py:131
 msgid "Laos"
 msgstr "Laos"
 
-#: countries.py:136
+#: countries.py:132
 msgid "Latvia"
 msgstr "Latvia"
 
-#: countries.py:137
+#: countries.py:133
 msgid "Lebanon"
 msgstr "Libanon"
 
-#: countries.py:138
+#: countries.py:134
 msgid "Lesotho"
 msgstr "Lesotho"
 
-#: countries.py:139
+#: countries.py:135
 msgid "Liberia"
 msgstr "Liberia"
 
-#: countries.py:140
+#: countries.py:136
 msgid "Libya"
 msgstr "Libya"
 
-#: countries.py:141
+#: countries.py:137
 msgid "Liechtenstein"
 msgstr "Liechtenstein"
 
-#: countries.py:142
+#: countries.py:138
 msgid "Lithuania"
 msgstr "Litauen"
 
-#: countries.py:143
+#: countries.py:139
 msgid "Luxembourg"
 msgstr "Luxembourg"
 
-#: countries.py:144
+#: countries.py:140
 msgid "Macau"
 msgstr "Macao"
 
-#: countries.py:145
+#: countries.py:141
 msgid "Macedonia"
 msgstr "Makedonia"
 
-#: countries.py:146
+#: countries.py:142
 msgid "Madagascar"
 msgstr "Madagaskar"
 
-#: countries.py:147
+#: countries.py:143
 msgid "Malawi"
 msgstr "Malawi"
 
-#: countries.py:148
+#: countries.py:144
 msgid "Malaysia"
 msgstr "Malaysia"
 
-#: countries.py:149
+#: countries.py:145
 msgid "Maldives"
 msgstr "Maldivene"
 
-#: countries.py:150
+#: countries.py:146
 msgid "Mali"
 msgstr "Mali"
 
-#: countries.py:151
+#: countries.py:147
 msgid "Malta"
 msgstr "Malta"
 
-#: countries.py:152
+#: countries.py:148
 msgid "Marshall Islands"
 msgstr "Marshalløyene"
 
-#: countries.py:153
+#: countries.py:149
 msgid "Martinique"
 msgstr "Martinique"
 
-#: countries.py:154
+#: countries.py:150
 msgid "Mauritania"
 msgstr "Mauritania"
 
-#: countries.py:155
+#: countries.py:151
 msgid "Mauritius"
 msgstr "Mauritius"
 
-#: countries.py:156
+#: countries.py:152
 msgid "Mayotte"
 msgstr "Mayotte"
 
-#: countries.py:157
+#: countries.py:153
 msgid "Mexico"
 msgstr "Mexico"
 
-#: countries.py:158
+#: countries.py:154
 msgid "Micronesia"
 msgstr "Indonesia"
 
-#: countries.py:159
+#: countries.py:155
 msgid "Moldova"
 msgstr "Moldova"
 
-#: countries.py:160
+#: countries.py:156
 msgid "Monaco"
 msgstr "Monaco"
 
-#: countries.py:161
+#: countries.py:157
 msgid "Mongolia"
 msgstr "Mongolia"
 
-#: countries.py:162
+#: countries.py:158
 msgid "Montenegro"
 msgstr "Montenegro"
 
-#: countries.py:163
+#: countries.py:159
 msgid "Montserrat"
 msgstr "Montserrat"
 
-#: countries.py:164
+#: countries.py:160
 msgid "Morocco"
 msgstr "Marokko"
 
-#: countries.py:165
+#: countries.py:161
 msgid "Mozambique"
 msgstr "Mosambik"
 
-#: countries.py:166
+#: countries.py:162
 msgid "Myanmar"
 msgstr "Myanmar"
 
-#: countries.py:167
+#: countries.py:163
 msgid "Namibia"
 msgstr "Namibia"
 
-#: countries.py:168
+#: countries.py:164
 msgid "Nauru"
 msgstr "Nauru"
 
-#: countries.py:169
+#: countries.py:165
 msgid "Nepal"
 msgstr "Nepal"
 
-#: countries.py:170
+#: countries.py:166
 msgid "Netherlands"
 msgstr "Nederland"
 
-#: countries.py:171
+#: countries.py:167
 msgid "Netherlands Antilles"
 msgstr ""
 
-#: countries.py:172
+#: countries.py:168
 msgid "New Caledonia"
 msgstr "Ny-Caledonia"
 
-#: countries.py:173
+#: countries.py:169
 msgid "New Zealand"
 msgstr "New Zealand"
 
-#: countries.py:174
+#: countries.py:170
 msgid "Nicaragua"
 msgstr "Nicaragua"
 
-#: countries.py:175
+#: countries.py:171
 msgid "Niger"
 msgstr "Niger"
 
-#: countries.py:176
+#: countries.py:172
 msgid "Nigeria"
 msgstr "Nigeria"
 
-#: countries.py:177
+#: countries.py:173
 msgid "Niue"
 msgstr "Niue"
 
-#: countries.py:178
+#: countries.py:174
 msgid "Norfolk Island"
 msgstr "Norfolkøya"
 
-#: countries.py:179
+#: countries.py:175
 msgid "Northern Mariana Islands"
 msgstr "Nord-Marianene"
 
-#: countries.py:180
+#: countries.py:176
 msgid "Norway"
 msgstr "Norge"
 
-#: countries.py:181
+#: countries.py:177
 msgid "Oman"
 msgstr "Oman"
 
-#: countries.py:182
+#: countries.py:178
 msgid "Pakistan"
 msgstr "Pakistan"
 
-#: countries.py:183
+#: countries.py:179
 msgid "Palau"
 msgstr "Palau"
 
-#: countries.py:184
+#: countries.py:180
 msgid "Palestine"
 msgstr "Palestina"
 
-#: countries.py:185
+#: countries.py:181
 msgid "Panama"
 msgstr "Panama"
 
-#: countries.py:186
+#: countries.py:182
 msgid "Papua New Guinea"
 msgstr "Papua Ny-Guinea"
 
-#: countries.py:187
+#: countries.py:183
 msgid "Paraguay"
 msgstr "Paraguay"
 
-#: countries.py:188
+#: countries.py:184
 msgid "Peru"
 msgstr "Peru"
 
-#: countries.py:189
+#: countries.py:185
 msgid "Philippines"
 msgstr "Filippinene"
 
-#: countries.py:190
+#: countries.py:186
 msgid "Pitcairn"
 msgstr "Pitcairnøyene"
 
-#: countries.py:191
+#: countries.py:187
 msgid "Poland"
 msgstr "Polen"
 
-#: countries.py:192
+#: countries.py:188
 msgid "Portugal"
 msgstr "Portugal"
 
-#: countries.py:193
+#: countries.py:189
 msgid "Puerto Rico"
 msgstr "Puerto Rico"
 
-#: countries.py:194
+#: countries.py:190
 msgid "Qatar"
 msgstr "Qatar"
 
-#: countries.py:195
+#: countries.py:191
 msgid "Reunion"
 msgstr "Réunion"
 
-#: countries.py:196
+#: countries.py:192
 msgid "Romania"
 msgstr "Romania"
 
-#: countries.py:197
+#: countries.py:193
 msgid "Russian Federation"
 msgstr "Russland"
 
-#: countries.py:198
+#: countries.py:194
 msgid "Rwanda"
 msgstr "Rwanda"
 
-#: countries.py:199
+#: countries.py:195
 msgid "Saint Barthélemy"
 msgstr "Saint-Barthélemy"
 
-#: countries.py:200
+#: countries.py:196
 msgid "Saint Helena"
 msgstr "Saint Helena"
 
-#: countries.py:201
+#: countries.py:197
 msgid "Saint Kitts and Nevis"
 msgstr "Saint Kitts og Nevis"
 
-#: countries.py:202
+#: countries.py:198
 msgid "Saint Lucia"
 msgstr "Saint Lucia"
 
-#: countries.py:203
+#: countries.py:199
 msgid "Saint Martin (French part)"
 msgstr "Saint Martin"
 
-#: countries.py:204
+#: countries.py:200
 msgid "Saint Pierre and Miquelon"
 msgstr "Saint-Pierre og Miquelon"
 
-#: countries.py:205
+#: countries.py:201
 msgid "Saint Vincent and the Grenadines"
 msgstr "Saint Vincent og Grenadinene"
 
-#: countries.py:206
+#: countries.py:202
 msgid "Samoa"
 msgstr "Samoa"
 
-#: countries.py:207
+#: countries.py:203
 msgid "San Marino"
 msgstr "San Marino"
 
-#: countries.py:208
+#: countries.py:204
 msgid "Sao Tome and Principe"
 msgstr "São Tomé og Príncipe"
 
-#: countries.py:209
+#: countries.py:205
 msgid "Saudi Arabia"
 msgstr "Saudi-Arabia"
 
-#: countries.py:210
+#: countries.py:206
 msgid "Senegal"
 msgstr "Senegal"
 
-#: countries.py:211
+#: countries.py:207
 msgid "Serbia"
 msgstr "Serbia"
 
-#: countries.py:212
+#: countries.py:208
 msgid "Seychelles"
 msgstr "Seychellene"
 
-#: countries.py:213
+#: countries.py:209
 msgid "Sierra Leone"
 msgstr "Sierra Leone"
 
-#: countries.py:214
+#: countries.py:210
 msgid "Singapore"
 msgstr "Singapore"
 
-#: countries.py:215
+#: countries.py:211
 msgid "Sint Maarten (Dutch part)"
 msgstr "Sint Maarten"
 
-#: countries.py:216
+#: countries.py:212
 msgid "Slovakia"
 msgstr "Slovakia"
 
-#: countries.py:217
+#: countries.py:213
 msgid "Slovenia"
 msgstr "Slovenia"
 
-#: countries.py:218
+#: countries.py:214
 msgid "Solomon Islands"
 msgstr "Solomon Islands"
 
-#: countries.py:219
+#: countries.py:215
 msgid "Somalia"
 msgstr "Somalia"
 
-#: countries.py:220
+#: countries.py:216
 msgid "South Africa"
 msgstr "Sør-Afrika"
 
-#: countries.py:221
+#: countries.py:217
 msgid "South Georgia and South Sandwich Islands"
 msgstr "Sør-Georgia og Sør-Sandwichøyene"
 
-#: countries.py:222
+#: countries.py:218
 msgid "South Sudan"
 msgstr "Sør-Sudan"
 
-#: countries.py:223
+#: countries.py:219
 msgid "Spain"
 msgstr "Spania"
 
-#: countries.py:224
+#: countries.py:220
 msgid "Sri Lanka"
 msgstr "Sri Lanka"
 
-#: countries.py:225
+#: countries.py:221
 msgid "Sudan"
 msgstr "Sudan"
 
-#: countries.py:226
+#: countries.py:222
 msgid "Suriname"
 msgstr "Surinam"
 
-#: countries.py:227
+#: countries.py:223
 msgid "Svalbard and Jan Mayen Islands"
 msgstr "Svalbard og Jan Mayen"
 
-#: countries.py:228
+#: countries.py:224
 msgid "Swaziland"
 msgstr "Swaziland"
 
-#: countries.py:229
+#: countries.py:225
 msgid "Sweden"
 msgstr "Sverige"
 
-#: countries.py:230
+#: countries.py:226
 msgid "Switzerland"
 msgstr "Sveits"
 
-#: countries.py:231
+#: countries.py:227
 msgid "Syria"
 msgstr "Syria"
 
-#: countries.py:232
+#: countries.py:228
 msgid "Taiwan"
 msgstr "Taiwan"
 
-#: countries.py:233
+#: countries.py:229
 msgid "Tajikistan"
 msgstr "Tadsjikistan"
 
-#: countries.py:234
+#: countries.py:230
 msgid "Tanzania"
 msgstr "Tanzania"
 
-#: countries.py:235
+#: countries.py:231
 msgid "Thailand"
 msgstr "Thailand"
 
-#: countries.py:236
+#: countries.py:232
 msgid "Timor-Leste"
 msgstr "Øst-Timor"
 
-#: countries.py:237
+#: countries.py:233
 msgid "Togo"
 msgstr "Togo"
 
-#: countries.py:238
+#: countries.py:234
 msgid "Tokelau"
 msgstr "Tokelau"
 
-#: countries.py:239
+#: countries.py:235
 msgid "Tonga"
 msgstr "Tonga"
 
-#: countries.py:240
+#: countries.py:236
 msgid "Trinidad and Tobago"
 msgstr "Trinidad og Tobago"
 
-#: countries.py:241
+#: countries.py:237
 msgid "Tunisia"
 msgstr "Tunisia"
 
-#: countries.py:242
+#: countries.py:238
 msgid "Turkey"
 msgstr "Tyrkia"
 
-#: countries.py:243
+#: countries.py:239
 msgid "Turkmenistan"
 msgstr "Turkmenistan"
 
-#: countries.py:244
+#: countries.py:240
 msgid "Turks and Caicos Islands"
 msgstr "Turks- og Caicosøyene"
 
-#: countries.py:245
+#: countries.py:241
 msgid "Tuvalu"
 msgstr "Tuvalu"
 
-#: countries.py:246
+#: countries.py:242
 msgid "Uganda"
 msgstr "Uganda"
 
-#: countries.py:247
+#: countries.py:243
 msgid "Ukraine"
 msgstr "Ukraina"
 
-#: countries.py:248
+#: countries.py:244
 msgid "United Arab Emirates"
 msgstr "De forente arabiske emirater"
 
-#: countries.py:249
+#: countries.py:245
 msgid "United Kingdom"
 msgstr "Storbritannia"
 
-#: countries.py:250
+#: countries.py:246
 msgid "United States Minor Outlying Islands"
 msgstr "USAs ytre småøyer"
 
-#: countries.py:251
+#: countries.py:247
 msgid "United States of America"
 msgstr "Amerikas forente stater"
 
-#: countries.py:252
+#: countries.py:248
 msgid "Uruguay"
 msgstr "Uruguay"
 
-#: countries.py:253
+#: countries.py:249
 msgid "Uzbekistan"
 msgstr "Usbekistan"
 
-#: countries.py:254
+#: countries.py:250
 msgid "Vanuatu"
 msgstr "Vanuatu"
 
-#: countries.py:255
+#: countries.py:251
 msgid "Vatican City"
 msgstr ""
 
-#: countries.py:256
+#: countries.py:252
 msgid "Venezuela"
 msgstr "Venezuela"
 
-#: countries.py:257
+#: countries.py:253
 msgid "Vietnam"
 msgstr "Vietnam"
 
-#: countries.py:258
+#: countries.py:254
 msgid "Virgin Islands, British"
 msgstr "De britiske jomfruøyene"
 
-#: countries.py:259
+#: countries.py:255
 msgid "Virgin Islands, U.S."
 msgstr "De amerikanske jomfruøyene"
 
-#: countries.py:260
+#: countries.py:256
 msgid "Wallis and Futuna Islands"
 msgstr "Wallis- og Futunaøyene"
 
-#: countries.py:261
+#: countries.py:257
 msgid "Western Sahara"
 msgstr "Vest-Sahara"
 
-#: countries.py:262
+#: countries.py:258
 msgid "Yemen"
 msgstr "Jemen"
 
-#: countries.py:263
+#: countries.py:259
 msgid "Zambia"
 msgstr "Zambia"
 
-#: countries.py:264
+#: countries.py:260
 msgid "Zimbabwe"
 msgstr "Zimbabwe"
 
-#: defaults.py:9
+#: defaults.py:7
 msgid ""
 "Countries that show up at the top of the country selection fields. A list of "
 "alpha2 codes."
@@ -1035,101 +1050,109 @@ msgid ""
 "and/or tuples in the form (alpha2, country_name)."
 msgstr ""
 
-#: defaults.py:40
+#: defaults.py:45
 msgid "Activate PayPal for payment"
 msgstr ""
 
-#: defaults.py:41
+#: defaults.py:46
 msgid "If ``True``, PayPal will be included as a payment method."
 msgstr ""
 
-#: defaults.py:48
+#: defaults.py:53
 msgid "Currency for PayPal payments"
 msgstr ""
 
-#: defaults.py:49
+#: defaults.py:54
 msgid "The currency Braintree is using for PayPal payments."
 msgstr ""
 
-#: forms.py:60 templates/shop/includes/payment_fields.html.py:5
+#: forms.py:86 templates/shop/includes/payment_fields.html:9
 msgid "Payment Method"
 msgstr ""
 
-#: forms.py:61
+#: forms.py:88
 msgid "Payment Method Nonce"
 msgstr ""
 
-#: forms.py:62
+#: forms.py:90
 msgid "Braintree Errors"
 msgstr ""
 
-#: forms.py:112 forms.py:114 forms.py:120 forms.py:124
+#: forms.py:150 forms.py:169
 msgid "This field is required."
 msgstr ""
 
-#: forms.py:116
+#: forms.py:157
+msgid "This card is not supported."
+msgstr ""
+
+#: forms.py:161
 msgid "A valid card number is required."
 msgstr ""
 
-#: forms.py:118
+#: forms.py:165
 msgid "A valid expiry date is required."
 msgstr ""
 
-#: forms.py:122
+#: forms.py:173
 msgid "A valid CCV is required."
 msgstr ""
 
-#: forms.py:128 forms.py:134
+#: forms.py:178 forms.py:188
 msgid "Credit Card Number/CCV could not be processed. Please try again."
 msgstr ""
 
-#: templates/shop/checkout.html:16
+#: templates/shop/checkout.html:19
 msgid "Next"
 msgstr ""
 
-#: templates/shop/checkout.html:18
+#: templates/shop/checkout.html:25
 msgid "Back"
 msgstr ""
 
-#: templates/shop/checkout.html:22
+#: templates/shop/checkout.html:30
 msgid "Your cart is empty."
 msgstr ""
 
-#: templates/shop/checkout.html:23
+#: templates/shop/checkout.html:31
 msgid ""
 "This may be due to your session timing out after a period of inactivity."
 msgstr ""
 
-#: templates/shop/checkout.html:24
+#: templates/shop/checkout.html:32
 msgid "We apologize for the inconvenience."
 msgstr ""
 
-#: templates/shop/checkout.html:26
+#: templates/shop/checkout.html:34
 msgid "Continue Shopping"
 msgstr ""
 
-#: templates/shop/checkout.html:51
+#: templates/shop/checkout.html:62
 msgid "Edit Cart"
 msgstr ""
 
-#: templates/shop/includes/braintreejs.html:36 templates/shop/payment.html:5
-msgid "Braintree API could not be created."
-msgstr ""
-
-#: templates/shop/includes/payment_fields.html:11
-#: templates/shop/includes/payment_fields.html:14
+#: templates/shop/includes/payment_fields.html:15
+#: templates/shop/includes/payment_fields.html:18
 msgid "Pay with PayPal"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:22
-#: templates/shop/includes/payment_fields.html:25
+#: templates/shop/includes/payment_fields.html:26
+#: templates/shop/includes/payment_fields.html:29
 msgid "Pay with Card"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:36
+#: templates/shop/includes/payment_fields.html:40
 msgid "Payment Details"
 msgstr ""
 
-#: templates/shop/includes/payment_fields.html:41
+#: templates/shop/includes/payment_fields.html:43
 msgid "Card Expiry"
+msgstr ""
+
+#: templates/shop/payment.html:6
+msgid "Braintree API could not be created."
+msgstr ""
+
+#: templates/shop/payment.html:9
+msgid "PayPal popup probably blocked by browser."
 msgstr ""
