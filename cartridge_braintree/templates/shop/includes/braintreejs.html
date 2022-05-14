@@ -140,8 +140,8 @@ contains these changes.
 <script src="{% static "cartridge_braintree/js/braintree-3.85.2/paypal-modal.js" %}"></script>
 <script type="text/javascript">
     $(function() {
-        var cardButton = $("#card").find("button:visible")[0],
-            paypalButton = $("#paypal").find("button:visible")[0],
+        var cardButton = $("#card").find("button")[0],
+            paypalButton = $("#paypal").find("button")[0],
             card = $("#card-details"),
             paymentMethod = $("#id_payment_method"),
             djangoReturnedErrors = form.find(".form-errors").length;
