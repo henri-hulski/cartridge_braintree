@@ -16,7 +16,6 @@ contains these changes.
 
 {% endcomment %}
 
-{% compress js %}
 <script src="{% static "cartridge_braintree/js/jquery.payment.js" %}"></script>
 <script type="text/javascript">
     $('#id_card_number').payment('formatCardNumber');
@@ -250,4 +249,3 @@ contains these changes.
     });
 </script>
 {% endif %}
-{% endcompress %}
