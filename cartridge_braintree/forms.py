@@ -141,7 +141,7 @@ class BraintreeOrderForm(OrderForm):
         See if the payment_method_nonce was created successfully.
         """
         if self.cleaned_data["step"] >= checkout.CHECKOUT_STEP_PAYMENT:
-            if self.cleaned_data["payment_method"] == "card":
+            if self.fields["payment_method"].value == "card":
                 braintree_errors = self.cleaned_data["braintree_errors"]
                 if braintree_errors:
                     errors = json.loads(braintree_errors)
