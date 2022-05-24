@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+3.0.5 (2022-05-14)
+--------------------
+
+- Handle also mobile Card and PayPal buttons.
+- Check payment_method from fields instead of cleaned_data.
+
+
 3.0.4 (2022-05-14)
 --------------------
 
