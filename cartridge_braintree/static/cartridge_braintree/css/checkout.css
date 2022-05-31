@@ -12,3 +12,11 @@
 .card-expiry-fields.error .help-block {
     color: #a94442;
 }
+
+/* Mobile settings */
+@media (max-width: 767px) {
+    #payment-method button {
+        display: block;
+        width: 100%;
+    }
+}
