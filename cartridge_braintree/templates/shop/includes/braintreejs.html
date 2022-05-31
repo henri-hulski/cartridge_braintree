@@ -25,8 +25,8 @@ contains these changes.
 <script type="text/javascript">
     var client,
         form = $("#checkout-form"),
-        nextButton = form.find(":submit[name='next']"),
-        backButton = form.find(":submit[name='back']"),
+        nextButton = form.find(":submit[name='next']")[0],
+        backButton = form.find(":submit[name='back']")[0],
         nonceField = $("#id_payment_method_nonce"),
         errorsField = $("#id_braintree_errors");
 
@@ -38,21 +38,21 @@ contains these changes.
     }
 
     $(function() {
-        backButton.click(function() {
+        backButton.addEventListener("click", function() {
             // Clicking the 'back' button is always OK.
             clearErrors();
             // continue with form submission
             return;
         });
 
-        nextButton.click(function(e) {
+        nextButton.addEventListener("click", function(e) {
             // 'Next' button was clicked.
             e.preventDefault();
 
             clearErrors();
 
             // Disable the submit button to prevent multiple clicks
-            nextButton.prop('disabled', true);
+            nextButton.disabled = true;
 
             // Validate card payment form
             var cardNumber = $('#id_card_number').val(),
@@ -117,7 +117,7 @@ contains these changes.
             } else {
                 errorsField.val(JSON.stringify(errors));
                 // Re-enable the next button
-                nextButton.prop('disabled', false);
+                nextButton.disabled = false;
                 form[0].submit();
             }
         });
@@ -140,14 +140,14 @@ contains these changes.
 <script src="{% static "cartridge_braintree/js/braintree-3.85.2/paypal-modal.js" %}"></script>
 <script type="text/javascript">
     $(function() {
-        var cardButton = $("#card").find("button"),
-            paypalButton = $("#paypal").find("button"),
+        var cardButton = $("#card").find("button")[0],
+            paypalButton = $("#paypal").find("button")[0],
             card = $("#card-details"),
             paymentMethod = $("#id_payment_method"),
             djangoReturnedErrors = form.find(".form-errors").length;
 
         // Disable the next button and hide the card details fieldset.
-        nextButton.prop('disabled', true);
+        nextButton.disabled = true;
         card.addClass('hidden');
 
         function activateCardPayment() {
@@ -155,7 +155,7 @@ contains these changes.
             // and re-enable the next button.
             card.removeClass('hidden');
             paymentMethod.val('card');
-            nextButton.prop('disabled', false);
+            nextButton.disabled = false;
         }
 
         // Show Card payment details when Django returned errors
@@ -163,7 +163,7 @@ contains these changes.
             activateCardPayment();
         }
 
-        cardButton.click(function() {
+        cardButton.addEventListener("click", function() {
             activateCardPayment();
         });
 
@@ -181,26 +181,24 @@ contains these changes.
             }, function (paypalErr, paypalInstance) {
                 if (paypalErr) {
                     console.error(_('Error creating PayPal:'), paypalErr);
-                    paypalButton.prop('disabled', false);
+                    paypalButton.disabled = false;
                     return;
                 }
         
                 clearErrors()
 
-                paypalButton.prop('disabled', false);
+                paypalButton.disabled = false;
             
                 // When the button is clicked, attempt to tokenize.
-                paypalButton.click(function() {
+                paypalButton.addEventListener("click", function() {
                     // 'PayPal' button was clicked.
 
-                    // Disable the button so that we don't attempt to open multiple popups.
-                    paypalButton.prop('disabled', true);
                     // Hide Card details form, set payment method to paypal
                     // and disable the next button and the paypal button.
                     card.addClass('hidden');
                     paymentMethod.val('paypal');
-                    nextButton.prop('disabled', true);
-                    paypalButton.prop('disabled', true);
+                    nextButton.disabled = true;
+                    paypalButton.disabled = true;
 
                     // Create nonce
                     paypalInstance.tokenize({
@@ -212,7 +210,7 @@ contains these changes.
                         offerCredit: false,
                         offerPayLater: false,
                     }, function (tokenizeErr, payload) {
-                        paypalButton.prop('disabled', false);
+                        paypalButton.disabled = false;
                         if (tokenizeErr) {
                             // Handle tokenization errors or premature flow closure
 
@@ -232,7 +230,7 @@ contains these changes.
                                     console.error(_('Error tokenizing:'), tokenizeErr);
                             }
                             paypalInstance.closeWindow();
-                            paypalButton.prop('disabled', false);
+                            paypalButton.disabled = false;
                             return;
                         }
                 
