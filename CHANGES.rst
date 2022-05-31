@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+3.0.6 (2022-05-31)
+--------------------
+
+- Change the appearence of Card and PaypPal buttons on
+  mobile devices by using the css '@media' property directly.
+- Use Vanilla JavaScript for button handling.
+
+
 3.0.5 (2022-05-14)
 --------------------
 
